@@ -1,0 +1,51 @@
+title: Post
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          date:
+            label: Datum
+            type: date
+            display: DD. MMMM YYYY
+          text:
+            type: blocks
+            size: huge
+            pretty: true
+  sidebar:
+    width: 1/3
+    fields:
+      categories:
+        label: Kategorien
+        type: multiselect
+        min: 1
+        options:
+          alltaeglich-belangloses: Alltäglich Belangloses
+          allwoechentlich-belangloses: Allwöchentlich Belangloses
+          archiv: Archiv
+          ausfluege: Ausflüge
+          buecher: Bücher
+          computer-technik: Computer & Technik
+          filme-serien:	Filme & Serien
+          fotografie: Fotografie
+          haus: Haus
+          musik-konzerte-festivals: Musik & Konzerte & Festivals
+          netzkram: Netzkram
+          pfadfinder: Pfadfinder
+          reisen: Reisen
+          auf-den-lofoten: Auf den Lofoten
+          frankreich-im-fruehjahr: Frankreich im Frühjahr
+          new-york: New York
+          rund-um-island: Rund um Island
+          webentwicklung: Webentwicklung
+      thumbnail:
+        label: Beitragsbild
+        type: files
+        query: page.images
+        multiple: false
+      files:
+        label: Dateien
+        type: files
