@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: local("Mona Sans"), url("../fonts/mona-sans.woff2") format("woff2");
+}
+
+body {
+  font-family: "Mona Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

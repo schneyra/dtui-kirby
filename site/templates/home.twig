@@ -1,0 +1,21 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    <ul>
+    {% for label, year in page('blog').children().flip() %}
+        <li>
+            {{ label }}
+
+            <ul>
+                {% for article in year.children().flip() %}
+                    <li>
+                        <a href="{{ article.url() }}">
+                            {{ article.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

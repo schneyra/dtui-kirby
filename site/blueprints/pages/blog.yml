@@ -1,0 +1,11 @@
+title: Jahr
+icon: 📚
+
+columns:
+  left:
+    width: 1/2
+    sections:
+      pages:
+        label: Jahrgänge
+        sortBy: title desc
+
