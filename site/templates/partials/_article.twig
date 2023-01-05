@@ -1,0 +1,17 @@
+<article class="article">
+    {% if hasHeadlineLink %}
+        <h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+    {% else %}
+        <h1>{{ article.title }}</h1>
+    {% endif %}
+
+    {% if article.thumbnail.toFile() %}
+        <img src="{{ article.thumbnail.toFile().url }}" width="200" alt="">
+    {% endif %}
+
+    {% for block in article.text.toBlocks %}
+        <div id="{{ block.id }}" class="block block-type-{{ block.type }}">
+            {{ block|raw }}
+        </div>
+    {% endfor %}
+</article>
