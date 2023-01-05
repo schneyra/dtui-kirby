@@ -35,6 +35,12 @@ RewriteRule ^site/(.*) index.php [L]
 # block direct access to Kirby and the Panel sources
 RewriteRule ^kirby/(.*) index.php [L]
 
+# force trailing slash
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/api
+RewriteCond %{REQUEST_URI} !^/panel
+RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+
 # make site links work
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

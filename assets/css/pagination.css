@@ -1,0 +1,24 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 6rem 0 0;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pagination a,
+.pagination span {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+
+.pagination a {
+  border-color: currentColor;
+  text-decoration: none;
+  line-height: 1;
+}

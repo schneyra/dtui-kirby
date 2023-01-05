@@ -1,7 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-    {% set articles = page('blog').grandChildren().flip().paginate(10) %}
+    {% set articles = page('blog').grandChildren().children().children().flip().paginate(10) %}
 
     {% for article in articles %}
         {% include "partials/_article.twig" with { 'hasHeadlineLink' : true } %}
@@ -9,8 +9,7 @@
 
     {% set pagination = articles.pagination()  %}
     <nav>
-        <ul>
-
+        <ul class="pagination">
             {% if (pagination.hasPrevPage()) %}
                 <li>
                     <a href="{{ pagination.prevPageURL() }}">‹</a>
@@ -38,7 +37,6 @@
                     <span>›</span>
                 </li>
             {% endif %}
-
         </ul>
     </nav>
 {% endblock %}

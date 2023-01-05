@@ -1,4 +1,4 @@
-title: Jahr
+title: Monat
 icon: 📚
 
 columns:
@@ -6,5 +6,6 @@ columns:
     width: 1/2
     sections:
       pages:
-        label: Monate
+        label: Tage
         sortBy: title desc
+

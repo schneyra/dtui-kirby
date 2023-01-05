@@ -1,5 +1,5 @@
 <article class="article">
-    {% if hasHeadlineLink %}
+    {% if hasHeadlineLink|default(false) %}
         <h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
     {% else %}
         <h1>{{ article.title }}</h1>
@@ -14,4 +14,10 @@
             {{ block|raw }}
         </div>
     {% endfor %}
+
+    <footer>
+        <time datetime="{{ article.date.strtotime() }}">{{ article.date.toDate("d. F Y - H:i") }} Uhr</time>
+        &middot;
+        {{ article.categories }}
+    </footer>
 </article>

@@ -1,4 +1,5 @@
 @import url("article.css");
+@import url("pagination.css");
 
 @font-face {
   font-family: "Mona Sans";
@@ -21,6 +22,8 @@
   --step-3: clamp(1.73rem, calc(1.48rem + 1.24vw), 2.44rem);
   --step-4: clamp(2.07rem, calc(1.73rem + 1.70vw), 3.05rem);
   --step-5: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
+
+  --maxContentWidth: 800px;
 }
 
 html {
@@ -30,6 +33,7 @@ html {
 body {
   font-family: "Mona Sans", sans-serif;
   line-height: 1.6;
+  margin-bottom: 6rem;
 }
 
 img {
@@ -37,3 +41,7 @@ img {
   height: auto;
 }
 
+.site-header {
+  margin: 0 auto;
+  max-width: var(--maxContentWidth);
+}
