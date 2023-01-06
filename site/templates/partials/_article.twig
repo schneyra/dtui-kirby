@@ -1,6 +1,6 @@
 <article class="article">
     {% if hasHeadlineLink|default(false) %}
-        <h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+        <h1><a href="{{ article.articleUrl }}">{{ article.title }}</a></h1>
     {% else %}
         <h1>{{ article.title }}</h1>
     {% endif %}
@@ -18,6 +18,8 @@
     <footer>
         <time datetime="{{ article.date.strtotime() }}">{{ article.date.toDate("d. F Y - H:i") }} Uhr</time>
         &middot;
-        {{ article.categories }}
+        {% for category in article.categories().split() %}
+            <a href="{{ url('/kategorie/' ~ category) }}">{{ category }}</a>
+        {% endfor %}
     </footer>
 </article>
