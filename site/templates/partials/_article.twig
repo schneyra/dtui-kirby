@@ -10,16 +10,15 @@
     {% endif %}
 
     {% for block in article.text.toBlocks %}
-        <div id="{{ block.id }}" class="block block-type-{{ block.type }}">
-            {{ block|raw }}
-        </div>
+        {{ block|raw }}
     {% endfor %}
 
     <footer>
         <time datetime="{{ article.date.strtotime() }}">{{ article.date.toDate("d. F Y - H:i") }} Uhr</time>
-        &middot;
+        {# &middot;
         {% for category in article.categories().split() %}
             <a href="{{ url('/kategorie/' ~ category) }}">{{ category }}</a>
         {% endfor %}
+        #}
     </footer>
 </article>
