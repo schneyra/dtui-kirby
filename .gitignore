@@ -60,4 +60,5 @@ Icon
 
 # ddev
 # ---------------
-/.ddev
+/.ddev/*
+!/.ddev/config.yaml
