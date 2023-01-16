@@ -30,6 +30,7 @@ columns:
                   - image
                   - gallery
                   - video
+                  - vid
               code:
                 label: Code
                 type: group

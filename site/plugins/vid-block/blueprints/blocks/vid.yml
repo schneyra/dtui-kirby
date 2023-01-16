@@ -1,0 +1,21 @@
+name: Video (selbstgehostet)
+icon: video
+tabs:
+  main:
+    fields:
+      title:
+        label: Titel
+        type: text
+      description:
+        label: Beschreibung
+        type: textarea
+      video:
+        label: Video
+        type: files
+        query: page.videos
+        multiple: false
+      cover:
+        label: Cover (optional)
+        type: files
+        query: page.images
+        multiple: false
