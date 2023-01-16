@@ -3,6 +3,9 @@
 return [
     'debug' => true,
     'locale' => 'de_DE.utf-8',
+    'options' => [
+        'secrets' => require_once 'config.secrets.php',
+    ],
     'routes' => [
         [
             'pattern' => '(:any)',

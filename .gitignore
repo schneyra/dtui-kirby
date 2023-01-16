@@ -1,8 +1,11 @@
 # System files
 # ------------
-
 Icon
 .DS_Store
+
+# Configuration
+# ---------------
+/site/config/config.secrets.php
 
 # Content
 # ---------------
@@ -10,13 +13,11 @@ Icon
 
 # Temporary files
 # ---------------
-
 /media/*
 !/media/index.html
 
 # Lock files
 # ---------------
-
 .lock
 
 # Editors
@@ -32,7 +33,6 @@ Icon
 
 # Cache Files
 # ---------------
-
 /site/cache/*
 !/site/cache/index.html
 
@@ -41,7 +41,6 @@ Icon
 
 /site/accounts/*
 !/site/accounts/index.html
-
 # Sessions
 # ---------------
 
@@ -50,7 +49,6 @@ Icon
 
 # License
 # ---------------
-
 /site/config/.license
 
 # Composer

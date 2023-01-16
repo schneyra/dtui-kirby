@@ -1,0 +1,31 @@
+name: Point Of Interest
+icon: map
+tabs:
+  main:
+    fields:
+      title:
+        label: Name
+        type: text
+      description:
+        label: Beschreibung
+        type: textarea
+      website:
+        label: Webseite
+        type: text
+      map:
+        label: Karte
+        type: headline
+        numbered: false
+      lat:
+        label: Latitude
+        type: number
+      lng:
+        label: Longitude
+        type: number
+      zoom:
+        label: Zoom
+        type: range
+        step: 1
+        min: 0
+        max: 22
+        default: 10
