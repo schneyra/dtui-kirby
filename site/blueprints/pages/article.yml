@@ -30,7 +30,7 @@ columns:
                   - image
                   - gallery
                   - video
-                  - vid
+                  - localvideo
               code:
                 label: Code
                 type: group

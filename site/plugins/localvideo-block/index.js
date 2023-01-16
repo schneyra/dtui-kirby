@@ -1,4 +1,4 @@
-panel.plugin("schneyra/vid-block", {
+panel.plugin("schneyra/localvideo-block", {
   blocks: {
     vid: {
       computed: {
