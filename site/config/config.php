@@ -30,5 +30,10 @@ return [
                 //go($uid);
             }
         ]
+    ],
+    'amteich.twig.env.functions' => [
+        'site' => function () { return site(); },
+        'page' => function () { return page(); },
+        'user' => function () { return user(); },
     ]
 ];

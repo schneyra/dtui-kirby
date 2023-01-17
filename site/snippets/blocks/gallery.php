@@ -7,8 +7,8 @@ $ratio   = $block->ratio()->or('auto');
 $sizes = "(min-width: 800px) 800px, 100vw";
 
 ?>
-<figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?>>
-  <ul>
+<figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?> class="gallery-wrapper">
+  <ul class="gallery">
     <?php foreach ($block->images()->toFiles() as $image): ?>
       <li>
         <picture>

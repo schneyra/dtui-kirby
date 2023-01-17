@@ -1,5 +1,7 @@
+@import url("reset.css");
 @import url("article.css");
 @import url("pagination.css");
+@import url("gallery.css");
 
 @font-face {
   font-family: "Mona Sans";
@@ -23,7 +25,8 @@
   --step-4: clamp(2.07rem, calc(1.73rem + 1.70vw), 3.05rem);
   --step-5: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
 
-  --maxContentWidth: 800px;
+  --contentWidth: 800px;
+  --wideContentWidth: 1200px;
 }
 
 html {
@@ -36,12 +39,7 @@ body {
   margin-bottom: 6rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .site-header {
   margin: 0 auto;
-  max-width: var(--maxContentWidth);
+  max-width: var(--contentWidth);
 }

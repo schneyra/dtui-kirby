@@ -19,7 +19,7 @@ $sizes = "(min-width: 800px) 800px, 100vw";
 ?>
 
 <?php if ($image): ?>
-  <figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?>>
+  <figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?> class="image-wrapper">
     <?php if ($link->isNotEmpty()): ?>
       <a href="<?= Str::esc($link->toUrl()) ?>">
     <?php endif ?>
