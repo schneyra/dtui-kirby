@@ -170,6 +170,13 @@ class Environment
             }
         }
 
+        // add plugin template paths
+        foreach ($kirby->extensions('templates') as $templatepath => $root) {
+            if (Str::endsWith(strtolower($root), '.twig')) {
+                $loader->addPath(str_replace($templatepath . '.twig', '', $root));
+            }
+        }
+
         // is viewpath in a plugin, add the pluginpath
         if ($viewPath != $this->templateDir) {
             $loader->addPath($viewPath);
@@ -224,15 +231,12 @@ class Environment
             $this->addCallable('test', $name, $func);
         }
 
-        $this->twig->addGlobal('kirby', kirby());
-        $this->twig->addGlobal('site', site());
-        $this->twig->addGlobal('pages', pages());
-        $this->twig->addGlobal('page', page());
-        $this->twig->addGlobal('user', kirby()->user());
-        $this->twig->addGlobal('users', kirby()->users());
-
         // Make sure the instance is stored / overwritten
         static::$instance = $this;
+    }
+
+    public function addGlobal($name, $value) {
+        $this->twig->addGlobal($name, $value);
     }
 
     /**
