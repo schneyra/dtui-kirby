@@ -14,7 +14,7 @@
     {% endfor %}
 
     <footer>
-        <time datetime="{{ article.date.strtotime() }}">{{ article.date.toDate("d. F Y - H:i") }} Uhr</time>
+        <time datetime="{{ article.date.strtotime() }}">{{ article.date.toDate("d. F Y — H:i") }} Uhr</time>
         {# &middot;
         {% for category in article.categories().split() %}
             <a href="{{ url('/kategorie/' ~ category) }}">{{ category }}</a>

@@ -1,6 +1,11 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>{{ page.title }} | {{ site.title }}</title>
+        {% if page.title == "Blog" %}
+            <title>{{ site.title }}</title>
+        {% else %}
+            <title>{{ page.title }} | {{ site.title }}</title>
+        {% endif %}
 
         {{ css('assets/css/style.css') }}
         {{ css('@auto') }}
