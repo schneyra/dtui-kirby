@@ -28,7 +28,14 @@ $sizes = "(min-width: 800px) 800px, 100vw";
             ]) ?>"
             sizes="<?= $sizes ?>">
 
-          <?= $image->crop(800) ?>
+          <img
+            src="<?= $image->crop(800)->url() ?>"
+            alt="<?= $image->alt() ?>"
+            width="<?= $image->width() ?>"
+            height="<?= $image->height() ?>"
+            loading="lazy"
+            decoding="async"
+          >
         </picture>
       </li>
     <?php endforeach ?>
