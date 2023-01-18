@@ -42,4 +42,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/content/, /site/config/config.secret.php, /site/accounts/, /.ddev/, /media/, .editorconfig"
+          EXCLUDE: "/content/, /site/config/config.secrets.php, /site/accounts/, /.ddev/, /media/, .editorconfig, .gitignore, README.md"
