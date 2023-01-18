@@ -13,11 +13,15 @@
 
     <body>
         <header class="site-header">
-            <a href="{{ site.url }}">der tag und ich</a>
+            <div class="site-header__content">
+                <a href="{{ site.url }}">der tag und ich</a>
+            </div>
         </header>
 
-        {% block content %}
-            <p>Huch.</p>
-        {% endblock %}
+        <main>
+            {% block content %}
+                <p>Huch.</p>
+            {% endblock %}
+        </main>
     </body>
 </html>

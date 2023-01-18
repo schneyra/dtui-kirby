@@ -1,0 +1,63 @@
+/* @link https://utopia.fyi/space/calculator?c=330,18,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-xl&g=s,xl,xl,12 */
+
+:root {
+  --space-3xs: clamp(0.31rem, calc(0.30rem + 0.08vw), 0.38rem);
+  --space-2xs: clamp(0.56rem, calc(0.53rem + 0.15vw), 0.69rem);
+  --space-xs: clamp(0.88rem, calc(0.83rem + 0.23vw), 1.06rem);
+  --space-s: clamp(1.13rem, calc(1.06rem + 0.30vw), 1.38rem);
+  --space-m: clamp(1.69rem, calc(1.59rem + 0.45vw), 2.06rem);
+  --space-l: clamp(2.25rem, calc(2.13rem + 0.61vw), 2.75rem);
+  --space-xl: clamp(3.38rem, calc(3.19rem + 0.91vw), 4.13rem);
+  --space-2xl: clamp(4.50rem, calc(4.25rem + 1.21vw), 5.50rem);
+  --space-3xl: clamp(6.75rem, calc(6.38rem + 1.82vw), 8.25rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.31rem, calc(0.22rem + 0.45vw), 0.69rem);
+  --space-2xs-xs: clamp(0.56rem, calc(0.44rem + 0.61vw), 1.06rem);
+  --space-xs-s: clamp(0.88rem, calc(0.75rem + 0.61vw), 1.38rem);
+  --space-s-m: clamp(1.13rem, calc(0.89rem + 1.14vw), 2.06rem);
+  --space-m-l: clamp(1.69rem, calc(1.42rem + 1.29vw), 2.75rem);
+  --space-l-xl: clamp(2.25rem, calc(1.78rem + 2.27vw), 4.13rem);
+  --space-xl-2xl: clamp(3.38rem, calc(2.84rem + 2.58vw), 5.50rem);
+  --space-2xl-3xl: clamp(4.50rem, calc(3.56rem + 4.55vw), 8.25rem);
+
+  /* Custom pairs */
+  --space-s-xl: clamp(1.13rem, calc(0.38rem + 3.64vw), 4.13rem);
+}
+
+/* @link https://utopia.fyi/type/calculator?c=330,18,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,xl,xl,12 */
+
+:root {
+  --step--2: clamp(0.78rem, calc(0.76rem + 0.12vw), 0.88rem);
+  --step--1: clamp(0.94rem, calc(0.90rem + 0.20vw), 1.10rem);
+  --step-0: clamp(1.13rem, calc(1.06rem + 0.30vw), 1.38rem);
+  --step-1: clamp(1.35rem, calc(1.26rem + 0.45vw), 1.72rem);
+  --step-2: clamp(1.62rem, calc(1.49rem + 0.64vw), 2.15rem);
+  --step-3: clamp(1.94rem, calc(1.76rem + 0.90vw), 2.69rem);
+  --step-4: clamp(2.33rem, calc(2.08rem + 1.24vw), 3.36rem);
+  --step-5: clamp(2.80rem, calc(2.45rem + 1.69vw), 4.20rem);
+}
+
+/* @link https://utopia.fyi/grid/calculator?c=330,18,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,xl,xl,12 */
+
+:root {
+  --grid-max-width: 103.13rem;
+  --grid-gutter: var(--space-s-xl, clamp(1.13rem, calc(0.38rem + 3.64vw), 4.13rem));
+  --grid-columns: 12;
+}
+
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+
+:root {
+  --contentWidth: 800px;
+  --wideContentWidth: 1200px;
+}

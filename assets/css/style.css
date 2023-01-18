@@ -1,32 +1,20 @@
 @import url("reset.css");
+@import url("variables.css");
+@import url("header.css");
 @import url("article.css");
+@import url("headlines.css");
+@import url("links.css");
 @import url("pagination.css");
 @import url("gallery.css");
 
 @font-face {
-  font-family: "Mona Sans";
-  src:
-    local("Mona Sans"),
-    url("../fonts/mona-sans.woff2") format("woff2 supports variations"),
-    url("../fonts/mona-sans.woff2") format("woff2-variations");
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
+  font-family: 'Cabin Sketch';
+  font-style: normal;
+  font-weight: 700;
   font-display: swap;
-}
-
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-:root {
-  --step--2: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.80rem);
-  --step--1: clamp(0.83rem, calc(0.78rem + 0.29vw), 1.00rem);
-  --step-0: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
-  --step-1: clamp(1.20rem, calc(1.07rem + 0.63vw), 1.56rem);
-  --step-2: clamp(1.44rem, calc(1.26rem + 0.89vw), 1.95rem);
-  --step-3: clamp(1.73rem, calc(1.48rem + 1.24vw), 2.44rem);
-  --step-4: clamp(2.07rem, calc(1.73rem + 1.70vw), 3.05rem);
-  --step-5: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
-
-  --contentWidth: 800px;
-  --wideContentWidth: 1200px;
+  src: local(''),
+  url('../fonts/cabin-sketch-v19-latin-700.woff2') format('woff2'),
+  url('../fonts/cabin-sketch-v19-latin-700.woff') format('woff');
 }
 
 html {
@@ -34,12 +22,7 @@ html {
 }
 
 body {
-  font-family: "Mona Sans", sans-serif;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.6;
   margin-bottom: 6rem;
-}
-
-.site-header {
-  margin: 0 auto;
-  max-width: var(--contentWidth);
 }

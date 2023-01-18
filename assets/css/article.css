@@ -12,9 +12,11 @@
   max-width: var(--wideContentWidth);
 }
 
-.article h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
+.article__headline {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Cabin Sketch', cursive;
+  text-transform: uppercase;
 }
 
 .article > * + * {

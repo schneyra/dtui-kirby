@@ -1,0 +1,29 @@
+.site-header {
+  padding: 0 1rem;
+}
+
+.site-header__content {
+  max-width: var(--contentWidth);
+  height: 6em;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.site-header a,
+.site-header a:visited {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Cabin Sketch', cursive;
+  text-transform: uppercase;
+  color: hsl(216, 71%, 23%);
+  text-decoration-color: transparent;
+}
+
+.site-header a:hover {
+  text-decoration-color: hsl(48, 100%, 60%);
+}
+
+.site-header + * {
+  margin-top: 4rem;
+}
