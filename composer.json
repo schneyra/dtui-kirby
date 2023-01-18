@@ -1,26 +1,21 @@
 {
-  "name": "getkirby/plainkit",
-  "description": "Kirby Plainkit",
+  "name": "schneyra/dtui-kirby",
+  "description": "der tag und ich goes Kirby",
   "type": "project",
+  "license": "MIT",
   "keywords": [
     "kirby",
     "cms",
-    "starterkit"
+    "website"
   ],
   "authors": [
     {
-      "name": "Bastian Allgeier",
-      "email": "bastian@getkirby.com",
-      "homepage": "https://getkirby.com"
+      "name": "Martin Schneider",
+      "email": "martin@martinschneider.me",
+      "homepage": "https://martinschneider.me"
     }
   ],
-  "homepage": "https://getkirby.com",
-  "support": {
-    "email": "support@getkirby.com",
-    "issues": "https://github.com/getkirby/starterkit/issues",
-    "forum": "https://forum.getkirby.com",
-    "source": "https://github.com/getkirby/starterkit"
-  },
+  "homepage": "https://dertagundich.de",
   "require": {
     "php": ">=8.2.0",
     "getkirby/cms": "^3.9",
