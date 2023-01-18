@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29149b7a0bfa31c6df5447d8130df91e",
+    "content-hash": "6a7c40cc29bc821b96cf0d39ce136f77",
     "packages": [
         {
             "name": "amteich/kirby-twig",
