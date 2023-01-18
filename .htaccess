@@ -55,3 +55,99 @@ AddOutputFilterByType DEFLATE application/json
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
+
+<IfModule mod_headers.c>
+Header set Access-Control-Allow-Origin "https://www.dertagundich.de"
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Xss-Protection "1; mode=block"
+Header always set Referrer-Policy "no-referrer-when-downgrade"
+Header always set Permissions-Policy "geolocation=(), midi=(), camera=(), usb=(), magnetometer=(), accelerometer=(), vr=(), speaker=(), ambient-light-sensor=(), gyroscope=(), microphone=()"
+</IfModule>
+
+<IfModule mod_filter.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml image/svg+xml text/css application/javascript text/javascript application/json
+</IfModule>
+
+<IfModule mod_expires.c>
+  AddType image/svg+xml .svg .svgz
+  AddType image/avif avif
+  #AddType image/webp webp
+  AddType application/font-woff2 woff2
+</IfModule>
+
+<IfModule mod_expires.c>
+  # Automatically add the `Cache-Control` header (as well as the
+  # equivalent `Expires` header).
+    ExpiresActive on
+
+  # By default, inform user agents to cache all resources for 1 year.
+    ExpiresDefault                                   "access plus 1 year"
+
+  # Overwrite the previous for file types whose content usually changes
+  # very often, and thus, should not be cached for such a long period,
+  # or at all.
+    # AppCache manifest files
+
+        ExpiresByType text/cache-manifest            "access plus 0 seconds"
+
+        # [!] If you have access to the main Apache configuration
+        #     file, you can match the root favicon exactly using the
+        #     `<Location>` directive. The same cannot be done inside
+        #     of a `.htaccess` file where only the `<Files>` directive
+        #     can be used, reason why the best that can be done is match
+        #     all files named `favicon.ico` (but that should work fine
+        #     if filename/path-based revving is used)
+        #
+        # See also: https://httpd.apache.org/docs/current/sections.html#file-and-web.
+        <Files "favicon.ico">
+            ExpiresByType image/x-icon               "access plus 1 hour"
+        </Files>
+    # Data interchange
+        ExpiresByType application/atom+xml           "access plus 1 hour"
+        ExpiresByType application/rdf+xml            "access plus 1 hour"
+        ExpiresByType application/rss+xml            "access plus 1 hour"
+
+        ExpiresByType application/json               "access plus 0 seconds"
+        ExpiresByType application/ld+json            "access plus 0 seconds"
+        ExpiresByType application/schema+json        "access plus 0 seconds"
+        ExpiresByType application/vnd.geo+json       "access plus 0 seconds"
+    # HTML
+        ExpiresByType text/html                      "access plus 0 seconds"
+
+    # Where needed add `immutable` value to the `Cache-Control` header
+    <IfModule mod_headers.c>
+        # Because `mod_headers` cannot match based on the content-type,
+        # the following workaround needs to be done.
+
+        # 1) Add the `immutable` value to the `Cache-Control` header
+        #    to all resources.
+
+        Header merge Cache-Control immutable
+
+        # 2) Remove the value for all resources that shouldn't be have it.
+        <FilesMatch "\.(appcache|cur|geojson|ico|json(ld)?|x?html?|topojson|xml)$">
+            Header edit Cache-Control immutable ""
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header unset Expires
+    Header unset Host
+    Header unset P3P
+    Header unset Pragma
+    Header unset Public-Key-Pins
+    Header unset Public-Key-Pins-Report-Only
+    Header unset Via
+    Header unset X-AspNet-Version
+    Header unset X-AspNetMvc-version
+    Header unset X-Frame-Options
+    Header unset X-Powered-By
+    Header unset X-Runtime
+    Header unset X-Version
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+</IfModule>
