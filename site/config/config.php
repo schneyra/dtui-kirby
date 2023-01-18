@@ -1,7 +1,6 @@
 <?php
 
 return [
-    'debug' => true,
     'locale' => 'de_DE.utf-8',
     'home' => 'blog',
     'options' => [
