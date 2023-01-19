@@ -28,7 +28,17 @@ return [
                 return var_dump($cagegory);
                 //go($uid);
             }
-        ]
+        ],
+        [
+            'pattern' => 'feed.xml',
+            'action'  => function () {
+                return Page::factory([
+                    'slug' => 'feed.xml',
+                    'template' => 'feed.xml',
+                    'model' => 'virtual'
+                ]);
+            }
+        ],
     ],
     'amteich.twig.env.functions' => [
         'site' => function () { return site(); },
