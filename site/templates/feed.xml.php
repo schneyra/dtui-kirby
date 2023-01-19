@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Thanks to Bruno Meilick (bnomei)
+ * https://github.com/bnomei/kirby3-feed/blob/master/snippets/feed/rss.php
+ *
+ * Template modified to support blocks
+ */
+
 use Kirby\Toolkit\Xml;
 
 $kirby->response()->type('application/xml');
