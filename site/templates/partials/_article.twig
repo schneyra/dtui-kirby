@@ -5,16 +5,18 @@
         <h1 class="article__headline">{{ article.title }}</h1>
     {% endif %}
 
+    {#
     {% if article.thumbnail.toFile() %}
         <img src="{{ article.thumbnail.toFile().url }}" width="200" alt="">
     {% endif %}
+    #}
 
     {% for block in article.text.toBlocks %}
         {{ block|raw }}
     {% endfor %}
 
     <footer class="article__footer">
-        <time datetime="{{ article.date.strtotime() }}">{{ article.date.toDate("d. F Y — H:i") }} Uhr</time>
+        <time datetime="{{ article.date.strtotime() }}"><a href="{{ article.articleUrl }}">{{ article.date.toDate("d. F Y") }}</a> &mdash; {{ article.date.toDate("H:i") }} Uhr</time>
         {# &middot;
         {% for category in article.categories().split() %}
             <a href="{{ url('/kategorie/' ~ category) }}">{{ category }}</a>
