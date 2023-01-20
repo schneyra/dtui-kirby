@@ -6,6 +6,9 @@ return [
     'options' => [
         'secrets' => require_once 'config.secrets.php',
     ],
+    'date'  => [
+        'handler' => 'intl'
+    ],
     'routes' => [
         [
             'pattern' => '(:num)/(:num)/(:num)/(:any)',
