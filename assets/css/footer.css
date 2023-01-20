@@ -1,0 +1,23 @@
+.site-footer {
+  margin-top: var(--space-4xl);
+  margin-bottom: var(--space-l);
+}
+
+.footer-navigation {
+  max-width: var(--contentWidth);
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+}
+
+.footer-navigation + .footer-navigation {
+  margin-top: var(--space-s);
+}
+
+.footer-navigation__item {
+  display: inline;
+}

@@ -8,21 +8,27 @@
   max-width: var(--contentWidth);
 }
 
+.article > * + * {
+  margin-top: 1em;
+}
+
 .article > .gallery-wrapper {
   max-width: var(--wideContentWidth);
 }
 
 .article__headline {
-  font-size: 2rem;
+  font-size: var(--step-3);
   font-weight: 700;
   font-family: 'Cabin Sketch', cursive;
   text-transform: uppercase;
 }
 
-.article > * + * {
-  margin-top: 1em;
+.article__footer {
+  margin-top: var(--space-l);
+  font-size: var(--step--1);
+  text-align: right;
 }
 
 .article + .article {
-  margin-top: 5rem;
+  margin-top: var(--space-4xl);
 }

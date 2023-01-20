@@ -6,6 +6,7 @@
 @import url("links.css");
 @import url("pagination.css");
 @import url("gallery.css");
+@import url("footer.css");
 
 @font-face {
   font-family: 'Cabin Sketch';
@@ -17,12 +18,8 @@
   url('../fonts/cabin-sketch-v19-latin-700.woff') format('woff');
 }
 
-html {
-  font-size: var(--step-0);
-}
-
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.6;
-  margin-bottom: 6rem;
+  font-size: var(--step-0);
 }
