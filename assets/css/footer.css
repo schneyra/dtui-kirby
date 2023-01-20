@@ -1,6 +1,7 @@
 .site-footer {
   margin-top: var(--space-4xl);
   margin-bottom: var(--space-l);
+  padding: 0 var(--space-s);
 }
 
 .footer-navigation {
