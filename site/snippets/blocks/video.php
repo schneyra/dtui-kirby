@@ -5,6 +5,7 @@ use Kirby\Cms\Html;
 ?>
 <?php if ($video = Html::video($block->url(), [], ['class' => 'js-video-iframe'])): ?>
   <?php $video = str_replace('src=', 'data-src=', $video); ?>
+  <?php $video = str_replace('youtube.com', 'youtube-nocookie.com', $video); ?>
 
   <figure class="video-wrapper">
     <div class="video js-video">

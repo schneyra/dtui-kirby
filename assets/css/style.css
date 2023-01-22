@@ -9,7 +9,7 @@
 @import url("video.css");
 @import url("footer.css");
 
-@font-face {
+/*@font-face {
   font-family: 'Cabin Sketch';
   font-style: normal;
   font-weight: 700;
@@ -17,7 +17,17 @@
   src: local(''),
   url('../fonts/cabin-sketch-v19-latin-700.woff2') format('woff2'),
   url('../fonts/cabin-sketch-v19-latin-700.woff') format('woff');
+}*/
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+  url('../fonts/vollkorn-v21-latin-700.woff2') format('woff2'),
+  url('../fonts/vollkorn-v21-latin-700.woff') format('woff');
 }
+
 
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

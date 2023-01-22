@@ -62,5 +62,6 @@
 :root {
   --contentWidth: 800px;
   --wideContentWidth: 1200px;
-  --headlineFontFamily: 'Cabin Sketch', cursive;
+  --headlineFontFamily: 'Vollkorn', cursive;
+  --headlineFontWeight: 700;
 }
