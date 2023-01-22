@@ -20,7 +20,7 @@
 .article__headline {
   font-size: var(--step-3);
   font-weight: 700;
-  font-family: 'Cabin Sketch', cursive;
+  font-family: var(--headlineFontFamily);
   text-transform: uppercase;
 }
 

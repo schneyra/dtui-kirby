@@ -62,4 +62,5 @@
 :root {
   --contentWidth: 800px;
   --wideContentWidth: 1200px;
+  --headlineFontFamily: 'Cabin Sketch', cursive;
 }

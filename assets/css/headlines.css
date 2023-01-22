@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cabin Sketch', cursive;
+  font-family: var(--headlineFontFamily);
   font-weight: 700;
   text-transform: uppercase;
   text-shadow: 0 0 1px #ddd;

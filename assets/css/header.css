@@ -14,7 +14,7 @@
 .site-header a:visited {
   font-size: var(--step-3);
   font-weight: 700;
-  font-family: 'Cabin Sketch', cursive;
+  font-family: var(--headlineFontFamily);
   text-transform: uppercase;
   color: hsl(216, 71%, 23%);
   text-decoration-color: transparent;
