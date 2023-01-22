@@ -1,0 +1,39 @@
+.video-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.video {
+  background: #eee;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: grid;
+}
+
+.video > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.video iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+  align-self: stretch;
+  background-color: #fafafa;
+}
+
+.video button {
+  font-size: var(--step--1);
+  border: 0;
+  background: transparent;
+}
+
+.video__disclaimer {
+  font-size: var(--step--2);
+  padding: var(--space-xs);
+  text-align: center;
+  align-self: end;
+  background: #eee;
+}

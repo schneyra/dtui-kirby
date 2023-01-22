@@ -12,7 +12,8 @@
   margin-top: 1em;
 }
 
-.article > .gallery-wrapper {
+.article > .gallery-wrapper,
+.article > .video-wrapper {
   max-width: var(--wideContentWidth);
 }
 
