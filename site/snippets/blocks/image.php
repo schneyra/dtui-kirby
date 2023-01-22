@@ -1,6 +1,7 @@
 <?php
 
 /** @var \Kirby\Cms\Block $block */
+
 $alt     = $block->alt();
 $caption = $block->caption();
 $crop    = $block->crop()->isTrue();
@@ -49,7 +50,6 @@ $sizes = "(min-width: 800px) 800px, 100vw";
           loading="lazy"
           decoding="async"
         >
-
       </picture>
 
     <?php if ($link->isNotEmpty()): ?>

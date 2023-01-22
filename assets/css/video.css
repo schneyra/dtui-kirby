@@ -9,6 +9,7 @@
   height: auto;
   aspect-ratio: 16 / 9;
   display: grid;
+  box-shadow: 0 25px 100px -20px rgba(21,31,55,.25),0 15px 60px -30px rgba(0,0,0,.3);
 }
 
 .video > * {
@@ -27,7 +28,17 @@
 .video button {
   font-size: var(--step--1);
   border: 0;
-  background: transparent;
+  background-color: hsla(255, 0%, 0%, 0.25);
+  background-image: url('../images/play-circle-transparent.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12.5%;
+  cursor: pointer;
+  transition: background-size 100ms ease-out;
+}
+
+.video button:hover {
+  background-size: 15%;
 }
 
 .video__disclaimer {
@@ -35,5 +46,7 @@
   padding: var(--space-xs);
   text-align: center;
   align-self: end;
-  background: #eee;
+  background: hsla(0, 0%, 100%, 0.85);
+  text-transform: uppercase;
+  font-weight: 600;
 }

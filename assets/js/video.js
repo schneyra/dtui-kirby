@@ -12,7 +12,7 @@
         iframe.setAttribute('src', `${iframe.getAttribute('data-src')}?autoplay=true`);
         iframe.removeAttribute('data-src');
         button.remove();
-        //cover.remove();
+        cover.remove();
         disclaimer.remove();
       });
     });

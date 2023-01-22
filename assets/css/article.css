@@ -15,6 +15,12 @@
 .article > .gallery-wrapper,
 .article > .video-wrapper {
   max-width: var(--wideContentWidth);
+  margin-top: 3em;
+}
+
+.article > .gallery-wrapper + *,
+.article > .video-wrapper + * {
+  margin-top: 3em;
 }
 
 .article__headline {
