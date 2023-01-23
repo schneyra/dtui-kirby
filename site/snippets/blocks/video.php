@@ -30,7 +30,7 @@ echo "</pre>";*/
   }
 
   if ($coverImageUrl) {
-    $imageName = getimage($coverImageUrl, $block->parent()->root(), 'cover-' . $videoId);
+    $imageName = getRemoteImage($coverImageUrl, $block->parent()->root(), 'cover-' . $videoId);
 
     if ($imageName) {
       $coverImage = $block->parent()->images()->find($imageName);

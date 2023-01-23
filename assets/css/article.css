@@ -13,15 +13,22 @@
 }
 
 .article > .gallery-wrapper,
+.article > .image-wrapper,
 .article > .video-wrapper {
   max-width: var(--wideContentWidth);
-  margin-top: 3em;
+  margin-top: var(--space-xl);
 }
 
 .article > .gallery-wrapper + *,
+.article > .image-wrapper + *,
 .article > .video-wrapper + * {
-  margin-top: 3em;
+  margin-top: var(--space-xl-2xl);
 }
+
+.article > .image-wrapper + .image-wrapper {
+  margin-top: var(--space-2xl);
+}
+
 
 .article__headline {
   font-size: var(--step-3);

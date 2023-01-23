@@ -9,7 +9,7 @@
   height: auto;
   aspect-ratio: 16 / 9;
   display: grid;
-  box-shadow: 0 25px 100px -20px rgba(21,31,55,.25),0 15px 60px -30px rgba(0,0,0,.3);
+  box-shadow: var(--boxShadow);
 }
 
 .video > * {

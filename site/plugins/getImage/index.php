@@ -1,10 +1,17 @@
 <?php
-function getimage($imgUrl, $articlePath, $newFilename){
+
+/**
+ * @param $imgUrl
+ * @param $articlePath
+ * @param $newFilename
+ * @return string|null
+ */
+function getRemoteImage($imgUrl, $articlePath, $newFilename){
     $urlArray = explode('/', $imgUrl);
 
     if ($newFilename) {
-        $filenameArray = explode('.', array_pop($urlArray));
-        $filename = $newFilename . '.' . array_pop($filenameArray);
+        $fileEnding = 'jpg';
+        $filename = $newFilename . '.' . $fileEnding;
     } else {
         $filename = array_pop($urlArray);
     }
