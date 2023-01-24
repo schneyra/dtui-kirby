@@ -18,8 +18,7 @@
   "homepage": "https://dertagundich.de",
   "require": {
     "php": ">=8.1.0",
-    "getkirby/cms": "^3.9",
-    "amteich/kirby-twig": "^4.2"
+    "getkirby/cms": "^3.9"
   },
   "config": {
     "allow-plugins": {

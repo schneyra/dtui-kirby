@@ -43,9 +43,4 @@ return [
             }
         ],
     ],
-    'amteich.twig.env.functions' => [
-        'site' => function () { return site(); },
-        'page' => function () { return page(); },
-        'user' => function () { return user(); },
-    ]
 ];
