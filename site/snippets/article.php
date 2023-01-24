@@ -1,8 +1,8 @@
 <article class="article content-layout">
-  <?php if (isset($hasHeadlineLink) && $hasHeadlineLink === true) : ?>
-    <h2 class="article__headline"><a href="<?= $article->articleUrl() ?>"><?= $article->title() ?></a></h2>
-  <?php else: ?>
+  <?php if (isset($isSingle) && $isSingle === true) : ?>
     <h1 class="article__headline"><?= $article->title() ?></h1>
+  <?php else: ?>
+    <h2 class="article__headline"><a href="<?= $article->articleUrl() ?>"><?= $article->title() ?></a></h2>
   <?php endif; ?>
 
   <?php /*
@@ -12,7 +12,7 @@
   #} */?>
 
   <?= $article->text()->toBlocks() ?>
-  
+
   <footer class="article__footer">
         <time datetime="<?= $article->date()->strtotime() ?>"><a href="<?= $article->articleUrl() ?>"><?= $article->date()->toDate("dd. MMMM YYYY") ?></a> &mdash; <?= $article->date()->toDate("HH:mm") ?> Uhr</time>
         <?php /*{# &middot;

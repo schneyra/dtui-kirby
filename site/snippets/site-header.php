@@ -14,6 +14,13 @@
   <?= css('@auto') ?>
 
   <link rel="alternate" type="application/rss+xml" title="der tag und ich" href="<?= $site->url() ?>/feed.xml">
+
+  <?php if (isset($renderArticleMeta) && $renderArticleMeta === true) : ?>
+    <?php snippet('meta-article'); ?>
+  <?php else: ?>
+    <?php snippet('meta-common'); ?>
+  <?php endif; ?>
+
 </head>
 
 <body>

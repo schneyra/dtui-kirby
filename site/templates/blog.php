@@ -6,7 +6,6 @@
     <?php
     snippet('article', [
       'article' => $article,
-      'hasHeadlineLink' => true
     ]);
     ?>
   <?php endforeach; ?>

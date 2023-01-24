@@ -1,8 +1,11 @@
-<?php snippet('site-header') ?>
+<?php snippet('site-header', [
+  'renderArticleMeta' => true
+]) ?>
 
 <?php
   snippet('article', [
-    'article' => $page
+    'article' => $page,
+    'isSingle' => true,
   ]);
 ?>
 
