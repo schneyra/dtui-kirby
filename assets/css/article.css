@@ -34,7 +34,6 @@
   font-size: var(--step-3);
   font-weight: var(--headlineFontWeight);
   font-family: var(--headlineFontFamily);
-  text-transform: uppercase;
 }
 
 .article__footer {

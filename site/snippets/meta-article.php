@@ -37,6 +37,7 @@
   <meta property="og:description" content="<?= $description ?>" />
   <meta property="og:url" content="<?= $page->articleUrl() ?>" />
   <meta property="og:site_name" content="Martin Schneider" />
+  <meta property="og:image" content="<?= e($page->template()->name() === 'article', $page->url() . '.png', $site->url() . '/default-og.png') ?>">
   <meta property="article:publisher" content="schneyra" />
   <meta property="article:author" content="schneyra" />
   <meta property="article:published_time" content="<?= $page->date()->strtotime() ?>" />
@@ -49,3 +50,5 @@
   <meta name="twitter:data1" content="Martin Schneider" />
   <meta name="twitter:label2" content="Lesezeit" />
   <meta name="twitter:data2" content="<?= $readingTime['minutes'] ?> Minuten" />
+
+
