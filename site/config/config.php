@@ -14,8 +14,8 @@ return [
             'pattern' => '(:num)/(:num)/(:num)/(:any).png',
             'action'  => function($year, $month, $day, $slug) {
                 $page = page($year . '/' . $month . '/' . $day  . '/' . $slug);
-                if(!$page) $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
-                if(!$page) $page = site()->errorPage();
+                if (!$page) $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
+                if (!$page) $page = site()->errorPage();
                 return $page->render([], 'png');
             },
         ],
@@ -23,8 +23,8 @@ return [
             'pattern' => '(:num)/(:num)/(:num)/(:any)',
             'action'  => function($year, $month, $day, $slug) {
                 $page = page($year . '/' . $month . '/' . $day  . '/' . $slug);
-                if(!$page) $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
-                if(!$page) $page = site()->errorPage();
+                if (!$page) $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
+                if (!$page) $page = site()->errorPage();
                 return site()->visit($page);
             },
         ],
@@ -39,6 +39,30 @@ return [
             'action'  => function($cagegory) {
                 return var_dump($cagegory);
                 //go($uid);
+            }
+        ],
+        [
+            'pattern' => '(:num)/(:num)/(:num)',
+            'action'  => function($year, $month, $day) {
+                $page = page('blog/' . $year . '/' . $month . '/' . $day);
+                if (!$page) $page = site()->errorPage();
+                return site()->visit($page);
+            }
+        ],
+        [
+            'pattern' => '(:num)/(:num)',
+            'action'  => function($year, $month) {
+                $page = page('blog/' . $year . '/' . $month);
+                if (!$page) $page = site()->errorPage();
+                return site()->visit($page);
+            }
+        ],
+        [
+            'pattern' => '(:num)',
+            'action'  => function($year) {
+                $page = page('blog/' . $year);
+                if (!$page) $page = site()->errorPage();
+                return site()->visit($page);
             }
         ],
         [
