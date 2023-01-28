@@ -27,7 +27,18 @@ columns:
                 label: Media
                 type: group
                 fieldsets:
-                  - image
+                  image:
+                    extends: blocks/image
+                    fields:
+                      align:
+                        label: Ausrichtung
+                        type: select
+                        options:
+                          center: zentriert
+                          left: links
+                          right: rechts
+                          wide: breit
+                          full: voll
                   - gallery
                   - video
                   - localvideo
@@ -58,7 +69,7 @@ columns:
           ausfluege: Ausflüge
           buecher: Bücher
           computer-technik: Computer & Technik
-          filme-serien:	Filme & Serien
+          filme-serien: Filme & Serien
           fotografie: Fotografie
           haus: Haus
           musik-konzerte-festivals: Musik & Konzerte & Festivals

@@ -29,3 +29,12 @@ tabs:
         min: 0
         max: 22
         default: 10
+      align:
+        label: Ausrichtung
+        type: select
+        options:
+          center: zentriert
+          left: links
+          right: rechts
+          wide: breit
+          full: voll
