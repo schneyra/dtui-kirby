@@ -9,7 +9,12 @@
 
   <footer class="teaser__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">
-      <?= $article->date()->toDate(new IntlDateFormatter( "de_DE", IntlDateFormatter::LONG, IntlDateFormatter::NONE, 'Europe/Berlin')) ?>
+      <?= $article->date()->toDate(new IntlDateFormatter(
+        "de_DE",
+        IntlDateFormatter::LONG,
+        IntlDateFormatter::NONE,
+        'Europe/Berlin'))
+      ?>
     </time>
 
     <?php /*{# &middot;

@@ -6,11 +6,23 @@ switch ($page->template()->name()) {
     $articles = $page->grandChildren()->children()->flip()->paginate(10);
     break;
   case 'month':
-    $title = $page->title()->toDate('MMMM') . ' ' . $page->parent()->title();
+    $title = $page->title()->toDate(new IntlDateFormatter(
+        "de_DE",
+        IntlDateFormatter::FULL,
+        IntlDateFormatter::NONE,
+        'Europe/Berlin',
+        IntlDateFormatter::GREGORIAN,
+        'MMMM')) . ' ' . $page->parent()->title();
     $articles = $page->grandChildren()->flip()->paginate(10);
     break;
   case 'day':
-    $title = $page->title() . '. ' . $page->parent()->title()->toDate('MMMM') . ' ' . $page->parent()->parent()->title();
+    $title = 'den ' . $page->title() . '. ' . $page->parent()->title()->toDate(new IntlDateFormatter(
+        "de_DE",
+        IntlDateFormatter::FULL,
+        IntlDateFormatter::NONE,
+        'Europe/Berlin',
+        IntlDateFormatter::GREGORIAN,
+        'MMMM')) . ' ' . $page->parent()->parent()->title();
     $articles = $page->children()->flip()->paginate(10);
     break;
 }
