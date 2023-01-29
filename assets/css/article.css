@@ -12,17 +12,18 @@
   margin-top: var(--defaultArticleMarginTop);
 }
 
-.article > .gallery-wrapper,
-.article > .image-wrapper,
-.article > .video-wrapper {
+.article > .align-wide {
   max-width: var(--wideContentWidth);
-  margin-top: var(--space-xl);
+}
+
+.article > .align-full {
+  max-width: 100%;
 }
 
 .article > .gallery-wrapper + *,
 .article > .image-wrapper + *,
 .article > .video-wrapper + * {
-  margin-top: var(--space-xl-2xl);
+  margin-top: var(--space-xl);
 }
 
 @media (min-width: 1000px) {
@@ -63,5 +64,5 @@
 }
 
 .article + .article {
-  margin-top: var(--space-4xl);
+  margin-top: var(--space-4xl-5xl);
 }

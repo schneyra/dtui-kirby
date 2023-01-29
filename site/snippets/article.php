@@ -14,11 +14,14 @@
   <?= $article->text()->toBlocks() ?>
 
   <footer class="article__footer">
-        <time datetime="<?= $article->date()->strtotime() ?>"><a href="<?= $article->articleUrl() ?>"><?= $article->date()->toDate("dd. MMMM YYYY") ?></a> &mdash; <?= $article->date()->toDate("HH:mm") ?> Uhr</time>
-        <?php /*{# &middot;
-        {% for category in article.categories().split() %}
-            <a href="{{ url('/kategorie/' ~ category) }}">{{ category }}</a>
-        {% endfor %}
-        #} */?>
-    </footer>
+    <time datetime="<?= $article->date()->strtotime() ?>"><a href="<?= $article->articleUrl() ?>"><?= $article->date()->toDate("dd. MMMM YYYY") ?></a> &mdash; <?= $article->date()->toDate("HH:mm") ?> Uhr</time>
+    <?php /*{# &middot;
+    {% for category in article.categories().split() %}
+        <a href="{{ url('/kategorie/' ~ category) }}">{{ category }}</a>
+    {% endfor %}
+    #} */?>
+    <?php if ($kirby->user()) : ?>
+      &middot; <a href="<?= $article->panel()->url() ?>">Bearbeiten</a>
+    <?php endif; ?>
+  </footer>
 </article>
