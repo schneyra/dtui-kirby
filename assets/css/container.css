@@ -1,0 +1,13 @@
+.container {
+  max-width: var(--contentWidth);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-s);
+}
+
+.container-wide {
+  max-width: var(--wideContentWidth);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--space-s);
+}

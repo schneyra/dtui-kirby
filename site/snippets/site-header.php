@@ -10,6 +10,8 @@
     <title><?= $page->title() ?> › <?= $site->title() ?> › Alltäglich belangloses </title>
   <?php endif; ?>
 
+  <link rel="preload" href="<?= $site->url() ?>/assets/fonts/vollkorn-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+
   <?= css('assets/css/style.css') ?>
   <?= css('@auto') ?>
 

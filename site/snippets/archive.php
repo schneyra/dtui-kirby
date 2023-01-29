@@ -17,17 +17,20 @@ switch ($page->template()->name()) {
 
 ?>
 
-<h1>Archiv für <?= $title; ?></h1>
+<div class="container">
+  <h1>Archiv für <?= $title; ?></h1>
 
-<?php foreach ($articles as $article): ?>
+  <?php foreach ($articles as $article): ?>
+    <?php
+    snippet('teaser', [
+      'article' => $article,
+    ]);
+    ?>
+  <?php endforeach; ?>
+
   <?php
-  var_dump($article->title());
+  snippet('pagination', [
+    'articles' => $articles,
+  ]);
   ?>
-<hr>
-<?php endforeach; ?>
-
-<?php
-snippet('pagination', [
-  'articles' => $articles,
-]);
-?>
+</div>
