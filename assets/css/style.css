@@ -12,20 +12,11 @@
 @import url("footer.css");
 @import url("container.css");
 
-/*@font-face {
-  font-family: 'Cabin Sketch';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local(''),
-  url('../fonts/cabin-sketch-v19-latin-700.woff2') format('woff2'),
-  url('../fonts/cabin-sketch-v19-latin-700.woff') format('woff');
-}*/
-
 @font-face {
   font-family: 'Vollkorn';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(''),
   url('../fonts/vollkorn-v21-latin-700.woff2') format('woff2'),
   url('../fonts/vollkorn-v21-latin-700.woff') format('woff');
