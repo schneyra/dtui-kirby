@@ -30,8 +30,23 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
-    - name: Install dependencies
+    - name: Install Composer dependencies
       run: composer install --prefer-dist --no-progress
+
+    - name: Cache NodeJS packages
+      id: nodejs-cache
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-nodejs-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nodejs-
+
+    - name: Install NodeJS dependencies
+      run: npm ci
+
+    - name: Run PostCSS
+      run: ./node_modules/.bin/postcss assets/css/style.css > assets/css/style.min.css
 
     - name: Deployment
       uses: easingthemes/ssh-deploy@main

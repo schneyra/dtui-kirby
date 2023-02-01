@@ -4,6 +4,7 @@ return [
     'locale' => 'de_DE.utf-8',
     'home' => 'blog',
     'options' => [
+        'local' => false,
         'secrets' => require_once 'config.secrets.php',
     ],
     'date'  => [

@@ -12,8 +12,11 @@
 
   <link rel="preload" href="<?= $site->url() ?>/assets/fonts/vollkorn-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
 
-  <?= css('assets/css/style.css') ?>
-  <?= css('@auto') ?>
+  <?php if ($kirby->option('options.local')) : ?>
+    <?= css('assets/css/style.css') ?>
+  <?php else: ?>
+    <?= css('assets/css/style.min.css') ?>
+  <?php endif; ?>
 
   <link rel="alternate" type="application/rss+xml" title="der tag und ich" href="<?= $site->url() ?>/feed.xml">
 

@@ -51,10 +51,15 @@ Icon
 # ---------------
 /site/config/.license
 
-# Composer
+# Compiled Assets
+# ---------------
+/assets/css/style.min.css
+
+# Composer & Node
 # ---------------
 /kirby/
 /vendor/
+/node_modules/
 
 # ddev
 # ---------------

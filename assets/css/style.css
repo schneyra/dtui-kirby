@@ -1,47 +1,18 @@
 @import url("reset.css");
 @import url("variables.css");
-@import url("header.css");
-@import url("article.css");
+
+@import url("body.css");
 @import url("headlines.css");
 @import url("links.css");
+@import url("header.css");
+@import url("container.css");
+
+@import url("article.css");
 @import url("pagination.css");
 @import url("gallery.css");
 @import url("video.css");
 @import url("poi.css");
 @import url("image.css");
 @import url("footer.css");
-@import url("container.css");
 
-@font-face {
-  font-family: 'Vollkorn';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local(''),
-  url('../fonts/vollkorn-v21-latin-700.woff2') format('woff2'),
-  url('../fonts/vollkorn-v21-latin-700.woff') format('woff');
-}
-
-
-body {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.6;
-  font-weight: 300;
-  font-size: var(--step-0);
-  color: hsl(216, 75%, 10%);
-}
-
-.screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-  word-break: normal;
-}
+@import url("screen-reader-text.css");
