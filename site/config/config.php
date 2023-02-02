@@ -67,7 +67,7 @@ return [
             }
         ],
         [
-            'pattern' => 'feed.xml',
+            'pattern' => ['feed.xml', 'feed'],
             'action'  => function () {
                 return Page::factory([
                     'slug' => 'feed.xml',

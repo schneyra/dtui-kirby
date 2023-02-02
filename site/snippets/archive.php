@@ -29,7 +29,6 @@ switch ($page->template()->name()) {
     $articles = $allArticles->paginate(10);
     break;
 }
-
 ?>
 
 <div class="container">
