@@ -17,6 +17,10 @@
   max-width: 100%;
 }
 
+.article > .video-wrapper {
+  margin-top: var(--space-l-xl);
+}
+
 .article > .gallery-wrapper + *,
 .article > .image-wrapper + *,
 .article > .video-wrapper + * {

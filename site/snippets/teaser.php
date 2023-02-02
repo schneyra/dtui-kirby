@@ -1,5 +1,9 @@
 <article class="teaser">
-  <h2 class="teaser__headline"><a href="<?= $article->articleUrl() ?>"><?= $article->title() ?></a></h2>
+  <h2 class="teaser__headline">
+    <a href="<?= $article->articleUrl() ?>" class="teaser__link">
+      <?= $article->title() ?>
+    </a>
+  </h2>
 
   <?php /*
   {% if article.thumbnail.toFile() %}
