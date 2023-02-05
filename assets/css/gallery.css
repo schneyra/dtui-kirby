@@ -8,12 +8,13 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  gap: var(--space-xl);
+  justify-content: space-between;
   max-width: 100%;
 }
 
 .gallery picture {
+  width: 50%;
   min-width: 50%;
-  max-width: 550px;
+  align-self: center;
 }

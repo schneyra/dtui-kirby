@@ -1,0 +1,5 @@
+blockquote {
+  border-left: 0.25rem solid hsl(216, 71%, 23%);
+  padding: var(--space-xs) calc(var(--space-s) - 0.25rem) !important;
+  background: #fafafa;
+}

@@ -17,6 +17,8 @@
   max-width: 100%;
 }
 
+.article > .image-wrapper,
+.article > .gallery-wrapper,
 .article > .video-wrapper {
   margin-top: var(--space-l-xl);
 }
@@ -48,7 +50,9 @@
   }
 }
 
-.article > .image-wrapper + .image-wrapper {
+.article > .image-wrapper + .image-wrapper,
+.article > .image-wrapper + .gallery-wrapper,
+.article > .gallery-wrapper + .image-wrapper {
   margin-top: var(--space-2xl);
 }
 

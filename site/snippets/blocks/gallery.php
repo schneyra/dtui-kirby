@@ -11,7 +11,7 @@ $sizes = "(min-width: 800px) 800px, 100vw";
   <ul class="gallery">
     <?php foreach ($block->images()->toFiles() as $image): ?>
       <li>
-        <picture>
+        <picture class="image">
           <source
             srcset="<?= $image->srcset([
               '400w'  => ['width' => 400, 'format' => 'webp'],
