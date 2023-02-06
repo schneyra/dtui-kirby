@@ -1,3 +1,4 @@
 .image {
   box-shadow: var(--boxShadow);
+  border: 1px solid #fff;
 }

@@ -2,6 +2,9 @@
   max-width: var(--wideContentWidth);
 }
 
+/**
+  * @see https://every-layout.dev/layouts/switcher/
+ */
 .gallery {
   list-style: none;
   margin: 0;
@@ -9,12 +12,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xl);
-  justify-content: space-between;
   max-width: 100%;
+  --threshold: 40rem;
 }
 
-.gallery picture {
-  width: 50%;
-  min-width: 50%;
-  align-self: center;
+.gallery > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+@media screen and (min-width: 40rem)  {
+  .gallery > * {
+    min-width: 400px;
+  }
 }
