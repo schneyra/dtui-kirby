@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "311dc20b67f75f7442fc69122c16c83b",
+    "content-hash": "35692e39c6d2268ee97a8913355b9dd2",
     "packages": [
+        {
+            "name": "bvdputte/kirby-fingerprint",
+            "version": "2.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bvdputte/kirby-fingerprint.git",
+                "reference": "9e46e295ccb900a1260077ae99564ec1b107c217"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bvdputte/kirby-fingerprint/zipball/9e46e295ccb900a1260077ae99564ec1b107c217",
+                "reference": "9e46e295ccb900a1260077ae99564ec1b107c217",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bart Vandeputte",
+                    "email": "bart.vdputte@gmail.com"
+                }
+            ],
+            "description": "Cache-busting utility to fingerprint assets (JS/CSS) in Kirby 3",
+            "keywords": [
+                "Fingerprint",
+                "cache-bust",
+                "hash",
+                "kirby3",
+                "kirby3-plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/bvdputte/kirby-fingerprint/issues",
+                "source": "https://github.com/bvdputte/kirby-fingerprint/tree/2.2.5"
+            },
+            "time": "2022-10-06T19:49:24+00:00"
+        },
         {
             "name": "claviska/simpleimage",
             "version": "3.7.2",

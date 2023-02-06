@@ -60,6 +60,7 @@ Icon
 /kirby/
 /vendor/
 /node_modules/
+/site/plugins/kirby-fingerprint/
 
 # ddev
 # ---------------
