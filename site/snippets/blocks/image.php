@@ -22,6 +22,14 @@ if ($block->location() == 'web') {
  */
 
 $sizes = "(min-width: 1200px) 1200px, 100vw";
+
+if ($align == 'left' || $align == 'right') {
+  $sizes = "(min-width: 1200px) 600px, 100vw";
+}
+
+if ($align == 'full') {
+  $sizes = "100vw";
+}
 ?>
 
 <?php if ($image): ?>
@@ -38,6 +46,8 @@ $sizes = "(min-width: 1200px) 1200px, 100vw";
           '1200w' => ['width' => 1200, 'format' => 'webp'],
           '1600w' => ['width' => 1600, 'format' => 'webp'],
           '2400w' => ['width' => 2400, 'format' => 'webp'],
+          '3200w' => ['width' => 3200, 'format' => 'webp'],
+          '4000w' => ['width' => 4000, 'format' => 'webp'],
         ]) ?>"
           sizes="<?= $sizes ?>">
 
@@ -48,6 +58,8 @@ $sizes = "(min-width: 1200px) 1200px, 100vw";
           '1200w' => ['width' => 1200, 'format' => 'avif'],
           '1600w' => ['width' => 1600, 'format' => 'avif'],
           '2400w' => ['width' => 2400, 'format' => 'avif'],
+          '3200w' => ['width' => 3200, 'format' => 'avif'],
+          '4000w' => ['width' => 4000, 'format' => 'avif'],
         ]) ?>"
           sizes="<?= $sizes ?>">
 

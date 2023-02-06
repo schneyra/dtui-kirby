@@ -9,7 +9,9 @@
   margin-top: var(--defaultArticleMarginTop);
 }
 
-.article > .align-wide {
+.article > .align-wide,
+.article > .align-left,
+.article > .align-right {
   max-width: var(--wideContentWidth);
 }
 
