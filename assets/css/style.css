@@ -1,20 +1,21 @@
-@import url("reset.css");
-@import url("variables.css");
+@import url("_reset.css");
+@import url("_variables.css");
 
-@import url("body.css");
-@import url("headlines.css");
-@import url("links.css");
-@import url("header.css");
-@import url("container.css");
+@import url("_body.css");
+@import url("_headlines.css");
+@import url("_links.css");
+@import url("_header.css");
+@import url("_container.css");
 
-@import url("article.css");
-@import url("pagination.css");
-@import url("gallery.css");
-@import url("video.css");
-@import url("poi.css");
-@import url("image.css");
-@import url("footer.css");
-@import url("teaser.css");
-@import url("blockquote.css");
+@import url("_article.css");
+@import url("_pagination.css");
+@import url("_gallery.css");
+@import url("_video.css");
+@import url("_poi.css");
+@import url("_image.css");
+@import url("_footer.css");
+@import url("_teaser.css");
+@import url("_blockquote.css");
+@import url("_figcaption.css");
 
-@import url("screen-reader-text.css");
+@import url("_screen-reader-text.css");
