@@ -15,7 +15,7 @@
 
       <?php foreach ($pagination->range(10) as $r): ?>
         <li>
-          <a<?= $pagination->page() === $r ? ' aria-current="page"' : '' ?> href="<?= $pagination->pageURL($r) ?>">
+          <a<?= $pagination->page() === $r ? ' aria-current="page" class="pagination__currentpage"' : '' ?> href="<?= $pagination->pageURL($r) ?>">
             <?= $r ?>
           </a>
         </li>

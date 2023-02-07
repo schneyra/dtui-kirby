@@ -22,7 +22,7 @@ use Kirby\Http\Uri;
 
     if ($request->code() === 200) {
       $results = $request->json(false);
-      $coverImageUrl = $results->items[0]->snippet->thumbnails->maxres->url;
+      $coverImageUrl = $results->items[0]->snippet->thumbnails->maxres->url ?? $results->items[0]->snippet->thumbnails->high->url;
       $videoTitle = $results->items[0]->snippet->title;
       $video = str_replace('data-src="', 'title="' . htmlentities($videoTitle) . '" data-src="', $video);
     }
