@@ -34,8 +34,13 @@ var_dump($block->parent()->root());
 echo "</pre>";*/
   }
 
+  /**
+   * @todo Bild nur einmal laden
+   * Eigentlich muss das hier alles nur beim ersten Lauf gemacht
+   *  werden, danach liegt das Bild im Dateisystem vor.
+   */
   if ($coverImageUrl) {
-    $imageName = getRemoteImage($coverImageUrl, $block->parent()->root(), 'cover-' . $videoId);
+    $imageName = getRemoteImage($coverImageUrl, $block->parent()->root(), 'cover-remote-' . $videoId);
 
     if ($imageName) {
       $coverImage = $block->parent()->images()->find($imageName);
