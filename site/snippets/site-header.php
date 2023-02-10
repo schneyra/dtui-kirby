@@ -25,7 +25,10 @@
   <?php else: ?>
     <?php snippet('meta-common'); ?>
   <?php endif; ?>
-
+  
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
 </head>
 
 <body>
