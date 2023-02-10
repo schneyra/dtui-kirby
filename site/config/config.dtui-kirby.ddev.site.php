@@ -5,4 +5,9 @@ return [
     'options' => [
         'local' => true,
     ],
+    'cache' => [
+        'pages' => [
+            'active' => false
+        ]
+    ]
 ];

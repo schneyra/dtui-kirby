@@ -77,4 +77,10 @@ return [
             }
         ],
     ],
+    'cache' => [
+        'pages' => [
+            'active' => true,
+            'type'   => 'file'
+        ]
+    ]
 ];
