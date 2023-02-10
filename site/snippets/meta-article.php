@@ -25,8 +25,7 @@
     $readingTime['minutes'] = $readingTime['minutes'] + 1;
   }
 
-  $description = implode(' ', array_slice(explode(' ', strip_tags($articleBody)), 0, 10)) . '...';
-
+  $description = trim(implode(' ', array_slice(explode(' ', strip_tags($articleBody)), 0, 10)) . '...');
   ?>
 
   <meta name="description" content="<?= $description ?>" />

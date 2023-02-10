@@ -25,5 +25,32 @@
 </footer>
 
 <?= js('assets/js/video.js') ?>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "email": "mailto:hallo@martinschneider.me",
+    "image": "<?= $site->url() ?>/images/avatar.jpg",
+    "jobTitle": "Frontend-Developer, Diplom Informatiker (FH)",
+    "name": "Martin Schneider",
+    "url": "https://martinschneider.me",
+    "sameAs": [
+      "https://www.dertagundich.de/",
+      "https://github.com/schneyra/",
+      "https://mastodon.social/@schneyra",
+      "https://www.linkedin.com/in/martin-schneider-b941bb5b/",
+      "https://www.xing.com/profile/Martin_Schneider68/cv"
+    ]
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "<?= $site->url() ?>"
+  }
+</script>
 </body>
 </html>
