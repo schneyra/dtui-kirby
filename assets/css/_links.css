@@ -13,7 +13,7 @@ a:visited {
 }
 
 a:hover {
-  color: var(--colorPrimaryDark);
+  color: var(--colorPrimaryLight);
   text-decoration-color: var(--colorSecondary);
   text-underline-offset: 0.15em;
 }

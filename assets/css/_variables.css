@@ -63,12 +63,14 @@
 }
 
 :root {
-  --colorPrimary: hsl(220, 75%, 25%);
+  --colorPrimary: hsl(220, 100%, 15%);
+  --colorPrimaryDark: hsl(220, 60%, 10%);
   --colorPrimaryDesaturated: hsl(220, 15%, 25%);
-  --colorPrimaryDark: hsl(220, 100%, 5%);
+  --colorPrimaryLight: hsl(220, 75%, 25%);
   --colorSecondary: hsl(50, 100%, 50%);
   --colorSecondaryDesaturated: hsl(50, 50%, 50%);
   --backgroundGradient: linear-gradient(to bottom, hsl(216, 75%, 99%), hsl(216, 50%, 98%));
+  --backgroundGradientBlue: linear-gradient(to bottom, hsl(220, 100%, 15%), hsl(220, 60%, 10%));
   --backgroundPrimary: hsl(0, 0%, 100%);
   --backgroundTransparentDark: hsla(220, 50%, 10%, 0.25);
   --backgroundTransparentLight: hsla(0, 0%, 100%, 0.85);

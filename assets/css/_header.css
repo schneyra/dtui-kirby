@@ -1,6 +1,6 @@
 .site-header__content {
   max-width: var(--contentWidth);
-  padding: var(--space-l-xl) var(--space-s);
+  padding: var(--space-l) var(--space-s);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -8,18 +8,35 @@
 
 .site-header a,
 .site-header a:visited {
-  font-size: var(--step-3);
+  font-size: var(--step-0);
   font-weight: var(--headlineFontWeight);
   font-family: var(--headlineFontFamily);
   text-transform: uppercase;
-  color: var(--colorPrimary);
+  color: var(--backgroundPrimary);
   text-decoration-color: transparent;
+  line-height: 1;
+  padding: 0 var(--space-s) var(--space-xs) 0;
+  letter-spacing: 0.1em;
+  position: relative;
 }
+
+.site-header a::before {
+  content: "";
+  display: block;
+  width: 2000px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--backgroundGradientBlue);
+  z-index: -1;
+}
+
 
 .site-header a:hover {
   text-decoration-color: var(--colorSecondary);
 }
 
 .site-header + * {
-  margin-top: var(--space-l-xl);
+  margin-top: var(--space-xl-2xl);
 }
