@@ -1,5 +1,17 @@
 <?php
 
+function dateformat($date, $pattern) {
+  $dateFormatter = new IntlDateFormatter(
+    "de_DE",
+    IntlDateFormatter::FULL,
+    IntlDateFormatter::NONE,
+    'Europe/Berlin',
+    IntlDateFormatter::GREGORIAN,
+    $pattern);
+
+  return $dateFormatter->format(new DateTime($date));
+}
+
 switch ($page->template()->name()) {
   case 'year':
     $title = $page->title();
@@ -7,24 +19,12 @@ switch ($page->template()->name()) {
     $articles = $allArticles->paginate(10);
     break;
   case 'month':
-    $title = $page->title()->toDate(new IntlDateFormatter(
-        "de_DE",
-        IntlDateFormatter::FULL,
-        IntlDateFormatter::NONE,
-        'Europe/Berlin',
-        IntlDateFormatter::GREGORIAN,
-        'MMMM')) . ' ' . $page->parent()->title();
+    $title = dateformat($page->parent()->title() . "-" . $page->title(), 'MMMM YYYY');
     $allArticles = $page->grandChildren()->flip()->paginate(10);
     $articles = $allArticles->paginate(10);
     break;
   case 'day':
-    $title = 'den ' . $page->title() . '. ' . $page->parent()->title()->toDate(new IntlDateFormatter(
-        "de_DE",
-        IntlDateFormatter::FULL,
-        IntlDateFormatter::NONE,
-        'Europe/Berlin',
-        IntlDateFormatter::GREGORIAN,
-        'MMMM')) . ' ' . $page->parent()->parent()->title();
+    $title = 'den ' . dateformat($page->parent()->parent()->title() . "-" . $page->parent()->title() . "-" . $page->title(), 'dd. MMMM YYYY');
     $allArticles = $page->children()->flip()->paginate(10);
     $articles = $allArticles->paginate(10);
     break;

@@ -1,6 +1,6 @@
 .teaser {
   padding: var(--space-s);
-  background-color: #fafafa;
+  background-color: #fff;
   position: relative;
   transition: box-shadow 100ms ease-out;
 }
@@ -26,6 +26,11 @@
 .teaser__footer {
   font-size: var(--step--1);
   margin-top: var(--space-xs);
+}
+
+.teaser__edit-link {
+  position: relative;
+  z-index: 2;
 }
 
 .archive-flow {

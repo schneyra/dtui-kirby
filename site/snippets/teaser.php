@@ -28,7 +28,7 @@
     #} */?>
 
     <?php if ($kirby->user()) : ?>
-      &middot; <a href="<?= $article->panel()->url() ?>">Bearbeiten</a>
+      &middot; <a href="<?= $article->panel()->url() ?>" class="teaser__edit-link">Bearbeiten</a>
     <?php endif; ?>
   </footer>
 </article>

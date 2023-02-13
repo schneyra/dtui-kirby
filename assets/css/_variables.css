@@ -58,6 +58,6 @@
   --headlineFontFamily: 'Vollkorn', cursive;
   --headlineFontWeight: 700;
   --boxShadow: 0 25px 100px -20px rgba(21,31,55,.25), 0 15px 60px -30px rgba(0,0,0,.3);
-  --boxShadowSmall: 0 6px 100px -5px rgba(21,31,55,.25), 0 3px 15px -7px rgba(0,0,0,.3);
+  --boxShadowSmall: 0 6px 10px -5px rgba(21,31,55,.25), 0 3px 15px -7px rgba(0,0,0,.3);
   --defaultArticleMarginTop: 1.5em;
 }
