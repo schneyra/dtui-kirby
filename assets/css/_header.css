@@ -38,5 +38,5 @@
 }
 
 .site-header + * {
-  margin-top: var(--space-xl-2xl);
+  margin-top: var(--space-2xl-3xl);
 }
