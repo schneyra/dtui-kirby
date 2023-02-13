@@ -1,6 +1,6 @@
 .teaser {
   padding: var(--space-s);
-  background-color: #fff;
+  background-color: var(--backgroundPrimary);
   position: relative;
   transition: box-shadow 100ms ease-out;
 }

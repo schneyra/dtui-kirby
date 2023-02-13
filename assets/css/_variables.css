@@ -61,3 +61,15 @@
   --boxShadowSmall: 0 6px 10px -5px rgba(21,31,55,.25), 0 3px 15px -7px rgba(0,0,0,.3);
   --defaultArticleMarginTop: 1.5em;
 }
+
+:root {
+  --colorPrimary: hsl(220, 75%, 25%);
+  --colorPrimaryDesaturated: hsl(220, 15%, 25%);
+  --colorPrimaryDark: hsl(220, 100%, 5%);
+  --colorSecondary: hsl(50, 100%, 50%);
+  --colorSecondaryDesaturated: hsl(50, 50%, 50%);
+  --backgroundGradient: linear-gradient(to bottom, hsl(216, 75%, 99%), hsl(216, 50%, 98%));
+  --backgroundPrimary: hsl(0, 0%, 100%);
+  --backgroundTransparentDark: hsla(220, 50%, 10%, 0.25);
+  --backgroundTransparentLight: hsla(0, 0%, 100%, 0.85);
+}

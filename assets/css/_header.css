@@ -12,12 +12,12 @@
   font-weight: var(--headlineFontWeight);
   font-family: var(--headlineFontFamily);
   text-transform: uppercase;
-  color: hsl(216, 71%, 23%);
+  color: var(--colorPrimary);
   text-decoration-color: transparent;
 }
 
 .site-header a:hover {
-  text-decoration-color: hsl(48, 100%, 60%);
+  text-decoration-color: var(--colorSecondary);
 }
 
 .site-header + * {
