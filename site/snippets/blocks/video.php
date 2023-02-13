@@ -80,7 +80,7 @@ echo "</pre>";*/
           >
         </picture>
       <?php endif; ?>
-      <button class="js-video-button"><span class="screen-reader-text">Video abspielen</span></button>
+      <button class="js-video-button"><span class="visually-hidden">Video abspielen</span></button>
       <p class="video__disclaimer js-video-disclaimer">Mit dem Klick werden Daten von YouTube nachgeladen.</p>
     </div>
 
