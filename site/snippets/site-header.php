@@ -34,7 +34,7 @@
 <body>
 <header class="site-header">
   <div class="site-header__content">
-    <a href="<?= $site->url() ?>">der tag und ich</a>
+    <a href="<?= $site->url() ?>" class="site-header__title">der tag und ich</a>
   </div>
 </header>
 
