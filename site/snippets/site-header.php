@@ -36,6 +36,17 @@
   <div class="site-header__content">
     <a href="<?= $site->url() ?>" class="site-header__title">der tag und ich</a>
   </div>
+  <?php /*
+  <nav class="site-header__navigation">
+    <ul class="site-navigation">
+      <li class="site-navigation__item">
+        <a href="https://www.dertagundich.de/kategorie/reisen/" class="site-navigation__link">Reisen</a>
+      </li>
+      <li class="site-navigation__item">
+        <a href="https://www.dertagundich.de/archiv/" class="site-navigation__link">Archiv</a>
+      </li>
+    </ul>
+  </nav>*/ ?>
 </header>
 
 <main>
