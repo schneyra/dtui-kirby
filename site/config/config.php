@@ -38,8 +38,9 @@ return [
         [
             'pattern' => 'kategorie/(:any)',
             'action'  => function($cagegory) {
-                return var_dump($cagegory);
-                //go($uid);
+                return page('blog')->render([
+                    'category' => $cagegory
+                ]);
             }
         ],
         [

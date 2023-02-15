@@ -1,8 +1,14 @@
 <?php snippet('site-header') ?>
 
-<?php $articles = page('blog')->grandChildren()->children()->children()->flip()->paginate(10); ?>
+<?php $paginatedArticles = $articles->flip()->paginate(10); ?>
 
-<?php foreach ($articles as $article): ?>
+<?php if ($archive) : ?>
+  <div class="container archive-header">
+    <h1>Archiv für <?= $archive; ?></h1>
+  </div>
+<?php endif; ?>
+
+<?php foreach ($paginatedArticles as $article): ?>
   <?php
   snippet('article', [
     'article' => $article,
@@ -12,7 +18,7 @@
 
 <?php
 snippet('pagination', [
-  'articles' => $articles,
+  'articles' => $paginatedArticles,
 ]);
 ?>
 

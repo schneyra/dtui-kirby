@@ -1,5 +1,5 @@
 blockquote {
-  border-left: 0.25rem solid var(--colorPrimary);
+  border-left: 0.5rem solid var(--colorPrimary);
   padding: var(--space-xs) calc(var(--space-s) - 0.25rem) !important;
   background: var(--backgroundPrimary);
 }
