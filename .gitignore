@@ -65,3 +65,4 @@ Icon
 # ---------------
 /.ddev/*
 !/.ddev/config.yaml
+.php-cs-fixer.cache
