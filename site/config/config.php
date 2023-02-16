@@ -13,31 +13,39 @@ return [
     'routes' => [
         [
             'pattern' => '(:num)/(:num)/(:num)/(:any).png',
-            'action'  => function($year, $month, $day, $slug) {
+            'action'  => function ($year, $month, $day, $slug) {
                 $page = page($year . '/' . $month . '/' . $day  . '/' . $slug);
-                if (!$page) $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
-                if (!$page) $page = site()->errorPage();
+                if (!$page) {
+                    $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
+                }
+                if (!$page) {
+                    $page = site()->errorPage();
+                }
                 return $page->render([], 'png');
             },
         ],
         [
             'pattern' => '(:num)/(:num)/(:num)/(:any)',
-            'action'  => function($year, $month, $day, $slug) {
+            'action'  => function ($year, $month, $day, $slug) {
                 $page = page($year . '/' . $month . '/' . $day  . '/' . $slug);
-                if (!$page) $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
-                if (!$page) $page = site()->errorPage();
+                if (!$page) {
+                    $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
+                }
+                if (!$page) {
+                    $page = site()->errorPage();
+                }
                 return site()->visit($page);
             },
         ],
         [
             'pattern' => 'blog/(:num)/(:num)/(:num)/(:any)',
-            'action'  => function($year, $month, $day, $slug) {
+            'action'  => function ($year, $month, $day, $slug) {
                 go($year . '/' . $month . '/' . $day  . '/' . $slug);
             }
         ],
         [
             'pattern' => 'kategorie/(:any)',
-            'action'  => function($cagegory) {
+            'action'  => function ($cagegory) {
                 return page('blog')->render([
                     'category' => $cagegory
                 ]);
@@ -45,25 +53,31 @@ return [
         ],
         [
             'pattern' => '(:num)/(:num)/(:num)',
-            'action'  => function($year, $month, $day) {
+            'action'  => function ($year, $month, $day) {
                 $page = page('blog/' . $year . '/' . $month . '/' . $day);
-                if (!$page) $page = site()->errorPage();
+                if (!$page) {
+                    $page = site()->errorPage();
+                }
                 return site()->visit($page);
             }
         ],
         [
             'pattern' => '(:num)/(:num)',
-            'action'  => function($year, $month) {
+            'action'  => function ($year, $month) {
                 $page = page('blog/' . $year . '/' . $month);
-                if (!$page) $page = site()->errorPage();
+                if (!$page) {
+                    $page = site()->errorPage();
+                }
                 return site()->visit($page);
             }
         ],
         [
             'pattern' => '(:num)',
-            'action'  => function($year) {
+            'action'  => function ($year) {
                 $page = page('blog/' . $year);
-                if (!$page) $page = site()->errorPage();
+                if (!$page) {
+                    $page = site()->errorPage();
+                }
                 return site()->visit($page);
             }
         ],

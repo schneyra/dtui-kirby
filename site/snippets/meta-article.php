@@ -1,7 +1,7 @@
 <?php
   $description = DtuiHelper::generateMetaDescription($page);
   $readingTime =DtuiHelper::generateReadingTime($page);
-?>
+  ?>
 
 <meta name="description" content="<?= $description ?>" />
 <link rel="canonical" href="<?= $page->articleUrl() ?>" />

@@ -4,7 +4,6 @@
  */
 
 return function ($page, $category) {
-
     $articles = $page->grandChildren()->children()->children();
 
     if ($category) {
@@ -15,5 +14,4 @@ return function ($page, $category) {
         'articles' => $articles,
         'archive' => $category
     ];
-
 };
