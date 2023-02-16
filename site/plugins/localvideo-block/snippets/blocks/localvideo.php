@@ -10,5 +10,4 @@
     <?php if ($block->description() != ""): ?>
         <p><?= $block->description() ?> </p>
     <?php endif; ?>
-
 </figure>

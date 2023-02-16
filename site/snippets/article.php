@@ -22,12 +22,7 @@
   <footer class="article__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">
       <a href="<?= $article->articleUrl() ?>">
-        <?= $article->date()->toDate(new IntlDateFormatter(
-          "de_DE",
-          IntlDateFormatter::LONG,
-          IntlDateFormatter::SHORT,
-          'Europe/Berlin'))
-        ?> Uhr
+        <?= DtuiHelper::getDateTimeForArticle($article) ?>
       </a>
     </time>
 
