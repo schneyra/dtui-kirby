@@ -38,12 +38,11 @@ Icon
 
 # Accounts
 # ---------------
-
 /site/accounts/*
 !/site/accounts/index.html
+
 # Sessions
 # ---------------
-
 /site/sessions/*
 !/site/sessions/index.html
 

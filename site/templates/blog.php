@@ -10,16 +10,14 @@
 
 <?php foreach ($paginatedArticles as $article): ?>
   <?php
-  snippet('article', [
-    'article' => $article,
-  ]);
-  ?>
+    snippet('article', [
+      'article' => $article,
+    ]);
+    ?>
 <?php endforeach; ?>
 
 <?php
-snippet('pagination', [
-  'articles' => $paginatedArticles,
-]);
+  snippet('pagination', ['articles' => $paginatedArticles]);
 ?>
 
 <?php snippet('site-footer') ?>
