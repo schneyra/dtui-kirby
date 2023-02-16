@@ -31,11 +31,9 @@
       </a>
     </time>
 
-    <?php /*{# &middot;
-    {% for category in article.categories().split() %}
-        <a href="{{ url('/kategorie/' ~ category) }}">{{ category }}</a>
-    {% endfor %}
-    #} */?>
+    <?php foreach ($article->categories() as $category) : ?>
+      &middot; <a href="<?= url('/kategorie/' . $category) ?>"><?= DtuiHelper::getCategoryName($category) ?></a>
+    <?php endforeach; ?>
 
     <?php if ($kirby->user()) : ?>
       &middot; <a href="<?= $article->panel()->url() ?>">Bearbeiten</a>

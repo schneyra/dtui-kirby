@@ -4,7 +4,7 @@
 
 <?php if ($archive) : ?>
   <div class="container archive-header">
-    <h1>Archiv für <?= $archive; ?></h1>
+    <h1>Archiv für <em><?= DtuiHelper::getCategoryName($archive); ?></em></h1>
   </div>
 <?php endif; ?>
 

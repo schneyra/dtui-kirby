@@ -9,18 +9,12 @@
   ]);
 ?>
 
-<?php
-$articleBody = $page->text()->toBlocks();
-$description = trim(implode(' ', array_slice(explode(' ', strip_tags($articleBody)), 0, 10)) . '...');
-
-?>
-
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "<?= $page->title() ?>",
-    "description": "<?= $description ?>",
+    "description": "<?= DtuiHelper::generateMetaDescription($page) ?>",
     "datePublished": "<?= $page->date()->strtotime() ?>",
     "mainEntityOfPage": "true",
     "image": {

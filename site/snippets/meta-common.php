@@ -5,7 +5,7 @@
 
 <meta property="og:locale" content="de_DE" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="<?= generatePageTitle($site, $page) ?>" />
+<meta property="og:title" content="<?= DtuiHelper::generatePageTitle($site, $page) ?>" />
 <meta property="og:description" content="" />
 <meta property="og:url" content="<?= $page->url() ?>" />
 <meta property="og:site_name" content="Martin Schneider" />

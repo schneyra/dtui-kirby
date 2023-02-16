@@ -8,7 +8,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title><?= generatePageTitle($site, $page); ?></title>
+  <title>
+    <?php
+      $archive = isset($archive) ? $archive : null;
+      echo DtuiHelper::generatePageTitle($site, $page, $archive);
+    ?>
+  </title>
 
   <link rel="preload" href="<?= $site->url() ?>/assets/fonts/vollkorn-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
 

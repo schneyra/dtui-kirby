@@ -26,7 +26,7 @@ $align = $block->align()->or('none');
             . ",0/820x410@2x?access_token="
             . $kirby->option('options.secrets.mapboxToken');
 
-        $imageName = getRemoteImage($url, $block->parent()->root(), 'map-' . Str::slug($block->title()));
+        $imageName = DtuiHelper::getRemoteImage($url, $block->parent()->root(), 'map-' . Str::slug($block->title()));
 
         $mapImage = null;
         if ($imageName) {

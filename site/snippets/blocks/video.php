@@ -40,7 +40,7 @@ echo "</pre>";*/
    *  werden, danach liegt das Bild im Dateisystem vor.
    */
   if ($coverImageUrl) {
-    $imageName = getRemoteImage($coverImageUrl, $block->parent()->root(), 'cover-remote-' . $videoId);
+    $imageName = DtuiHelper::getRemoteImage($coverImageUrl, $block->parent()->root(), 'cover-remote-' . $videoId);
 
     if ($imageName) {
       $coverImage = $block->parent()->images()->find($imageName);
