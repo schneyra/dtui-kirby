@@ -145,6 +145,12 @@ class DtuiHelper
         return $dateFormatter->format(new DateTime($date));
     }
 
+    /**
+     * Generiert die Datum/Uhrzeit-Ausgabe eines Artikels
+     *
+     * @param $article
+     * @return string
+     */
     public static function getDateTimeForArticle($article)
     {
         return $article->date()->toDate(new IntlDateFormatter(
