@@ -1,7 +1,7 @@
 <?php $pagination = $articles->pagination() ?>
 
 <?php if ($pagination->hasPrevPage() || $pagination->hasNextPage()) : ?>
-  <nav>
+  <nav aria-label="Seiten">
     <ul class="pagination">
       <?php if ($pagination->hasPrevPage()): ?>
         <li>

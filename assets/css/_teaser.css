@@ -28,7 +28,7 @@
   margin-top: var(--space-xs);
 }
 
-.teaser__edit-link {
+.teaser__small-link {
   position: relative;
   z-index: 2;
 }

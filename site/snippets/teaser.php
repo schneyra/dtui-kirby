@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var App $kirby
+ **/
+?>
+
 <article class="teaser">
   <h2 class="teaser__headline">
     <a href="<?= $article->articleUrl() ?>" class="teaser__link">
@@ -17,11 +23,11 @@
     </time>
 
     <?php foreach ($article->categories() as $category) : ?>
-      &middot; <a href="<?= url('/kategorie/' . $category) ?>"><?= DtuiHelper::getCategoryName($category) ?></a>
+      &middot; <a href="<?= url('/kategorie/' . $category) ?>" class="teaser__small-link"><?= DtuiHelper::getCategoryName($category) ?></a>
     <?php endforeach; ?>
 
     <?php if ($kirby->user()) : ?>
-      &middot; <a href="<?= $article->panel()->url() ?>" class="teaser__edit-link">Bearbeiten</a>
+      &middot; <a href="<?= $article->panel()->url() ?>" class="teaser__small-link">Bearbeiten</a>
     <?php endif; ?>
   </footer>
 </article>

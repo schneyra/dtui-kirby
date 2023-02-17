@@ -33,11 +33,13 @@
 
 <body>
 <header class="site-header">
-  <div class="site-header__content">
+  <?php $logoTag = ($page->isHomepage() && !isset($archive)) ? 'h1' : 'div'; ?>
+
+  <<?= $logoTag ?> class="site-header__content">
     <a href="<?= $site->url() ?>" class="site-header__title">der tag und ich</a>
-  </div>
+  </<?= $logoTag ?>>
   <?php /*
-  <nav class="site-header__navigation">
+  <nav class="site-header__navigation" aria-label="Hauptnavigation">
     <ul class="site-navigation">
       <li class="site-navigation__item">
         <a href="https://www.dertagundich.de/kategorie/reisen/" class="site-navigation__link">Reisen</a>

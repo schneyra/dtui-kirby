@@ -77,6 +77,7 @@ echo "</pre>";*/
             height="<?= $coverImage->height() ?>"
             loading="lazy"
             decoding="async"
+            alt=""
           >
         </picture>
       <?php endif; ?>

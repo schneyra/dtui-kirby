@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var App $kirby
+ **/
+?>
+
 <article class="article">
   <?php if (isset($isSingle) && $isSingle === true) : ?>
     <h1 class="article__headline">

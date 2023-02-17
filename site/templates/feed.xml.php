@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var App $kirby
+ **/
 
 /**
  * Thanks to Bruno Meilick (bnomei)

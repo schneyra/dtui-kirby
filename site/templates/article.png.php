@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var App $kirby
+ **/
 
 /**
  * Based on https://getkirby.com/docs/cookbook/content/dynamic-og-images
