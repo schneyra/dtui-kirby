@@ -10,7 +10,7 @@
   height: auto;
   aspect-ratio: 16 / 9;
   display: grid;
-  box-shadow: var(--boxShadow);
+  box-shadow: var(--shadow-elevation-high);
   border: 1px solid var(--backgroundPrimary);
 }
 

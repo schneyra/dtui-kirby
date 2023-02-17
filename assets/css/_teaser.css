@@ -2,7 +2,9 @@
   padding: var(--space-s);
   background-color: var(--backgroundPrimary);
   position: relative;
-  transition: box-shadow 100ms ease-out;
+  box-shadow: var(--shadow-elevation-low);
+  border-radius: 4px;
+  transition: background-color 100ms ease-out;
 }
 
 .teaser__headline {
@@ -20,7 +22,7 @@
 }
 
 .teaser:hover {
-  box-shadow: var(--boxShadowSmall);
+  background-color: var(--backgroundPrimaryHover);
 }
 
 .teaser__footer {

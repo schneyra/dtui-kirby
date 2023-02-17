@@ -1,4 +1,4 @@
 .image {
-  box-shadow: var(--boxShadow);
+  box-shadow: var(--shadow-elevation-high);
   border: 1px solid var(--backgroundPrimary);
 }

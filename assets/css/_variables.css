@@ -57,8 +57,6 @@
   --wideContentWidth: 1200px;
   --headlineFontFamily: 'Vollkorn', cursive;
   --headlineFontWeight: 700;
-  --boxShadow: 0 25px 100px -20px rgba(21,31,55,.25), 0 15px 60px -30px rgba(0,0,0,.3);
-  --boxShadowSmall: 0 6px 10px -5px rgba(21,31,55,.25), 0 3px 15px -7px rgba(0,0,0,.3);
   --defaultArticleMarginTop: 1.5em;
 }
 
@@ -70,8 +68,32 @@
   --colorSecondary: hsl(50, 100%, 50%);
   --colorSecondaryDesaturated: hsl(50, 50%, 50%);
   --backgroundGradient: linear-gradient(to bottom, hsl(216, 75%, 99%), hsl(216, 50%, 98%));
-  --backgroundGradientBlue: linear-gradient(to bottom, hsl(220, 100%, 15%), hsl(220, 60%, 10%));
+  --backgroundGradientBlue: linear-gradient(to bottom, hsl(220, 60%, 10%), hsl(220, 100%, 15%));
   --backgroundPrimary: hsl(0, 0%, 100%);
+  --backgroundPrimaryHover: hsl(0, 0%, 98%);
   --backgroundTransparentDark: hsla(220, 50%, 10%, 0.25);
   --backgroundTransparentLight: hsla(0, 0%, 100%, 0.85);
+}
+
+/* @link https://www.joshwcomeau.com/shadow-palette/ */
+:root {
+  --shadow-color: 0deg 0% 56%;
+  --shadow-elevation-low:
+    0.3px 0.5px 0.9px hsl(var(--shadow-color) / 0),
+    0.7px 1px 1.8px hsl(var(--shadow-color) / 0.28),
+    1.4px 2.2px 3.9px hsl(var(--shadow-color) / 0.55);
+  --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.44),
+    1.1px 1.7px 2.3px -0.8px hsl(var(--shadow-color) / 0.44),
+    2.9px 4.4px 5.9px -1.7px hsl(var(--shadow-color) / 0.44),
+    7px 10.8px 14.5px -2.5px hsl(var(--shadow-color) / 0.44);
+  --shadow-elevation-high:
+    0.2px 0.2px 0.2px hsl(var(--shadow-color) / 0.81),
+    0.2px 0.2px 0.2px -0.7px hsl(var(--shadow-color) / 0.71),
+    0.7px 0.6px 0.7px -1.4px hsl(var(--shadow-color) / 0.61),
+    1.8px 1.7px 1.9px -2.1px hsl(var(--shadow-color) / 0.51),
+    4px 3.8px 4.1px -2.9px hsl(var(--shadow-color) / 0.4),
+    7.7px 7.2px 7.9px -3.6px hsl(var(--shadow-color) / 0.3),
+    13.2px 12.3px 13.5px -4.3px hsl(var(--shadow-color) / 0.2),
+    20.9px 19.5px 21.4px -5px hsl(var(--shadow-color) / 0.1);
 }

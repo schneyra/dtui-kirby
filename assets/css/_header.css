@@ -27,7 +27,8 @@
   right: 0;
   background: var(--backgroundGradientBlue);
   z-index: -1;
-  box-shadow: var(--boxShadowSmall);
+  box-shadow: var(--shadow-elevation-low);
+  border-radius: 0 0 2px 0;
 }
 
 a.site-header__title,
@@ -72,7 +73,7 @@ a.site-header__title:hover {
   left: 0;
   background: var(--backgroundGradient);
   z-index: -1;
-  box-shadow: var(--boxShadowSmall);
+  box-shadow: var(--shadow-elevation-low);
 }
 
 .site-navigation__item + .site-navigation__item {
