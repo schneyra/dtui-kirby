@@ -22,7 +22,7 @@
       <?= DtuiHelper::dateformat($article->date(), 'dd. MMMM YYYY')?>
     </time>
 
-    <?php foreach ($article->categories() as $category) : ?>
+    <?php foreach ($article->categories()->split() as $category) : ?>
       &middot; <a href="<?= url('/kategorie/' . $category) ?>" class="teaser__small-link"><?= DtuiHelper::getCategoryName($category) ?></a>
     <?php endforeach; ?>
 

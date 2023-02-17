@@ -30,7 +30,7 @@
       <a href="<?= $article->articleUrl() ?>"><?= DtuiHelper::getDateTimeForArticle($article) ?></a>
     </time>
 
-    <?php foreach ($article->categories() as $category) : ?>
+    <?php foreach ($article->categories()->split() as $category) : ?>
       &middot; <a href="<?= url('/kategorie/' . $category) ?>"><?= DtuiHelper::getCategoryName($category) ?></a>
     <?php endforeach; ?>
 
