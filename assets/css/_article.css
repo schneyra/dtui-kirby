@@ -37,13 +37,16 @@
     width: 50%;
     float: left;
     margin-right: var(--space-m-l);
-    margin-bottom: var(--space-m-l);
   }
 
   .align-right > * {
     width: 50%;
     float: right;
     margin-left: var(--space-m-l);
+  }
+
+  .align-right > *:last-child,
+  .align-left > *:last-child {
     margin-bottom: var(--space-m-l);
   }
 
@@ -69,6 +72,7 @@
   margin-top: var(--space-l);
   font-size: var(--step--1);
   text-align: right;
+  clear: both;
 }
 
 .article + .article {
@@ -77,4 +81,8 @@
 
 .archive-header + * {
   margin-top: var(--space-2xl-3xl);
+}
+
+.article ul:not([class]) li:not([class]) {
+  margin-left: var(--space-s-m);
 }

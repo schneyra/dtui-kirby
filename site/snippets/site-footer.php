@@ -1,7 +1,7 @@
 </main>
 
 <footer class="site-footer">
-  <nav aria-label="Footer-Navigation">
+  <nav aria-label="Footer-Navigation" class="footer-navigation-wrapper">
     <ul class="footer-navigation">
       <li class="footer-navigation__item">
         <a href="<?= $site->url() ?>/impressum/" class="footer-navigation__link">Impressum</a>
