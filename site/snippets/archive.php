@@ -1,22 +1,8 @@
 <?php
+$title = DtuiHelper::generateArchiveTitle($page);
 
-switch ($page->template()->name()) {
-    case 'year':
-        $title = $page->title();
-        $allArticles = $page->grandChildren()->children()->flip();
-        $articles = $allArticles->paginate(10);
-        break;
-    case 'month':
-        $title = DtuiHelper::dateformat($page->parent()->title() . "-" . $page->title(), 'MMMM YYYY');
-        $allArticles = $page->grandChildren()->flip()->paginate(10);
-        $articles = $allArticles->paginate(10);
-        break;
-    case 'day':
-        $title = 'den ' . DtuiHelper::dateformat($page->parent()->parent()->title() . "-" . $page->parent()->title() . "-" . $page->title(), 'dd. MMMM YYYY');
-        $allArticles = $page->children()->flip()->paginate(10);
-        $articles = $allArticles->paginate(10);
-        break;
-}
+$allArticles = DtuiHelper::getAllArticlesForArchive($page);
+$articles = $allArticles->paginate(10);
 ?>
 
 <div class="container">

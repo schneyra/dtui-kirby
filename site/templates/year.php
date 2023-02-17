@@ -1,4 +1,4 @@
-<?php snippet('site-header') ?>
+<?php snippet('site-header', ['dateArchive' => $page]) ?>
 
 <?php
 snippet('archive', [

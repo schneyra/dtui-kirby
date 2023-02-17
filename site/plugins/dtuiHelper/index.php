@@ -8,10 +8,16 @@ class DtuiHelper
      * @param $site
      * @param $page
      * @param null $archive
+     * @param null $dateArchive
      * @return string
+     * @throws Exception
      */
-    public static function generatePageTitle($site, $page, $archive = null): string
+    public static function generatePageTitle($site, $page, $archive = null, $dateArchive = null): string
     {
+        if ($dateArchive) {
+            return "Archiv für " . self::generateArchiveTitle($page) . " › " . $site->title() . " › Alltäglich belangloses";
+        }
+
         if ($archive) {
             return "Archiv " . self::getCategoryName($archive) . " › " . $site->title() . " › Alltäglich belangloses";
         }
@@ -159,5 +165,56 @@ class DtuiHelper
             IntlDateFormatter::SHORT,
             'Europe/Berlin'
         )) . " Uhr";
+    }
+
+    /**
+     * Gibt das passend formatierte Datum für das aktuellen Archivs zurück
+     *
+     * @param $page
+     * @return string
+     * @throws Exception
+     */
+    public static function generateArchiveTitle($page)
+    {
+        $title = '';
+
+        switch ($page->template()->name()) {
+            case 'year':
+                $title = $page->title();
+                break;
+            case 'month':
+                $title = self::dateformat($page->parent()->title() . "-" . $page->title(), 'MMMM YYYY');
+                break;
+            case 'day':
+                $title = 'den ' . self::dateformat($page->parent()->parent()->title() . "-" . $page->parent()->title() . "-" . $page->title(), 'dd. MMMM YYYY');
+                break;
+        }
+
+        return $title;
+    }
+
+    /**
+     * Je nach Archiv muss eine andere Ebene an Content abgegriffen werden
+     *
+     * @param $page
+     * @return mixed|null
+     */
+    public static function getAllArticlesForArchive($page)
+    {
+        $allArticles = null;
+
+        switch ($page->template()->name()) {
+            case 'year':
+                $allArticles = $page->grandChildren()->children()->flip();
+                break;
+            case 'month':
+                $allArticles = $page->grandChildren()->flip();
+                break;
+            case 'day':
+                $allArticles = $page->children()->flip();
+                break;
+        }
+
+        return $allArticles;
     }
 }
