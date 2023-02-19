@@ -2,27 +2,11 @@
   max-width: var(--wideContentWidth);
 }
 
-/**
-  * @see https://every-layout.dev/layouts/switcher/
- */
 .gallery {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: var(--space-xl);
-  max-width: 100%;
-  --threshold: 40rem;
-}
-
-.gallery > * {
-  flex-grow: 1;
-  flex-basis: calc((var(--threshold) - 100%) * 999);
-}
-
-@media screen and (min-width: 40rem)  {
-  .gallery > * {
-    min-width: 400px;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
