@@ -1,19 +1,19 @@
-a {
-  color: var(--colorPrimary);
+a:link {
+  color: var(--color-primary);
   font-weight: bold;
-  text-decoration-color: var(--colorSecondary);
+  text-decoration-color: var(--color-secondary);
   text-underline-offset: 0.1em;
   text-decoration-thickness: 0.1em;
-  transition: text-decoration-color 100ms linear, color 100ms linear, text-underline-offset 100ms linear;
+  transition: color 100ms linear, text-decoration-color 100ms linear, color 100ms linear, text-underline-offset 100ms linear;
 }
 
 a:visited {
-  color: var(--colorPrimaryDesaturated);
-  text-decoration-color: var(--colorSecondaryDesaturated);
+  color: var(--color-primary-2);
+  text-decoration-color: var(--color-secondary-2);
 }
 
 a:hover {
-  color: var(--colorPrimaryLight);
-  text-decoration-color: var(--colorSecondary);
+  color: var(--color-primary-2);
+  text-decoration-color: var(--color-secondary);
   text-underline-offset: 0.15em;
 }

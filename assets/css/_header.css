@@ -25,20 +25,19 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background: var(--backgroundGradientBlue);
+  background: var(--background-dark);
   z-index: -1;
-  box-shadow: var(--shadow-elevation-low);
   border-radius: 0 0 2px 0;
 }
 
 a.site-header__title,
 a.site-header__title:visited {
   text-decoration-color: transparent;
-  color: var(--backgroundPrimary);
+  color: var(--background-light);
 }
 
 a.site-header__title:hover {
-  text-decoration-color: var(--colorSecondary);
+  text-decoration-color: var(--color-secondary);
 }
 
 .site-header + * {
@@ -71,9 +70,8 @@ a.site-header__title:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: var(--backgroundGradient);
+  background: var(--background-medium);
   z-index: -1;
-  box-shadow: var(--shadow-elevation-low);
 }
 
 .site-navigation__item + .site-navigation__item {

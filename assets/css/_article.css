@@ -19,17 +19,17 @@
   max-width: 100%;
 }
 
-.article > .image-wrapper,
-.article > .gallery-wrapper,
-.article > .video-wrapper {
+.article > .image-wrapper:not(:nth-child(2)),
+.article > .gallery-wrapper:not(:nth-child(2)),
+.article > .video-wrapper:not(:nth-child(2)) {
   clear: both;
-  margin-top: var(--space-l-xl);
+  margin-top: var(--space-l);
 }
 
 .article > .gallery-wrapper + *,
 .article > .image-wrapper + *,
 .article > .video-wrapper + * {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-l);
 }
 
 @media (min-width: 1000px) {

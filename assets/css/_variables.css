@@ -60,19 +60,22 @@
   --defaultArticleMarginTop: 1.5em;
 }
 
+
+/** @link https://coolors.co/2a3141-8d99ae-edf2f4-f6ae2d-678d58 */
 :root {
-  --colorPrimary: hsl(220, 100%, 15%);
-  --colorPrimaryDark: hsl(220, 60%, 10%);
-  --colorPrimaryDesaturated: hsl(220, 15%, 25%);
-  --colorPrimaryLight: hsl(220, 75%, 25%);
-  --colorSecondary: hsl(50, 100%, 50%);
-  --colorSecondaryDesaturated: hsl(50, 50%, 50%);
-  --backgroundGradient: linear-gradient(to bottom, hsl(216, 75%, 99%), hsl(216, 50%, 98%));
-  --backgroundGradientBlue: linear-gradient(to bottom, hsl(220, 60%, 10%), hsl(220, 100%, 15%));
-  --backgroundPrimary: hsl(0, 0%, 100%);
-  --backgroundPrimaryHover: hsl(0, 0%, 98%);
-  --backgroundTransparentDark: hsla(220, 50%, 10%, 0.25);
-  --backgroundTransparentLight: hsla(0, 0%, 100%, 0.85);
+  --color-primary: hsl(220, 51%, 21%);
+  --color-primary-2: hsl(220, 11%, 29%);
+  --color-secondary: hsl(39, 92%, 57%);
+  --color-secondary-2: hsl(39, 92%, 77%);
+
+  --color-text: hsl(220, 21%, 21%);
+
+  --background-body: hsl(220, 24%, 98%);
+  --background-light: hsl(0, 0%, 100%);
+  --background-light-transparent: hsla(0, 0%, 100%, 0.85);
+  --background-medium: hsl(220, 24%, 94%);
+  --background-dark: hsl(220, 21%, 21%);
+  --background-dark-transparent: hsla(220, 21%, 11%, 0.25);
 }
 
 /* @link https://www.joshwcomeau.com/shadow-palette/ */

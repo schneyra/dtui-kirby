@@ -1,8 +1,8 @@
 .teaser {
   padding: var(--space-s);
-  background-color: var(--backgroundPrimary);
+  background-color: var(--background-light);
   position: relative;
-  box-shadow: var(--shadow-elevation-low);
+  box-shadow: var(--shadow-elevation-medium);
   border-radius: 4px;
   transition: background-color 100ms ease-out;
 }
@@ -22,7 +22,7 @@
 }
 
 .teaser:hover {
-  background-color: var(--backgroundPrimaryHover);
+  background-color: var(--background-medium);
 }
 
 .teaser__footer {

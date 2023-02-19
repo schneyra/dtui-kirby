@@ -21,9 +21,8 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background: var(--backgroundPrimary);
+  background: var(--background-light);
   z-index: -1;
-  box-shadow: var(--shadow-elevation-low);
   border-radius: 2px 0 0 0;
 }
 
