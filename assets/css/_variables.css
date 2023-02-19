@@ -65,10 +65,10 @@
 :root {
   --color-primary: hsl(220, 51%, 21%);
   --color-primary-2: hsl(220, 11%, 29%);
-  --color-secondary: hsl(39, 92%, 57%);
+  --color-secondary: hsl(47, 73%, 48%);
   --color-secondary-2: hsl(39, 92%, 77%);
 
-  --color-text: hsl(220, 21%, 21%);
+  --color-text: hsl(220, 21%, 11%);
 
   --background-body: hsl(220, 24%, 98%);
   --background-light: hsl(0, 0%, 100%);
@@ -80,7 +80,7 @@
 
 /* @link https://www.joshwcomeau.com/shadow-palette/ */
 :root {
-  --shadow-color: 0deg 0% 56%;
+  --shadow-color: 240deg 5% 45%;
   --shadow-elevation-low:
     0.3px 0.5px 0.9px hsl(var(--shadow-color) / 0),
     0.7px 1px 1.8px hsl(var(--shadow-color) / 0.28),
