@@ -8,13 +8,18 @@
   </div>
 <?php endif; ?>
 
-<?php foreach ($paginatedArticles as $article): ?>
-  <?php
-    snippet('article', [
-      'article' => $article,
-    ]);
-    ?>
-<?php endforeach; ?>
+<?php if (count($articles)) : ?>
+  <?php foreach ($paginatedArticles as $article): ?>
+    <?php
+      snippet('article', [
+        'article' => $article,
+      ]);
+      ?>
+  <?php endforeach; ?>
+
+<?php else : ?>
+  <p class="container">Keine Beiträge gefunden.</p>
+<?php endif; ?>
 
 <?php
   snippet('pagination', ['articles' => $paginatedArticles]);

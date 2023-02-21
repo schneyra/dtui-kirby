@@ -45,9 +45,14 @@ return [
         ],
         [
             'pattern' => 'kategorie/(:any)',
-            'action'  => function ($cagegory) {
+            'action'  => function ($category) {
+                if (!DtuiHelper::isCategory($category)) {
+                    $page = site()->errorPage();
+                    return site()->visit($page);
+                }
+
                 return page('blog')->render([
-                    'category' => $cagegory
+                    'category' => $category
                 ]);
             }
         ],

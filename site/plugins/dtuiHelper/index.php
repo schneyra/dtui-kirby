@@ -30,6 +30,18 @@ class DtuiHelper
     }
 
     /**
+     * @return array
+     */
+    private static function getCategories()
+    {
+        $props = Kirby\Cms\Blueprint::load('pages/article');
+        $props['model'] = page();
+
+        $bp = new Kirby\Cms\PageBlueprint($props);
+        return $bp->fields()['categories']['options'];
+    }
+
+    /**
      * Liest die Kategorien aus den Blogartikel-Blueprint und gibt einen davon zurück
      *
      * @param $slug
@@ -37,13 +49,22 @@ class DtuiHelper
      */
     public static function getCategoryName($slug): string
     {
-        $props = Kirby\Cms\Blueprint::load('pages/article');
-        $props['model'] = page();
+        $categories = self::getCategories();
 
-        $bp = new Kirby\Cms\PageBlueprint($props);
-        $categories = $bp->fields()['categories']['options'];
+        return $categories[$slug] ?? $slug;
+    }
 
-        return $categories[$slug];
+    /**
+     * Überprüft ob es eine Kategorie gibt
+     *
+     * @param $slug
+     * @return bool
+     */
+    public static function isCategory($slug): bool
+    {
+        $categories = self::getCategories();
+
+        return array_key_exists($slug, $categories);
     }
 
     /**
