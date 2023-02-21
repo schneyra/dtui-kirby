@@ -53,7 +53,7 @@
 
 :root {
   /* Annährungswert an 70ch für Textabsätze */
-  --contentWidth: clamp(50rem, calc(30rem + 30vw),60rem);
+  --contentWidth: clamp(50rem, calc(30rem + 30vw), 55rem);
   --wideContentWidth: 1200px;
   --headlineFontFamily: 'Vollkorn', cursive;
   --headlineFontWeight: 700;
@@ -61,7 +61,7 @@
 }
 
 
-/** @link https://coolors.co/d4ad21-f1faee-a8dadc-457b9d-1d3557 */
+/** @link https://coolors.co/d4ad21-f9fafb-f2f3f8-457b9d-1d3557 */
 :root {
   --color-primary: hsl(215, 50%, 20%);
   --color-primary-2: hsl(215, 10%, 30%);

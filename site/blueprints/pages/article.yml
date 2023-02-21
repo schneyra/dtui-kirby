@@ -39,7 +39,15 @@ columns:
                           right: rechts
                           wide: breit
                           full: voll
-                  - gallery
+                  gallery:
+                    extends: blocks/gallery
+                    fields:
+                      columns:
+                        label: Spalten
+                        type: number
+                        default: 2
+                        min: 1
+                        max: 4
                   - video
                   - localvideo
               code:

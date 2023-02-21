@@ -3,12 +3,21 @@
 $caption = $block->caption();
 $crop    = $block->crop()->isTrue();
 $ratio   = $block->ratio()->or('auto');
+$columns = $block->columns()->toString();
 
 $sizes = "(min-width: 800px) 800px, 100vw";
 
+$galleryClasses = '';
+if (
+    count($block->images()->toFiles()) % 2 != 0
+    && ($columns % 2 === 0)
+) {
+    $galleryClasses .= ' gallery--odd';
+}
+
 ?>
 <figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?> class="gallery-wrapper">
-  <ul class="gallery">
+  <ul class="gallery<?= $galleryClasses ?>" style="--columns:<?= $columns ?>">
     <?php foreach ($block->images()->toFiles() as $image): ?>
       <li>
         <picture class="image">
