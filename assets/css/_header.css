@@ -41,7 +41,7 @@ a.site-header__title:hover {
 }
 
 .site-header + * {
-  margin-top: var(--space-2xl-3xl);
+  margin-top: var(--space-3xl-4xl);
 }
 
 .site-header__navigation {
