@@ -1,38 +1,22 @@
 .site-footer {
   max-width: var(--contentWidth);
   margin: var(--space-4xl) auto 0;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
 }
 
 .footer-navigation-wrapper {
-  width: max-content;
-  align-self: flex-end;
   position: relative;
-  padding: 0 var(--space-s);
-}
-
-.footer-navigation-wrapper::before {
-  content: "";
-  display: block;
-  width: 60vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  padding: var(--space-s);
   background: var(--background-light);
-  z-index: -1;
-  border-radius: 2px 0 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 .footer-navigation {
-  max-width: var(--contentWidth);
   list-style: none;
+  margin: 0;
   padding: 0;
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-s);
 }
 
