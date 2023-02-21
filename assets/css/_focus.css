@@ -3,14 +3,14 @@
 }
 
 *:focus-visible {
-  outline: 2px dashed var(--color-secondary);
+  outline: 3px dashed var(--color-secondary);
   outline-offset: 2px;
   text-decoration: none;
 }
 
 @supports not selector(:focus-visible) {
   *:focus {
-    outline: 2px dashed var(--color-secondary);
+    outline: 3px dashed var(--color-secondary);
     outline-offset: 2px;
     text-decoration: none;
   }

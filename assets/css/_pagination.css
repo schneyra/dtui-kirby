@@ -20,14 +20,15 @@
 .pagination a {
   text-decoration: none;
   line-height: 1;
-  box-shadow: var(--shadow-elevation-medium);
-  border-radius: 2px;
+  box-shadow: var(--shadow-elevation-low);
+  border-radius: 4px;
   background-color: var(--background-light);
-  transition: background-color 100ms ease-out;
+  transition: background-color 100ms ease-out, box-shadow 100ms ease-out;
 }
 
 .pagination a:hover {
   background-color: var(--background-medium);
+  box-shadow: none;
 }
 
 .pagination a[aria-current] {

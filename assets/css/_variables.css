@@ -61,21 +61,21 @@
 }
 
 
-/** @link https://coolors.co/2a3141-8d99ae-edf2f4-f6ae2d-678d58 */
+/** @link https://coolors.co/d4ad21-f1faee-a8dadc-457b9d-1d3557 */
 :root {
-  --color-primary: hsl(220, 51%, 21%);
-  --color-primary-2: hsl(220, 11%, 29%);
+  --color-primary: hsl(215, 50%, 20%);
+  --color-primary-2: hsl(215, 10%, 30%);
   --color-secondary: hsl(47, 73%, 48%);
   --color-secondary-2: hsl(39, 92%, 77%);
 
   --color-text: hsl(220, 21%, 11%);
 
-  --background-body: hsl(220, 24%, 98%);
+  --background-body: hsl(220, 25%, 98%);
   --background-light: hsl(0, 0%, 100%);
   --background-light-transparent: hsla(0, 0%, 100%, 0.85);
-  --background-medium: hsl(220, 24%, 94%);
-  --background-dark: hsl(220, 21%, 21%);
-  --background-dark-transparent: hsla(220, 21%, 11%, 0.25);
+  --background-medium: hsl(220, 25%, 100%);
+  --background-dark: hsl(215, 50%, 20%);
+  --background-dark-transparent: hsla(215, 50%, 20%, 0.25);
 }
 
 /* @link https://www.joshwcomeau.com/shadow-palette/ */
@@ -85,11 +85,6 @@
     0.3px 0.5px 0.9px hsl(var(--shadow-color) / 0),
     0.7px 1px 1.8px hsl(var(--shadow-color) / 0.28),
     1.4px 2.2px 3.9px hsl(var(--shadow-color) / 0.55);
-  --shadow-elevation-medium:
-    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.44),
-    1.1px 1.7px 2.3px -0.8px hsl(var(--shadow-color) / 0.44),
-    2.9px 4.4px 5.9px -1.7px hsl(var(--shadow-color) / 0.44),
-    7px 10.8px 14.5px -2.5px hsl(var(--shadow-color) / 0.44);
   --shadow-elevation-high:
     0.2px 0.2px 0.2px hsl(var(--shadow-color) / 0.81),
     0.2px 0.2px 0.2px -0.7px hsl(var(--shadow-color) / 0.71),
