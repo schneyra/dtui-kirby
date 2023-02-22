@@ -17,7 +17,7 @@ if (
 
 ?>
 <figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?> class="gallery-wrapper">
-  <ul class="gallery<?= $galleryClasses ?>" style="--columns:<?= $columns ?>">
+  <ul class="gallery<?= $galleryClasses ?>" style="--columns:<?= $columns ?? 2 ?>">
     <?php foreach ($block->images()->toFiles() as $image): ?>
       <li>
         <picture class="image">

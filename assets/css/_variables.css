@@ -61,12 +61,13 @@
 }
 
 
-/** @link https://coolors.co/d4ad21-f9fafb-f2f3f8-457b9d-1d3557 */
+/** @link https://coolors.co/d4ad21-f9fafb-f2f3f8-dbe9f0-1d3557 */
 :root {
   --color-primary: hsl(215, 50%, 20%);
   --color-primary-2: hsl(215, 10%, 30%);
   --color-secondary: hsl(47, 73%, 48%);
   --color-secondary-2: hsl(39, 92%, 77%);
+  --color-tertiary: hsl(200, 40%, 90%);
 
   --color-text: hsl(220, 21%, 11%);
 
