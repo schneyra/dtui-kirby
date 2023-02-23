@@ -238,4 +238,28 @@ class DtuiHelper
 
         return $allArticles;
     }
+
+    /**
+     * Gibt Beiträge von gleichen Datum aus anderen Jahren zurück.
+     * Wenn kein Page-Object übergeben wird, ist das Referenzdatum "heute".
+     *
+     * @param null $page
+     * @return Kirby\Cms\Pages Object
+     */
+    public static function onThisDay($page = null)
+    {
+        if (!$page) {
+            $date = date('m-d');
+            $today = null;
+        } else {
+            $date = $page->date()->toDate('MM-dd');
+            $today = $page->date()->toDate('YYYY-MM-dd');
+        }
+
+        return page('blog')
+            ->grandChildren()->children()->children()
+            ->filter(function ($page) use ($date, $today) {
+                return $page->date()->toDate('MM-dd') === $date && $page->date()->toDate('YYYY-MM-dd') !== $today;
+            });
+    }
 }

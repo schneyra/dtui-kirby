@@ -70,6 +70,7 @@
   --color-tertiary: hsl(200, 40%, 90%);
 
   --color-text: hsl(220, 21%, 11%);
+  --color-text-invert: hsl(220, 25%, 98%);
 
   --background-body: hsl(220, 25%, 98%);
   --background-light: hsl(0, 0%, 100%);

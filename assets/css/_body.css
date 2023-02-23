@@ -6,4 +6,8 @@ body {
   color: var(--color-text);
   background: var(--background-body);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  gap: var(--space-3xl-4xl);
 }

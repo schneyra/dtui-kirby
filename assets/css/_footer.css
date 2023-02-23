@@ -1,13 +1,14 @@
 .site-footer {
-  max-width: var(--contentWidth);
-  margin: var(--space-4xl) auto 0;
+  background-color: var(--background-dark);
+  color: var(--color-text-invert);
 }
 
 .footer-navigation-wrapper {
   position: relative;
   padding: var(--space-s);
-  background: var(--background-light);
   border-radius: 4px 4px 0 0;
+  max-width: var(--contentWidth);
+  margin: 0 auto;
 }
 
 .footer-navigation {
@@ -26,4 +27,8 @@
 
 .footer-navigation__item {
   display: inline;
+}
+
+.site-footer a {
+  color: var(--color-text-invert);
 }

@@ -40,10 +40,6 @@ a.site-header__title:hover {
   text-decoration-color: var(--color-secondary);
 }
 
-.site-header + * {
-  margin-top: var(--space-3xl-4xl);
-}
-
 .site-header__navigation {
   max-width: var(--contentWidth);
   margin: 0 auto;
