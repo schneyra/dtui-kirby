@@ -107,10 +107,9 @@ class DtuiHelper
      */
     public static function generateMetaDescription($page)
     {
-        $articleBody = $page->text()->toBlocks();
-        return trim(implode(' ', array_slice(explode(' ', strip_tags($articleBody)), 0, 10)) . '...');
+        $articleBody = trim(strip_tags($page->body()->toBlocks()));
+        return implode(' ', array_slice(explode(' ', $articleBody), 0, 10)) . '...';
     }
-
 
     /**
      * Function to calculate the estimated reading time of the given text.
@@ -140,7 +139,7 @@ class DtuiHelper
      */
     public static function generateReadingTime($page)
     {
-        $articleBody = $page->text()->toBlocks();
+        $articleBody = strip_tags($page->body()->toBlocks());
         $readingTime = self::estimateReadingTime($page->title() . ' ' .  $articleBody);
 
         if ($readingTime['seconds'] > 30) {

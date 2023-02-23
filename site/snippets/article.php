@@ -23,7 +23,7 @@
   {% endif %}
   #} */?>
 
-  <?= $article->text()->toBlocks() ?>
+  <?= $article->body()->toBlocks() ?>
 
   <footer class="article__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">

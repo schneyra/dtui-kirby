@@ -8,7 +8,8 @@ columns:
       fields:
         type: fields
         fields:
-          text:
+          body:
+            label: Inhalt
             type: blocks
             size: huge
             pretty: true
