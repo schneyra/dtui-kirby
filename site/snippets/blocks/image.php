@@ -65,7 +65,7 @@ if ($align == 'full') {
 
         <img
           src="<?= $image->crop(800)->url() ?>"
-          alt="<?= $image->alt() ?>"
+          alt="<?= $image->alt()->esc() ?>"
           width="<?= $image->width() ?>"
           height="<?= $image->height() ?>"
           class="image"
