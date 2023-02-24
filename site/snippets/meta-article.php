@@ -14,8 +14,8 @@
 <meta property="og:image" content="<?= e($page->template()->name() === 'article', $page->url() . '.png', $site->url() . '/default-og.png') ?>">
 <meta property="article:publisher" content="schneyra" />
 <meta property="article:author" content="schneyra" />
-<meta property="article:published_time" content="<?= $page->date()->strtotime() ?>" />
-<meta property="article:modified_time" content="<?= $page->modified('YYYY-MM-dd HH:mm:ss') ?>" />
+<meta property="article:published_time" content="<?= date('c', $page->date()->toTimestamp()) ?>" />
+<meta property="article:modified_time" content="<?= date('c', page()->modified()) ?>" />
 <meta name="author" content="Martin Schneider" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@schneyra" />

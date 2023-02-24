@@ -20,7 +20,7 @@
     "@type": "BlogPosting",
     "headline": "<?= $page->title() ?>",
     "description": "<?= DtuiHelper::generateMetaDescription($page) ?>",
-    "datePublished": "<?= $page->date()->strtotime() ?>",
+    "datePublished": "<?= date('c', $page->date()->toTimestamp()) ?>",
     "mainEntityOfPage": "true",
     "image": {
       "@type": "imageObject",
