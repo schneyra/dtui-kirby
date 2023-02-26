@@ -1,21 +1,26 @@
-title: Default Page
+title: Seite
 
 columns:
   main:
     width: 2/3
     sections:
-      fields:
-        type: fields
-        fields:
-          text:
-            type: blocks
-            size: huge
-            pretty: true
+      extends: sections/body
+
   sidebar:
     width: 1/3
-    sections:
-      pages:
-        type: pages
+    fields:
       files:
+        label: Dateien
         type: files
+      date:
+        label: Datum
+        type: date
+        display: DD. MMMM YYYY
+        default: now
+        time:
+          display: HH.mm
 
+options:
+  changeTemplate:
+    - article
+    - default

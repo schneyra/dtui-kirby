@@ -19,7 +19,7 @@ $link = site()->url();
 $feedurl = site()->url() . "/feed.xml";
 $description = "Dies ist Martins Blog. Alltäglich belangloses und so. Seit 2003.";
 $items = page('blog')->grandChildren()->children()->children()->flip()->limit(10);
-$modified = date('r', $items->first()->date()->toTimestamp());
+$modified = date(DATE_RSS, $items->first()->date()->toTimestamp());
 
 echo '<?xml version="1.0" encoding="utf-8"?>';
 ?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -38,7 +38,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
         <title><?= Xml::encode($item->title()) ?></title>
         <link><?= Xml::encode($item->url()) ?></link>
         <guid><?= Xml::encode($item->url()) ?></guid>
-        <pubDate><?= date('r', $item->date()->toTimestamp()) ?></pubDate>
+        <pubDate><?= date(DATE_RSS, $item->date()->toTimestamp()) ?></pubDate>
         <description><![CDATA[<?php foreach ($item->body()->toBlocks() as $block) { echo $block; } ?>]]></description>
       </item>
     <?php endforeach; ?>
