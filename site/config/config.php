@@ -36,6 +36,7 @@ return [
                 }
                 return site()->visit($page);
             },
+            'method' => 'GET|HEAD'
         ],
         [
             'pattern' => 'blog/(:num)/(:num)/(:num)/(:any)',
