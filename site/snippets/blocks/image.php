@@ -39,6 +39,7 @@ if ($align == 'full') {
     <?php endif ?>
 
       <picture>
+        <?php /*
         <source
           srcset="<?= $image->srcset([
             '400w'  => ['width' => 400, 'format' => 'avif'],
@@ -51,7 +52,7 @@ if ($align == 'full') {
           ]) ?>"
           type="image/avif"
           sizes="<?= $sizes ?>">
-
+        */ ?>
         <source
           srcset="<?= $image->srcset([
           '400w'  => ['width' => 400, 'format' => 'webp'],

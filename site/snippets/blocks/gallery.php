@@ -21,6 +21,7 @@ if (
     <?php foreach ($block->images()->toFiles() as $image): ?>
       <li>
         <picture class="image">
+          <?php /*
           <source
             srcset="<?= $image->srcset([
               '400w'  => ['width' => 400, 'format' => 'avif'],
@@ -29,6 +30,7 @@ if (
             ]) ?>"
             type="image/avif"
             sizes="<?= $sizes ?>">
+          */ ?>
 
           <source
             srcset="<?= $image->srcset([
