@@ -49,6 +49,7 @@ if ($align == 'full') {
           '3200w' => ['width' => 3200, 'format' => 'webp'],
           '4000w' => ['width' => 4000, 'format' => 'webp'],
         ]) ?>"
+          type="image/webp"
           sizes="<?= $sizes ?>">
 
         <source
@@ -61,6 +62,7 @@ if ($align == 'full') {
           '3200w' => ['width' => 3200, 'format' => 'avif'],
           '4000w' => ['width' => 4000, 'format' => 'avif'],
         ]) ?>"
+          type="image/avif"
           sizes="<?= $sizes ?>">
 
         <img

@@ -27,6 +27,7 @@ if (
               '800w'  => ['width' => 800, 'format' => 'webp'],
               '1200w' => ['width' => 1600, 'format' => 'webp']
             ]) ?>"
+            type="image/webp"
             sizes="<?= $sizes ?>">
 
           <source
@@ -35,6 +36,7 @@ if (
               '800w'  => ['width' => 800, 'format' => 'avif'],
               '1200w' => ['width' => 1600, 'format' => 'avif']
             ]) ?>"
+            type="image/avif"
             sizes="<?= $sizes ?>">
 
           <img
