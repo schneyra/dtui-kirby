@@ -11,10 +11,10 @@ $align   = $block->align()->or('none');
 $src     = null;
 
 if ($block->location() == 'web') {
-  $src = $block->src()->esc();
+    $src = $block->src()->esc();
 } elseif ($image = $block->image()->toFile()) {
-  $alt = $alt ?? $image->alt();
-  $src = $image->url();
+    $alt = $alt ?? $image->alt();
+    $src = $image->url();
 }
 
 /**
@@ -24,11 +24,11 @@ if ($block->location() == 'web') {
 $sizes = "(min-width: 1200px) 1200px, 100vw";
 
 if ($align == 'left' || $align == 'right') {
-  $sizes = "(min-width: 1200px) 600px, 100vw";
+    $sizes = "(min-width: 1200px) 600px, 100vw";
 }
 
 if ($align == 'full') {
-  $sizes = "100vw";
+    $sizes = "100vw";
 }
 ?>
 
@@ -57,6 +57,7 @@ if ($align == 'full') {
           srcset="<?= $image->srcset([
           '400w'  => ['width' => 400, 'format' => 'webp'],
           '800w'  => ['width' => 800, 'format' => 'webp'],
+          '1000w'  => ['width' => 800, 'format' => 'webp'],
           '1200w' => ['width' => 1200, 'format' => 'webp'],
           '1600w' => ['width' => 1600, 'format' => 'webp'],
           '2400w' => ['width' => 2400, 'format' => 'webp'],
