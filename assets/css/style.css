@@ -1,12 +1,17 @@
+/* Basis */
 @import url("_reset.css");
 @import url("_variables.css");
 
+/* Elemente */
 @import url("_body.css");
 @import url("_headlines.css");
 @import url("_links.css");
 @import url("_header.css");
 @import url("_container.css");
+@import url("_figcaption.css");
+@import url("_blockquote.css");
 
+/* Komponenten */
 @import url("_article.css");
 @import url("_pagination.css");
 @import url("_gallery.css");
@@ -15,9 +20,9 @@
 @import url("_image.css");
 @import url("_footer.css");
 @import url("_teaser.css");
-@import url("_blockquote.css");
-@import url("_figcaption.css");
+@import url("_archive.css");
 
+/* Trümpfe */
 @import url("_visually-hidden.css");
 @import url("_focus.css");
 @import url("_selection.css");

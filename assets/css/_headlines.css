@@ -1,6 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--headlineFontFamily);
-  font-weight: var(--headlineFontWeight);
+  font-family: var(--headline-font-family);
+  font-weight: var(--headline-font-weight);
   color: #333;
   line-height: 1.3;
 }

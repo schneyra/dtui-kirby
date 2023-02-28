@@ -1,5 +1,5 @@
 .site-header__content {
-  max-width: var(--contentWidth);
+  max-width: var(--content-width);
   padding: var(--space-l) var(--space-s) 0;
   margin: 0 auto;
   display: flex;
@@ -8,8 +8,8 @@
 
 .site-header__title {
   font-size: var(--step-0);
-  font-weight: var(--headlineFontWeight);
-  font-family: var(--headlineFontFamily);
+  font-weight: var(--headline-font-weight);
+  font-family: var(--headline-font-family);
   text-transform: uppercase;
   line-height: 1;
   padding: 0;
@@ -27,7 +27,7 @@
   right: calc(var(--space-xs) * -1);
   background: var(--background-dark);
   z-index: -1;
-  border-radius: 0 0 2px 0;
+  border-radius: 0 0 2px;
 }
 
 a.site-header__title,
@@ -41,7 +41,7 @@ a.site-header__title:hover {
 }
 
 .site-header__navigation {
-  max-width: var(--contentWidth);
+  max-width: var(--content-width);
   margin: 0 auto;
   justify-content: flex-end;
   display: flex;

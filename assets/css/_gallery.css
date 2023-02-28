@@ -1,5 +1,5 @@
 .gallery-wrapper {
-  max-width: var(--wideContentWidth);
+  max-width: var(--wide-content-width);
 }
 
 .gallery {

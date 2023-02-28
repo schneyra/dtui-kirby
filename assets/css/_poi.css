@@ -1,10 +1,10 @@
 .poi-wrapper {
-  max-width: var(--wideContentWidth);
+  max-width: var(--wide-content-width);
 }
 
 .poi {
   width: 100%;
-  max-width: var(--contentWidth);
+  max-width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
   background: var(--background-light);

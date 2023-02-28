@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Vollkorn';
+  font-family: Vollkorn;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -8,9 +8,11 @@
   url('../fonts/vollkorn-v21-latin-700.woff') format('woff');
 }
 
-
-/* @link https://utopia.fyi/space/calculator?c=330,16,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|7|12,s-xl&g=s,xl,xl,12 */
 :root {
+  /*
+  Breiten und Abstände
+  @link https://utopia.fyi/space/calculator?c=330,16,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|7|12,s-xl&g=s,xl,xl,12
+  */
   --space-3xs: clamp(0.25rem, calc(0.22rem + 0.15vw), 0.38rem);
   --space-2xs: clamp(0.50rem, calc(0.45rem + 0.23vw), 0.69rem);
   --space-xs: clamp(0.75rem, calc(0.67rem + 0.38vw), 1.06rem);
@@ -37,10 +39,8 @@
 
   /* Custom pairs */
   --space-s-xl: clamp(1.00rem, calc(0.22rem + 3.79vw), 4.13rem);
-}
 
-/* @link https://utopia.fyi/type/calculator?c=330,16,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,xl,xl,12 */
-:root {
+  /* @link https://utopia.fyi/type/calculator?c=330,16,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,xl,xl,12 */
   --step--2: clamp(0.69rem, calc(0.65rem + 0.23vw), 0.88rem);
   --step--1: clamp(0.83rem, calc(0.77rem + 0.32vw), 1.10rem);
   --step-0: clamp(1.00rem, calc(0.91rem + 0.45vw), 1.38rem);
@@ -49,51 +49,57 @@
   --step-3: clamp(1.73rem, calc(1.49rem + 1.16vw), 2.69rem);
   --step-4: clamp(2.07rem, calc(1.75rem + 1.56vw), 3.36rem);
   --step-5: clamp(2.49rem, calc(2.06rem + 2.07vw), 4.20rem);
-}
 
-:root {
-  /* Annährungswert an 70ch für Textabsätze */
-  --contentWidth: clamp(50rem, calc(30rem + 30vw), 55rem);
-  --wideContentWidth: 1200px;
-  --headlineFontFamily: 'Vollkorn', cursive;
-  --headlineFontWeight: 700;
-  --defaultArticleMarginTop: 1.5em;
-}
+  /*
+  Eigene Breiten und Abstände
+  Annährungswert an 70ch für Textabsätze
+  */
+  --content-width: clamp(50rem, calc(30rem + 30vw), 55rem);
+  --wide-content-width: 1200px;
+  --default-article-margin-top: 1.5em;
 
+  /* Schrift */
+  --headline-font-family: 'Vollkorn', cursive;
+  --headline-font-weight: 700;
 
-/** @link https://coolors.co/d4ad21-f9fafb-f2f3f8-dbe9f0-1d3557 */
-:root {
-  --color-primary: hsl(215, 50%, 20%);
-  --color-primary-2: hsl(215, 10%, 30%);
-  --color-secondary: hsl(47, 73%, 48%);
-  --color-secondary-2: hsl(39, 92%, 77%);
-  --color-tertiary: hsl(200, 40%, 90%);
+  /*
+  Basis
+  @link https://coolors.co/d4ad21-f9fafb-f2f3f8-dbe9f0-1d3557
+  */
+  --color-primary: hsl(215deg 50% 20%);
+  --color-primary-2: hsl(215deg 10% 30%);
+  --color-secondary: hsl(47deg 73% 48%);
+  --color-secondary-2: hsl(39deg 92% 77%);
+  --color-tertiary: hsl(200deg 40% 90%);
 
-  --color-text: hsl(220, 21%, 11%);
-  --color-text-invert: hsl(220, 25%, 98%);
+  /* Text */
+  --color-text: hsl(220deg 21% 11%);
+  --color-text-invert: hsl(220deg 25% 98%);
 
-  --background-body: hsl(220, 25%, 98%);
-  --background-light: hsl(0, 0%, 100%);
-  --background-light-transparent: hsla(0, 0%, 100%, 0.85);
-  --background-medium: hsl(220, 25%, 100%);
-  --background-dark: hsl(215, 50%, 20%);
-  --background-dark-transparent: hsla(215, 50%, 20%, 0.25);
-}
+  /* Hintergründe */
+  --background-body: hsl(220deg 25% 98%);
+  --background-light: hsl(0deg 0% 100%);
+  --background-light-transparent: hsl(0deg 0% 100% / 0.85);
+  --background-medium: hsl(220deg 25% 100%);
+  --background-dark: hsl(215deg 50% 20%);
+  --background-dark-transparent: hsl(215deg 50% 20% / 0.25);
 
-/* @link https://www.joshwcomeau.com/shadow-palette/ */
-:root {
+  /*
+  Schatten
+  @link https://www.joshwcomeau.com/shadow-palette/
+  */
   --shadow-color: 240deg 5% 45%;
   --shadow-elevation-low:
-    0.3px 0.5px 0.9px hsl(var(--shadow-color) / 0),
-    0.7px 1px 1.8px hsl(var(--shadow-color) / 0.28),
-    1.4px 2.2px 3.9px hsl(var(--shadow-color) / 0.55);
+    0px 0.5px 0.9px hsl(var(--shadow-color) / 0),
+    1px 1px 1.8px hsl(var(--shadow-color) / 0.28),
+    1px 2.2px 3.9px hsl(var(--shadow-color) / 0.55);
   --shadow-elevation-high:
-    0.2px 0.2px 0.2px hsl(var(--shadow-color) / 0.81),
-    0.2px 0.2px 0.2px -0.7px hsl(var(--shadow-color) / 0.71),
-    0.7px 0.6px 0.7px -1.4px hsl(var(--shadow-color) / 0.61),
-    1.8px 1.7px 1.9px -2.1px hsl(var(--shadow-color) / 0.51),
-    4px 3.8px 4.1px -2.9px hsl(var(--shadow-color) / 0.4),
-    7.7px 7.2px 7.9px -3.6px hsl(var(--shadow-color) / 0.3),
-    13.2px 12.3px 13.5px -4.3px hsl(var(--shadow-color) / 0.2),
-    20.9px 19.5px 21.4px -5px hsl(var(--shadow-color) / 0.1);
+    0px 0px 0.2px hsl(var(--shadow-color) / 0.81),
+    0px 0px 0.2px -0.7px hsl(var(--shadow-color) / 0.71),
+    1px 1px 0.7px -1.4px hsl(var(--shadow-color) / 0.61),
+    2px 2px 1.9px -2.1px hsl(var(--shadow-color) / 0.51),
+    4px 4px 4.1px -2.9px hsl(var(--shadow-color) / 0.4),
+    8px 7px 7.9px -3.6px hsl(var(--shadow-color) / 0.3),
+    13px 12px 13.5px -4.3px hsl(var(--shadow-color) / 0.2),
+    21px 20px 21.4px -5px hsl(var(--shadow-color) / 0.1);
 }

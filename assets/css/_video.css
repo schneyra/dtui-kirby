@@ -1,6 +1,6 @@
 .video-wrapper {
   width: 100%;
-  max-width: var(--wideContentWidth);
+  max-width: var(--wide-content-width);
   height: auto;
 }
 

@@ -7,7 +7,7 @@
   position: relative;
   padding: var(--space-s);
   border-radius: 4px 4px 0 0;
-  max-width: var(--contentWidth);
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 
