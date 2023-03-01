@@ -108,7 +108,7 @@ class DtuiHelper
     public static function generateMetaDescription($page)
     {
         $articleBody = trim(strip_tags($page->body()->toBlocks()));
-        return implode(' ', array_slice(explode(' ', $articleBody), 0, 10)) . '...';
+        return esc(implode(' ', array_slice(explode(' ', $articleBody), 0, 10)) . '...');
     }
 
     /**
