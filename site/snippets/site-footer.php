@@ -22,8 +22,8 @@
              decoding="async">
       </picture>
 
-      <p>Hallo! 👋 Dies ist das Weblog von Martin Schneider. Hier geht es um Ausflüge, Bücher, Filme & Serien Fotografie, unser Haus, Musik, Reisen
-        und all die anderen alltäglichen Belanglosigkeiten, die mir sonst noch so widerfahren.
+      <p>Hallo! 👋 Ich bin Martin und dies ist mein Blog. Hier geht es um Ausflüge, Bücher, Filme & Serien Fotografie, unser Haus, Musik, Reisen
+        und all die anderen alltäglichen Belanglosigkeiten, die mir sonst noch so widerfahren. Seit 2003.
       </p>
     </div>
     <div class="flow">
