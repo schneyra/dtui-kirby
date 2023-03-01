@@ -1,5 +1,6 @@
 .article-list {
   --background-color: var(--background-dark-2);
+
   list-style: none;
 }
 
