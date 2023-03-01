@@ -1,0 +1,23 @@
+.article-list {
+  --background-color: var(--background-dark-2);
+  list-style: none;
+}
+
+.article-list__item {
+  border-inline-start: 0.25em solid transparent;
+  padding: var(--space-3xs) var(--space-xs);
+}
+
+.article-list__item:hover,
+.article-list:not(:hover) .article-list__item--active {
+  border-inline-start-color: var(--color-secondary);
+  background-color: var(--background-color);
+}
+
+.article-list__link {
+  text-decoration: none;
+}
+
+.article-list__date {
+  font-size: var(--step--2);
+}

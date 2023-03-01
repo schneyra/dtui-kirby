@@ -9,10 +9,6 @@
   margin-top: var(--default-article-margin-top);
 }
 
-.article ul:not([class]) li:not([class]) {
-  margin-left: var(--space-s-m);
-}
-
 .article > .image-wrapper:not(:nth-child(2)),
 .article > .gallery-wrapper:not(:nth-child(2)),
 .article > .video-wrapper:not(:nth-child(2)) {

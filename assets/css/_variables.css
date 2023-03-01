@@ -82,6 +82,7 @@
   --background-light-transparent: hsl(0deg 0% 100% / 0.85);
   --background-medium: hsl(220deg 25% 100%);
   --background-dark: hsl(215deg 50% 20%);
+  --background-dark-2: hsl(215deg 50% 10%);
   --background-dark-transparent: hsl(215deg 50% 20% / 0.25);
 
   /*

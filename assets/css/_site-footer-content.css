@@ -1,0 +1,23 @@
+.site-footer-content {
+  display: grid;
+  grid-gap: var(--space-2xl-3xl);
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  padding-top: var(--space-2xl-3xl);
+}
+
+.site-footer-content__headline {
+  color: var(--color-text-invert);
+  font-size: var(--step-1);
+}
+
+.site-footer-content__image {
+  --flow-space: 1.45em;
+
+  width: 200px;
+  max-width: 33%;
+  float: left;
+  margin-inline-end: var(--space-s);
+  margin-block-end: var(--space-s);
+  border-inline-end: var(--space-3xs) solid var(--color-secondary);
+  border-block-end: var(--space-3xs) solid var(--color-secondary);
+}
