@@ -26,31 +26,31 @@ $align = $block->align()->or('none');
             . ",0/820x410@2x?access_token="
             . $kirby->option('options.secrets.mapboxToken');
 
-        $imageName = DtuiHelper::getRemoteImage($url, $block->parent()->root(), 'map-' . Str::slug($block->title()));
+$imageName = DtuiHelper::getRemoteImage($url, $block->parent()->root(), 'map-' . Str::slug($block->title()));
 
-        $mapImage = null;
-        if ($imageName) {
-            $mapImage = $block->parent()->images()->find($imageName);
-        }
-        ?>
+$mapImage = null;
+if ($imageName) {
+    $mapImage = $block->parent()->images()->find($imageName);
+}
+?>
 
         <?php if ($mapImage) : ?>
             <?php $sizes = "(min-width: 800px) 800px, 100vw"; ?>
             <picture>
                 <source
                         srcset="<?= $mapImage->srcset([
-                            '400w'  => ['width' => 400, 'format' => 'webp'],
-                            '800w'  => ['width' => 800, 'format' => 'webp'],
-                            '1200w' => ['width' => 1600, 'format' => 'webp']
-                        ]) ?>"
+                    '400w'  => ['width' => 400, 'format' => 'webp'],
+                    '800w'  => ['width' => 800, 'format' => 'webp'],
+                    '1200w' => ['width' => 1600, 'format' => 'webp']
+                ]) ?>"
                         sizes="<?= $sizes ?>">
 
                 <source
                         srcset="<?= $mapImage->srcset([
-                            '400w'  => ['width' => 400, 'format' => 'avif'],
-                            '800w'  => ['width' => 800, 'format' => 'avif'],
-                            '1200w' => ['width' => 1600, 'format' => 'avif']
-                        ]) ?>"
+                    '400w'  => ['width' => 400, 'format' => 'avif'],
+                    '800w'  => ['width' => 800, 'format' => 'avif'],
+                    '1200w' => ['width' => 1600, 'format' => 'avif']
+                ]) ?>"
                         sizes="<?= $sizes ?>">
 
                 <img

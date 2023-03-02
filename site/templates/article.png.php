@@ -16,7 +16,7 @@ $canvas = imagecreatetruecolor(2400, 1200);
 $colorYellow      = imagecolorallocate($canvas, 212, 173, 33);
 $backgroundColor  = imagecolorallocate($canvas, 249, 249, 251);
 $titleColor       = imagecolorallocate($canvas, 22, 26, 34);
-$siteTitleColor   = imagecolorallocate($canvas, 25,47,77);
+$siteTitleColor   = imagecolorallocate($canvas, 25, 47, 77);
 
 // Set background
 imagefill($canvas, 0, 0, $backgroundColor);
