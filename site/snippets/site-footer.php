@@ -22,9 +22,11 @@
              decoding="async">
       </picture>
 
-      <p>Hallo! 👋 Ich bin Martin und dies ist mein Blog. Hier geht es um Ausflüge, Bücher, Filme & Serien Fotografie, unser Haus, Musik, Reisen
-        und all die anderen alltäglichen Belanglosigkeiten, die mir sonst noch so widerfahren. Seit 2003.
+      <p>Hallo! 👋 Ich bin Martin und dies ist mein Blog. Hier geht es um Bücher, Filme & Serien Fotografie, unser Haus, Ausflüge, Musik, Reisen
+        und alle möglichen anderen alltäglichen Belanglosigkeiten. Seit 2003 schreibe ich einigermaßen regelmäßig auf was mir so widerfährt.
+        Ganz vielleicht gibt es bald auch wieder ein ordentliches Archiv.
       </p>
+      <p>Um auf dem Laufenden zu bleiben empfehle ich meinen <a href="https://dertagundich.de/feed/">RSS-Feed</a> zu abonnieren oder mir auf <a href="https://mastodon.social/@schneyra" rel="me">Mastodon</a> zu folgen.</p>
     </div>
     <div class="flow">
       <h2 class="site-footer-content__headline">Sonst so am <?= DtuiHelper::dateformat(date('Y-m-d'), 'dd. MMMM') ?></h2>
