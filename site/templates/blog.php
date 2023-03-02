@@ -8,6 +8,12 @@
   </div>
 <?php endif; ?>
 
+<?php if ($search) : ?>
+  <div class="container archive-header">
+    <h1>Suchergebnisse für <em><?= esc($search) ?></em></h1>
+  </div>
+<?php endif; ?>
+
 <?php if (count($articles)) : ?>
   <?php foreach ($paginatedArticles as $article): ?>
     <?php

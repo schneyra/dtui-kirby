@@ -58,6 +58,14 @@ return [
             }
         ],
         [
+            'pattern' => 'suche',
+            'action'  => function () {
+                return page('blog')->render([
+                    'search' => true
+                ]);
+            }
+        ],
+        [
             'pattern' => '(:num)/(:num)/(:num)',
             'action'  => function ($year, $month, $day) {
                 $page = page('blog/' . $year . '/' . $month . '/' . $day);

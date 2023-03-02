@@ -29,6 +29,12 @@
       <p>Um auf dem Laufenden zu bleiben empfehle ich meinen <a href="https://dertagundich.de/feed/">RSS-Feed</a> zu abonnieren oder mir auf <a href="https://mastodon.social/@schneyra" rel="me">Mastodon</a> zu folgen.</p>
     </div>
     <div class="flow">
+      <h2 class="site-footer-content__headline">Suche</h2>
+      <form method="GET" action="<?= url('suche') ?>">
+        <input type="search" name="s" aria-label="Suchbegriff">
+        <button type="submit">Suchen</button>
+      </form>
+
       <h2 class="site-footer-content__headline">Sonst so am <?= DtuiHelper::dateformat(date('Y-m-d'), 'dd. MMMM') ?></h2>
       <?php
       $articlesOnThisDay = DtuiHelper::onThisDay()->flip();

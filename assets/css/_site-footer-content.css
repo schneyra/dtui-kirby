@@ -10,7 +10,12 @@
   font-size: var(--step-1);
 }
 
+* + .site-footer-content__headline {
+  --flow-space: var(--space-xl);
+}
+
 .site-footer-content__image {
+  /* Sehr spezifischer Wert um mit dem Bild _ungefähr_ auf Texthöhe anzufangen */
   --flow-space: 1.45em;
 
   width: 200px;
