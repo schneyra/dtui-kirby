@@ -22,7 +22,7 @@
              decoding="async">
       </picture>
 
-      <p>Hallo! 👋 Ich bin Martin und dies ist mein Blog. Hier geht es um Bücher, Filme & Serien Fotografie, unser Haus, Ausflüge, Musik, Reisen
+      <p>Hallo! 👋 Ich bin Martin und dies ist mein Blog. Hier geht es um Bücher, Filme & Serien, Fotografie, unser Haus, Ausflüge, Musik, Reisen
         und alle möglichen anderen alltäglichen Belanglosigkeiten. Seit 2003 schreibe ich einigermaßen regelmäßig auf was mir so widerfährt.
         Ganz vielleicht gibt es bald auch wieder ein ordentliches Archiv.
       </p>
