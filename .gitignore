@@ -59,7 +59,8 @@ Icon
 /kirby/
 /vendor/
 /node_modules/
-/site/plugins/kirby-fingerprint/
+/site/plugins/*
+!/site/plugins/dtui*/
 
 # ddev
 # ---------------
