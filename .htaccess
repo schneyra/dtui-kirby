@@ -8,6 +8,13 @@
 # http://yourdomain.com/about-us/team
 RewriteEngine on
 
+# www und https erzwingen
+RewriteCond %{HTTP_HOST} !=""
+RewriteCond %{HTTP_HOST} !^dtui-kirby\.
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 # make sure to set the RewriteBase correctly
 # if you are running the site in a subfolder;
 # otherwise links or the entire site will break.
