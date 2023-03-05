@@ -18,7 +18,7 @@ $title = "der tag und ich";
 $link = site()->url();
 $feedurl = site()->url() . "/feed.xml";
 $description = "Dies ist Martins Blog. Alltäglich belangloses und so. Seit 2003.";
-$items = page('blog')->grandChildren()->children()->children()->flip()->limit(10);
+$items = page('blog')->grandChildren()->children()->children()->listed()->flip()->limit(10);
 $modified = date(DATE_RSS, $items->first()->date()->toTimestamp());
 
 echo '<?xml version="1.0" encoding="utf-8"?>';

@@ -4,7 +4,7 @@
  */
 
 return function ($page, $category = null, $search = null) {
-    $articles = $page->grandChildren()->children()->children();
+    $articles = $page->grandChildren()->children()->children()->listed();
     $template = 'article';
 
     if ($category) {
