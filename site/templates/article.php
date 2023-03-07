@@ -9,11 +9,6 @@
   ]);
 ?>
 
-<?php
-//dump(DtuiHelper::onThisDay());
-//dump(DtuiHelper::onThisDay($page));
-?>
-
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",

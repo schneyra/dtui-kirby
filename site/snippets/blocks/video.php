@@ -4,11 +4,10 @@ use Kirby\Http\Uri;
 
 /**
  * @var App $kirby
- * @var \Kirby\Cms\Block $block
+ * @var Kirby\Cms\Block $block
  */
-?>
 
-<?php if ($video = Html::video($block->url(), [], ['class' => 'js-video-iframe'])):
+if ($video = Html::video($block->url(), [], ['class' => 'js-video-iframe'])):
     $video = str_replace('src=', 'data-src=', $video);
     $video = str_replace('youtube.com', 'youtube-nocookie.com', $video);
 
@@ -66,10 +65,10 @@ echo "</pre>";*/
           */?>
           <source
             srcset="<?= $coverImage->srcset([
-                '400w'  => ['width' => 400, 'format' => 'webp'],
-                '800w'  => ['width' => 800, 'format' => 'webp'],
-                '1200w' => ['width' => 1600, 'format' => 'webp']
-              ]) ?>"
+                    '400w'  => ['width' => 400, 'format' => 'webp'],
+                    '800w'  => ['width' => 800, 'format' => 'webp'],
+                    '1200w' => ['width' => 1600, 'format' => 'webp']
+                  ]) ?>"
             type="image/webp"
             sizes="<?= $sizes ?>">
 

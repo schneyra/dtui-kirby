@@ -1,5 +1,7 @@
 <?php /**
  * @var App $kirby
+ * @var object $site
+ * @var object $page
 **/ ?>
 
 <!DOCTYPE html>

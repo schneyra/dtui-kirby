@@ -1,18 +1,20 @@
 <?php
 
+use Kirby\Cms\Pages;
+
 class DtuiHelper
 {
     /**
      * Generiert einen String für den Title-Tag im Head
      *
-     * @param $site
-     * @param $page
-     * @param null $archive
-     * @param null $dateArchive
+     * @param object $site
+     * @param object $page
+     * @param string|null $archive
+     * @param object|null $dateArchive
      * @return string
      * @throws Exception
      */
-    public static function generatePageTitle($site, $page, $archive = null, $dateArchive = null): string
+    public static function generatePageTitle(object $site, object $page, string $archive = null, object $dateArchive = null): string
     {
         if ($dateArchive) {
             return "Archiv für " . self::generateArchiveTitle($page) . " › " . $site->title() . " › Alltäglich belangloses";
@@ -32,7 +34,7 @@ class DtuiHelper
     /**
      * @return array
      */
-    private static function getCategories()
+    private static function getCategories(): array
     {
         $props = Kirby\Cms\Blueprint::load('pages/article');
         $props['model'] = page();
@@ -44,10 +46,10 @@ class DtuiHelper
     /**
      * Liest die Kategorien aus den Blogartikel-Blueprint und gibt einen davon zurück
      *
-     * @param $slug
+     * @param string $slug
      * @return string
      */
-    public static function getCategoryName($slug): string
+    public static function getCategoryName(string $slug): string
     {
         $categories = self::getCategories();
 
@@ -57,10 +59,10 @@ class DtuiHelper
     /**
      * Überprüft ob es eine Kategorie gibt
      *
-     * @param $slug
+     * @param string $slug
      * @return bool
      */
-    public static function isCategory($slug): bool
+    public static function isCategory(string $slug): bool
     {
         $categories = self::getCategories();
 
@@ -70,12 +72,12 @@ class DtuiHelper
     /**
      * Lädt ein Bild von einer entfernten Quelle und speichert es im Dateisystem
      *
-     * @param $imgUrl
-     * @param $articlePath
-     * @param $newFilename
+     * @param string $imgUrl
+     * @param string $articlePath
+     * @param string $newFilename
      * @return string|null
      */
-    public static function getRemoteImage($imgUrl, $articlePath, $newFilename): ?string
+    public static function getRemoteImage(string $imgUrl, string $articlePath, string $newFilename): ?string
     {
         $urlArray = explode('/', $imgUrl);
 
@@ -102,10 +104,10 @@ class DtuiHelper
     /**
      * Gibt den Anfang des Inhaltes eines Artikels zurück
      *
-     * @param $page
+     * @param object $page
      * @return string
      */
-    public static function generateMetaDescription($page)
+    public static function generateMetaDescription(object $page): string
     {
         $articleBody = trim(strip_tags($page->body()->toBlocks()));
         return esc(implode(' ', array_slice(explode(' ', $articleBody), 0, 10)) . '...');
@@ -116,10 +118,10 @@ class DtuiHelper
      * @see https://ourcodeworld.com/articles/read/1603/how-to-determine-the-estimated-reading-time-of-a-text-with-php
      *
      * @param string $text The text to calculate the reading time for.
-     * @param string $wpm The rate of words per minute to use.
+     * @param int $wpm The rate of words per minute to use.
      * @return Array
      */
-    private static function estimateReadingTime($text, $wpm = 200)
+    private static function estimateReadingTime(string $text, int $wpm = 200): array
     {
         $totalWords = str_word_count(strip_tags($text));
         $minutes = floor($totalWords / $wpm);
@@ -134,10 +136,10 @@ class DtuiHelper
     /**
      * Errechnet die geschätzte Lesezeit eines Beitrags
      *
-     * @param $page
+     * @param object $page
      * @return array
      */
-    public static function generateReadingTime($page)
+    public static function generateReadingTime(object $page): array
     {
         $articleBody = strip_tags($page->body()->toBlocks());
         $readingTime = self::estimateReadingTime($page->title() . ' ' .  $articleBody);
@@ -174,10 +176,10 @@ class DtuiHelper
     /**
      * Generiert die Datum/Uhrzeit-Ausgabe eines Artikels
      *
-     * @param $article
+     * @param object $article
      * @return string
      */
-    public static function getDateTimeForArticle($article)
+    public static function getDateTimeForArticle(object $article): string
     {
         return $article->date()->toDate(new IntlDateFormatter(
             "de_DE",
@@ -190,11 +192,11 @@ class DtuiHelper
     /**
      * Gibt das passend formatierte Datum für das aktuellen Archivs zurück
      *
-     * @param $page
+     * @param object $page
      * @return string
      * @throws Exception
      */
-    public static function generateArchiveTitle($page)
+    public static function generateArchiveTitle(object $page): string
     {
         $title = '';
 
@@ -216,10 +218,10 @@ class DtuiHelper
     /**
      * Je nach Archiv muss eine andere Ebene an Content abgegriffen werden
      *
-     * @param $page
-     * @return mixed|null
+     * @param object $page
+     * @return object|null
      */
-    public static function getAllArticlesForArchive($page)
+    public static function getAllArticlesForArchive(object $page): ?object
     {
         $allArticles = null;
 
@@ -242,10 +244,10 @@ class DtuiHelper
      * Gibt Beiträge von gleichen Datum aus anderen Jahren zurück.
      * Wenn kein Page-Object übergeben wird, ist das Referenzdatum "heute".
      *
-     * @param null $page
-     * @return Kirby\Cms\Pages Object
+     * @param object|null $page
+     * @return object
      */
-    public static function onThisDay($page = null)
+    public static function onThisDay(object $page = null): object
     {
         if (!$page) {
             $date = date('m-d');

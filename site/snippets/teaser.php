@@ -1,6 +1,7 @@
 <?php
 /**
  * @var App $kirby
+ * @var object $article
  **/
 ?>
 

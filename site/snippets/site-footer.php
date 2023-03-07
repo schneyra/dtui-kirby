@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var object $site
+ **/
+?>
+
 </main>
 
 <footer class="site-footer">
