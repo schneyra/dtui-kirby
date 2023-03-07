@@ -2,6 +2,9 @@
 /**
  * @var object $site
  **/
+
+$articlesOnThisDay = DtuiHelper::onThisDay()->flip();
+$rand = rand(0, count($articlesOnThisDay)-1);
 ?>
 
 </main>
@@ -42,10 +45,6 @@
       </form>
 
       <h2 class="site-footer-content__headline">Sonst so am <?= DtuiHelper::dateformat(date('Y-m-d'), 'dd. MMMM') ?></h2>
-      <?php
-      $articlesOnThisDay = DtuiHelper::onThisDay()->flip();
-      $rand = rand(0, count($articlesOnThisDay)-1);
-      ?>
       <?php if (count($articlesOnThisDay)) : ?>
         <ul class="article-list">
         <?php $i = 0;
