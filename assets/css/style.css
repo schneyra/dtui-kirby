@@ -11,6 +11,7 @@
 @import url("_figcaption.css");
 @import url("_blockquote.css");
 @import url("_ul-ol.css");
+@import url("_hr.css");
 
 /* Komponenten */
 @import url("_article.css");
