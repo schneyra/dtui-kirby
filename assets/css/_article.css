@@ -38,7 +38,7 @@
 
 
 @media (min-width: 1000px) {
-  .article > .poi-wrapper:not(.align-none):not(.align-center) {
+  .article > .poi-wrapper:not(.align-none, .align-center) {
     max-width: var(--wide-content-width);
   }
 
