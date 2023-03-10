@@ -12,8 +12,8 @@ use Kirby\Cms\Block;
 $align = $block->align()->or('none');
 ?>
 
-<div class="poi-wrapper">
-    <figure class="poi <?= 'align-' . $align ?>">
+<div class="poi-wrapper <?= 'align-' . $align ?>">
+    <figure class="poi">
         <?php if ($block->title()) : ?>
             <h3 class="poi__title"><?= $block->title() ?> </h3>
         <?php endif; ?>

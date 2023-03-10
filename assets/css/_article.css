@@ -32,7 +32,16 @@
   max-width: 100%;
 }
 
+.article > .poi-wrapper {
+  max-width: var(--content-width);
+}
+
+
 @media (min-width: 1000px) {
+  .article > .poi-wrapper {
+    max-width: var(--wide-content-width);
+  }
+
   .align-left > * {
     width: 50%;
     float: left;

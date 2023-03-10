@@ -1,22 +1,5 @@
-.poi-wrapper {
-  max-width: var(--wide-content-width);
-}
-
 .poi {
-  width: 100%;
-  max-width: var(--content-width);
-  margin-left: auto;
-  margin-right: auto;
   background: var(--background-light);
-}
-
-@media (min-width: 1200px) {
-  .poi {
-    width: 50%;
-    float: right;
-    margin-left: var(--space-m-l);
-    margin-bottom: var(--space-m-l);
-  }
 }
 
 .poi__title {
@@ -27,4 +10,5 @@
 
 .poi__description {
   padding: var(--space-xs);
+  font-size: var(--step--1);
 }
