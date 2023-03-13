@@ -18,11 +18,9 @@
   /* Sehr spezifischer Wert um mit dem Bild _ungefähr_ auf Texthöhe anzufangen */
   --flow-space: 1.45em;
 
-  width: 200px;
-  max-width: 33%;
+  width: 10.25em;
   float: left;
   margin-inline-end: var(--space-s);
-  margin-block-end: var(--space-s);
   border-inline-end: var(--space-3xs) solid var(--color-secondary);
   border-block-end: var(--space-3xs) solid var(--color-secondary);
 }
