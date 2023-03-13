@@ -27,7 +27,7 @@
 
   <footer class="article__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">
-      <a href="<?= $article->articleUrl() ?>"><?= DtuiHelper::getDateTimeForArticle($article) ?></a>
+      <a href="<?= $article->articleUrl() ?>"><?= DtuiHelper::dateformat($article->date(), 'dd. MMMM YYYY')?></a>
     </time>
 
     <?php foreach ($article->categories()->split() as $category) : ?>
