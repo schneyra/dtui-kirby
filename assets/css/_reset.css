@@ -52,6 +52,7 @@ button,
 textarea,
 select {
   font: inherit;
+  font-size: var(--step-input);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

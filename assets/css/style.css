@@ -12,6 +12,7 @@
 @import url("_blockquote.css");
 @import url("_ul-ol.css");
 @import url("_hr.css");
+@import url("_button.css");
 
 /* Komponenten */
 @import url("_article.css");

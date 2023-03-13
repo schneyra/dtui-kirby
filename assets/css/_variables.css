@@ -50,6 +50,9 @@
   --step-4: clamp(2.07rem, calc(1.75rem + 1.56vw), 3.36rem);
   --step-5: clamp(2.49rem, calc(2.06rem + 2.07vw), 4.20rem);
 
+  /* Extra Schriftgröße für Eingabefelder: Mindestens 16px, aber nicht so groß wie --step-0 am Ende */
+  --step-input: clamp(1.00rem, calc(0.91rem + 0.45vw), 1.10rem);
+
   /*
   Eigene Breiten und Abstände
   Annährungswert an 70ch für Textabsätze

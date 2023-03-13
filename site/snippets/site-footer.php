@@ -39,7 +39,7 @@ $rand = rand(0, count($articlesOnThisDay)-1);
     </div>
     <div class="flow">
       <h2 class="site-footer-content__headline">Suche</h2>
-      <form method="GET" action="<?= url('suche') ?>">
+      <form method="GET" action="<?= url('suche') ?>" class="site-footer-searchform">
         <input type="search" name="s" aria-label="Suchbegriff">
         <button type="submit">Suchen</button>
       </form>

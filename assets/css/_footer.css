@@ -32,3 +32,12 @@
 .site-footer a {
   color: var(--color-text-invert);
 }
+
+.site-footer-searchform {
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.site-footer-searchform input {
+  width: 100%;
+}
