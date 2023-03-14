@@ -11,12 +11,13 @@ return [
         'handler' => 'intl'
     ],
     'routes' => [
+        // OG-Image
         [
-            'pattern' => '(:num)/(:num)/(:num)/(:any).png',
-            'action'  => function ($year, $month, $day, $slug) {
-                $page = page($year . '/' . $month . '/' . $day  . '/' . $slug);
+            'pattern' => '(:num)/(:any).png',
+            'action'  => function ($year, $slug) {
+                $page = page($year . '/' . $slug);
                 if (!$page) {
-                    $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
+                    $page = page('blog/' . $year . '/' . $slug);
                 }
                 if (!$page) {
                     $page = site()->errorPage();
@@ -24,12 +25,13 @@ return [
                 return $page->render([], 'png');
             },
         ],
+        // Blogpost
         [
-            'pattern' => '(:num)/(:num)/(:num)/(:any)',
-            'action'  => function ($year, $month, $day, $slug) {
-                $page = page($year . '/' . $month . '/' . $day  . '/' . $slug);
+            'pattern' => '(:num)/(:any)',
+            'action'  => function ($year, $slug) {
+                $page = page($year . '/' . $slug);
                 if (!$page) {
-                    $page = page('blog/' . $year . '/' . $month . '/' . $day  . '/' . $slug);
+                    $page = page('blog/' . $year . '/' . $slug);
                 }
                 if (!$page) {
                     $page = site()->errorPage();
@@ -38,12 +40,21 @@ return [
             },
             'method' => 'GET|HEAD'
         ],
+        // Blogpost: Fallback für alte Routen
         [
-            'pattern' => 'blog/(:num)/(:num)/(:num)/(:any)',
+            'pattern' => '(:num)/(:num)/(:num)/(:any)',
             'action'  => function ($year, $month, $day, $slug) {
-                go($year . '/' . $month . '/' . $day  . '/' . $slug);
+                go($year . '/' . $slug, 301);
+            },
+        ],
+        // 'blog'-Ordner abfangen
+        [
+            'pattern' => 'blog/(:num)/(:any)',
+            'action'  => function ($year, $slug) {
+                go($year . '/' . $slug, 301);
             }
         ],
+        // Kategorien
         [
             'pattern' => 'kategorie/(:any)',
             'action'  => function ($category) {
@@ -57,6 +68,7 @@ return [
                 ]);
             }
         ],
+        // Suche
         [
             'pattern' => 'suche',
             'action'  => function () {
@@ -65,36 +77,7 @@ return [
                 ]);
             }
         ],
-        [
-            'pattern' => '(:num)/(:num)/(:num)',
-            'action'  => function ($year, $month, $day) {
-                $page = page('blog/' . $year . '/' . $month . '/' . $day);
-                if (!$page) {
-                    $page = site()->errorPage();
-                }
-                return site()->visit($page);
-            }
-        ],
-        [
-            'pattern' => '(:num)/(:num)',
-            'action'  => function ($year, $month) {
-                $page = page('blog/' . $year . '/' . $month);
-                if (!$page) {
-                    $page = site()->errorPage();
-                }
-                return site()->visit($page);
-            }
-        ],
-        [
-            'pattern' => '(:num)',
-            'action'  => function ($year) {
-                $page = page('blog/' . $year);
-                if (!$page) {
-                    $page = site()->errorPage();
-                }
-                return site()->visit($page);
-            }
-        ],
+        // RSS-Feed
         [
             'pattern' => ['feed.xml', 'feed'],
             'action'  => function () {

@@ -1,6 +1,6 @@
 type: pages
 label: Artikel
-info: "{{ page.date.toDate('d.m.Y H:i') }}"
+info: "{{ page.date.toDate('dd. MMMM YYYY') }}"
 template: article
 empty: Noch keine Artikel
 sortBy: date desc

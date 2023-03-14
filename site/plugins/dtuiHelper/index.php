@@ -258,7 +258,7 @@ class DtuiHelper
         }
 
         return page('blog')
-            ->grandChildren()->children()->children()
+            ->grandChildren()
             ->filter(function ($page) use ($date, $today) {
                 return $page->date()->toDate('MM-dd') === $date && $page->date()->toDate('YYYY-MM-dd') !== $today;
             });

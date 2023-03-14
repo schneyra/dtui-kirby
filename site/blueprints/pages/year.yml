@@ -1,10 +1,25 @@
 title: Jahr
 icon: 📚
+template: article
 
 columns:
   left:
     width: 1/2
     sections:
-      pages:
-        label: Monate
-        sortBy: title desc
+      listed:
+        extends: sections/articles
+        label: Veröffentlicht
+        status: listed
+
+  right:
+    width: 1/2
+    sections:
+      drafts:
+        extends: sections/articles
+        label: Entwürfe
+        status: draft
+
+      unlisted:
+        extends: sections/articles
+        label: Ungelistet
+        status: unlisted
