@@ -227,12 +227,9 @@ class DtuiHelper
 
         switch ($page->template()->name()) {
             case 'year':
-                $allArticles = $page->grandChildren()->children()->flip();
-                break;
-            case 'month':
                 $allArticles = $page->grandChildren()->flip();
                 break;
-            case 'day':
+            case 'month':
                 $allArticles = $page->children()->flip();
                 break;
         }

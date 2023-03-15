@@ -8,3 +8,9 @@ columns:
       pages:
         label: Jahrgänge
         sortBy: title desc
+  right:
+    width: 1/2
+    sections:
+      addPost:
+        label: Beitrag schreiben
+        type: addPost

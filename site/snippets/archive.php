@@ -27,6 +27,6 @@ $articles = $allArticles->paginate(10);
     ]);
       ?>
   <?php else: ?>
-    <p>Keine Artikel gefunden</p>
+    <p>Keine Beiträge gefunden</p>
   <?php endif; ?>
 </div>
