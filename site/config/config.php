@@ -44,7 +44,7 @@ return [
         [
             'pattern' => '(:num)/(:num)/(:num)/(:any)',
             'action'  => function ($year, $month, $day, $slug) {
-                go($year . '/' . $slug, 301);
+                go($year . '/' . $month . '/' . $slug, 301);
             },
         ],
         // 'blog'-Ordner abfangen
