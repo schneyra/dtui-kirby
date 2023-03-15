@@ -6,20 +6,6 @@ columns:
   left:
     width: 1/2
     sections:
-      listed:
-        extends: sections/articles
-        label: Veröffentlicht
-        status: listed
-
-  right:
-    width: 1/2
-    sections:
-      drafts:
-        extends: sections/articles
-        label: Entwürfe
-        status: draft
-
-      unlisted:
-        extends: sections/articles
-        label: Ungelistet
-        status: unlisted
+      pages:
+        label: Monate
+        sortBy: title desc

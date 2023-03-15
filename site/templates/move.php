@@ -27,11 +27,6 @@ foreach ($years as $year) {
 
             $path = './content/blog/' . $year . '/' . $month;
             if (is_dir($path)) {
-                $textfile = $path . '/month.txt';
-                if (file_exists($textfile)) {
-                    unlink($textfile);
-                }
-
                 $days = scandir($path);
 
                 foreach ($days as $day) {
@@ -54,7 +49,10 @@ foreach ($years as $year) {
                             }
 
                             if (is_dir('./content/blog/' . $year . '/' . $month . '/' . $day . '/' . $post)) {
-                                rename('./content/blog/' . $year . '/' . $month . '/' . $day . '/' . $post, './content/blog/' . $year . '/' . $post);
+                                rename(
+                                  './content/blog/' . $year . '/' . $month . '/' . $day . '/' . $post,
+                                  './content/blog/' . $year . '/' . $month . '/' . $post
+                                );
                             }
                         }
                     }

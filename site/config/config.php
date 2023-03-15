@@ -13,11 +13,11 @@ return [
     'routes' => [
         // OG-Image
         [
-            'pattern' => '(:num)/(:any).png',
-            'action'  => function ($year, $slug) {
-                $page = page($year . '/' . $slug);
+            'pattern' => '(:num)/(:num)/(:any).png',
+            'action'  => function ($year, $month, $slug) {
+                $page = page($year . '/' . $month . '/' . $slug);
                 if (!$page) {
-                    $page = page('blog/' . $year . '/' . $slug);
+                    $page = page('blog/' . $year . '/' . $month . '/' . $slug);
                 }
                 if (!$page) {
                     $page = site()->errorPage();
@@ -27,11 +27,11 @@ return [
         ],
         // Blogpost
         [
-            'pattern' => '(:num)/(:any)',
-            'action'  => function ($year, $slug) {
-                $page = page($year . '/' . $slug);
+            'pattern' => '(:num)/(:num)/(:any)',
+            'action'  => function ($year, $month, $slug) {
+                $page = page($year . '/' . $month . '/' . $slug);
                 if (!$page) {
-                    $page = page('blog/' . $year . '/' . $slug);
+                    $page = page('blog/' . $year . '/' . $month . '/' . $slug);
                 }
                 if (!$page) {
                     $page = site()->errorPage();
@@ -75,6 +75,27 @@ return [
                 return page('blog')->render([
                     'search' => true
                 ]);
+            }
+        ],
+        // Archive für Jahr und Monat
+        [
+            'pattern' => '(:num)/(:num)',
+            'action'  => function ($year, $month) {
+                $page = page('blog/' . $year . '/' . $month);
+                if (!$page) {
+                    $page = site()->errorPage();
+                }
+                return site()->visit($page);
+            }
+        ],
+        [
+            'pattern' => '(:num)',
+            'action'  => function ($year) {
+                $page = page('blog/' . $year);
+                if (!$page) {
+                    $page = site()->errorPage();
+                }
+                return site()->visit($page);
             }
         ],
         // RSS-Feed

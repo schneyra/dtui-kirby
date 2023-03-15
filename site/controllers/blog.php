@@ -3,7 +3,7 @@
  * https://getkirby.com/docs/cookbook/content/filter-via-route
  */
 return function (object $page, string $category = null, string $search = null): array {
-    $articles = $page->grandChildren()->listed();
+    $articles = $page->grandChildren()->children()->listed();
     $template = 'article';
 
     if ($category) {
