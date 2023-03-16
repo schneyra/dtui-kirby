@@ -31,7 +31,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install Composer dependencies
-      run: composer install --prefer-dist --no-progress
+      run: composer install --prefer-dist --no-progress --no-dev
 
     - name: Cache NodeJS packages
       id: nodejs-cache
