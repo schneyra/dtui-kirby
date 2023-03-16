@@ -47,6 +47,26 @@ return [
                 go($year . '/' . $month . '/' . $slug, 301);
             },
         ],
+        // Blogpost: Fallback für ganz alte Routen
+        [
+            'pattern' => '(:any)',
+            'action'  => function ($slug) {
+                $page = page($slug);
+
+                if (!$page) {
+                    $page = page('blog')->index()->findBy('slug', $slug);
+
+                    if ($page) {
+                        $page = str_replace('blog/', '', $page);
+                        go($page, 301);
+                    } else {
+                        $page = site()->errorPage();
+                    }
+                }
+
+                return site()->visit($page);
+            },
+        ],
         // 'blog'-Ordner abfangen
         [
             'pattern' => 'blog/(:num)/(:any)',
