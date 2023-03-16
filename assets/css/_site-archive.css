@@ -1,0 +1,36 @@
+.site-archive h1 + * {
+  margin-top: var(--space-xl);
+}
+
+.site-archive h2 {
+  display: inline;
+}
+
+.site-archive ul {
+  margin-top: var(--space-xs);
+}
+
+.site-archive li {
+  margin-top: var(--space-2xs);
+}
+
+.site-archive summary {
+  border-block-end: 1px solid var(--color-secondary);
+}
+
+.site-archive details {
+  background-color: var(--background-light);
+  padding: var(--space-xs);
+}
+
+.site-archive details + details {
+  margin-top: var(--space-l);
+}
+
+.site-archive h3 {
+  margin-top: var(--space-m);
+}
+
+.site-archive__date {
+  font-size: var(--step--1);
+}
