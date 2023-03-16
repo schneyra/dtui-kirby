@@ -9,7 +9,8 @@ final class UrlTest extends TestCase
             'https://dtui-kirby.ddev.site/suche?s=k%C3%A4sebrot', // Suche
             'https://dtui-kirby.ddev.site/kategorie/auf-den-lofoten', // Kategorie-Seite
             'https://dtui-kirby.ddev.site/2023/02/von-einer-mueden-woche', // Blogpost
-            'https://dtui-kirby.ddev.site/impressum/' // Seite
+            'https://dtui-kirby.ddev.site/impressum/', // Seite
+            'https://dtui-kirby.ddev.site/feed/' // RSS-Feed
         ];
 
         foreach ($urls as $url) {
