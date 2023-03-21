@@ -1,6 +1,6 @@
 panel.plugin("schneyra/localvideo-block", {
   blocks: {
-    vid: {
+    localvideo: {
       computed: {
         cover() {
           return this.content.cover[0] || {};

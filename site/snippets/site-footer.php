@@ -33,7 +33,7 @@ $rand = rand(0, count($articlesOnThisDay)-1);
 
       <p>Hallo! 👋 Ich bin Martin und dies ist mein Blog. Hier geht es um Bücher, Filme & Serien, Fotografie, unser Haus, Ausflüge, Musik, Reisen
         und alle möglichen anderen alltäglichen Belanglosigkeiten. Seit 2003 schreibe ich einigermaßen regelmäßig auf was mir so widerfährt.
-        Ganz vielleicht gibt es bald auch wieder ein ordentliches Archiv.
+        Einen kleinen Überblick gibt das im Moment noch eher <a href="<?= url('archiv') ?>">rudimentäre Archiv</a>.
       </p>
       <p>Um auf dem Laufenden zu bleiben empfehle ich meinen <a href="https://dertagundich.de/feed/">RSS-Feed</a> zu abonnieren oder mir auf <a href="https://mastodon.social/@schneyra" rel="me">Mastodon</a> zu folgen.</p>
     </div>

@@ -20,6 +20,8 @@ fields:
         label: Media
         type: group
         fieldsets:
+          - video
+          - localvideo
           image:
             extends: blocks/image
             fields:
@@ -41,8 +43,6 @@ fields:
                 default: 2
                 min: 1
                 max: 4
-            - video
-            - localvideo
       code:
         label: Code
         type: group

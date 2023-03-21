@@ -1,4 +1,4 @@
-<figure>
+<figure class="localvideo">
     <?php if ($block->title() != ""): ?>
         <h3><?= $block->title() ?></h3>
     <?php endif; ?>
