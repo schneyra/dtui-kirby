@@ -1,7 +1,8 @@
 {
   "scripts": {
     "stylelint": "npx stylelint \"assets/css/**/*.css\"",
-    "postcss": "postcss assets/css/style.css > assets/css/style.min.css"
+    "postcss": "postcss assets/css/style.css > assets/css/style.min.css",
+    "prettier": "npx prettier --write ./assets"
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
@@ -9,6 +10,7 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
+    "prettier": "^2.8.6",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-order": "^6.0.2"

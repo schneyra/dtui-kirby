@@ -38,7 +38,7 @@
   font-size: var(--step--1);
   border: 0;
   background-color: var(--background-dark-transparent);
-  background-image: url('../images/play-circle-transparent.svg');
+  background-image: url("../images/play-circle-transparent.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 12.5%;

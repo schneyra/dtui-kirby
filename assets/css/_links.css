@@ -4,7 +4,8 @@ a:link {
   text-decoration-color: var(--color-secondary);
   text-underline-offset: 0.1em;
   text-decoration-thickness: 0.1em;
-  transition: color 100ms linear, text-decoration-color 100ms linear, color 100ms linear, text-underline-offset 100ms linear;
+  transition: color 100ms linear, text-decoration-color 100ms linear,
+    color 100ms linear, text-underline-offset 100ms linear;
 }
 
 a:visited {
