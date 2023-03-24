@@ -4,7 +4,7 @@
     "postcss": "postcss assets/css/style.css > assets/css/style.min.css",
     "prettier": "npx prettier --write ./assets"
   },
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
     "postcss": "^8.4.21",
@@ -14,5 +14,8 @@
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-order": "^6.0.2"
+  },
+  "dependencies": {
+    "instant.page": "^5.2.0"
   }
 }

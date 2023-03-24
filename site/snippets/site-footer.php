@@ -85,8 +85,6 @@ $rand = rand(0, count($articlesOnThisDay)-1);
   </nav>
 </footer>
 
-<?= js('assets/js/video.js') ?>
-
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -113,5 +111,8 @@ $rand = rand(0, count($articlesOnThisDay)-1);
     "url": "<?= $site->url() ?>"
   }
 </script>
+
+<?= js('assets/js/video.js') ?>
+<?= js('assets/js/instantpage.js') ?>
 </body>
 </html>
