@@ -1,5 +1,5 @@
 title: Artikel
-num: '{{ page.date.toDate("YmdHi") }}'
+num: datetime
 
 columns:
   main:
@@ -14,8 +14,7 @@ columns:
         type: date
         display: DD. MMMM YYYY
         default: now
-        time:
-          display: HH.mm
+        time: true
       categories:
         label: Kategorien
         type: multiselect
