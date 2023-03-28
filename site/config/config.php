@@ -109,6 +109,25 @@ return [
                 ]);
             }
         ],
+        [
+            'pattern' => 'latestposts',
+            'action'  => function () {
+                $articles = page('blog')->grandChildren()->children()->listed()->flip()->limit(5);
+
+                $data = [];
+                foreach ($articles as $article) {
+                    $data[] = [
+                        'title' => $article->title()->value(),
+                        'url' => $article->articleUrl()
+                    ];
+                }
+
+                return [
+                    'status' => 'ok',
+                    'data'   => $data
+                ];
+            }
+        ],
         // Blogpost: Fallback für ganz alte Routen
         [
             'pattern' => '(:any)',
