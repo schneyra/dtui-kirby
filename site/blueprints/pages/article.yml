@@ -38,6 +38,12 @@ columns:
           new-york: New York
           rund-um-island: Rund um Island
           webentwicklung: Webentwicklung
+      tags:
+        label: Schlagworte
+        type: tags
+        options:
+          type: query
+          query: site.index.pluck("tags", ",", true)
       thumbnail:
         label: Beitragsbild
         type: files
