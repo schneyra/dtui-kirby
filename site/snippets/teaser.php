@@ -27,6 +27,10 @@
       &middot; <a href="<?= url('/kategorie/' . $category) ?>" class="teaser__small-link"><?= DtuiHelper::getCategoryName($category) ?></a>
     <?php endforeach; ?>
 
+    <?php if ($article->tags()->split()) : ?>
+      &middot; <img src="<?= asset('assets/images/tag.svg')->url() ?>" class="teaser__icon" alt="">
+    <?php endif; ?>
+
     <?php if ($kirby->user()) : ?>
       &middot; <a href="<?= $article->panel()->url() ?>" class="teaser__small-link">Bearbeiten</a>
     <?php endif; ?>
