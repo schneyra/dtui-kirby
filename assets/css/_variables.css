@@ -39,15 +39,15 @@
   /* Custom pairs */
   --space-s-xl: clamp(1rem, calc(0.22rem + 3.79vw), 4.13rem);
 
-  /* @link https://utopia.fyi/type/calculator?c=330,16,1.2,1650,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,xl,xl,12 */
-  --step--2: clamp(0.69rem, calc(0.65rem + 0.23vw), 0.88rem);
-  --step--1: clamp(0.83rem, calc(0.77rem + 0.32vw), 1.1rem);
-  --step-0: clamp(1rem, calc(0.91rem + 0.45vw), 1.38rem);
-  --step-1: clamp(1.2rem, calc(1.07rem + 0.63vw), 1.72rem);
-  --step-2: clamp(1.44rem, calc(1.26rem + 0.86vw), 2.15rem);
-  --step-3: clamp(1.73rem, calc(1.49rem + 1.16vw), 2.69rem);
-  --step-4: clamp(2.07rem, calc(1.75rem + 1.56vw), 3.36rem);
-  --step-5: clamp(2.49rem, calc(2.06rem + 2.07vw), 4.2rem);
+  /* @link https://utopia.fyi/type/calculator/?c=330,16,1.2,1650,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,xl,xl,12 */
+  --step--2: clamp(0.69rem, calc(0.67rem + 0.13vw), 0.80rem);
+  --step--1: clamp(0.83rem, calc(0.79rem + 0.20vw), 1.00rem);
+  --step-0: clamp(1.00rem, calc(0.94rem + 0.30vw), 1.25rem);
+  --step-1: clamp(1.20rem, calc(1.11rem + 0.44vw), 1.56rem);
+  --step-2: clamp(1.44rem, calc(1.31rem + 0.62vw), 1.95rem);
+  --step-3: clamp(1.73rem, calc(1.55rem + 0.86vw), 2.44rem);
+  --step-4: clamp(2.07rem, calc(1.83rem + 1.19vw), 3.05rem);
+  --step-5: clamp(2.49rem, calc(2.16rem + 1.61vw), 3.82rem);
 
   /* Extra Schriftgröße für Eingabefelder: Mindestens 16px, aber nicht so groß wie --step-0 am Ende */
   --step-input: clamp(1rem, calc(0.91rem + 0.45vw), 1.1rem);
