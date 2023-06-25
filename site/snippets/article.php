@@ -25,10 +25,10 @@
 
   <?= $article->body()->toBlocks() ?>
 
-  <?php
+  <?php /*
   snippet('weeknotes', [
     'page' => $article
-  ]);
+  ]);*/
 ?>
 
   <footer class="article__footer">
