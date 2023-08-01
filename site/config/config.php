@@ -118,7 +118,8 @@ return [
                 foreach ($articles as $article) {
                     $data[] = [
                         'title' => $article->title()->value(),
-                        'url' => $article->articleUrl()
+                        'url' => $article->articleUrl(),
+                        'image' => $article->articleImage()
                     ];
                 }
 
