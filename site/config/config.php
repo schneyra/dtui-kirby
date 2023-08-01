@@ -49,9 +49,9 @@ return [
         ],
         // 'blog'-Ordner abfangen
         [
-            'pattern' => 'blog/(:num)/(:any)',
-            'action'  => function ($year, $slug) {
-                go($year . '/' . $slug, 301);
+            'pattern' => 'blog/(:num)/(:num)/(:any)',
+            'action'  => function ($year, $month, $slug) {
+                go($year . '/' . $month . '/' . $slug, 301);
             }
         ],
         // Kategorien
