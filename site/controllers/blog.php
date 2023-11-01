@@ -11,16 +11,9 @@ return function (object $page, string $category = null, string $search = null): 
         $template = 'teaser';
     }
 
-    if ($search) {
-        $search = get('s');
-        $articles = $articles->search($search);
-        $template = 'teaser';
-    }
-
     return [
         'articles' => $articles,
         'archive' => $category,
-        'search' => $search,
         'template' => $template
     ];
 };

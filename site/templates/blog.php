@@ -10,13 +10,7 @@ $paginatedArticles = $articles->flip()->paginate(10);
   </div>
 <?php endif; ?>
 
-<?php if ($search) : ?>
-  <div class="container archive-header">
-    <h1>Suchergebnisse für <em><?= esc($search) ?></em></h1>
-  </div>
-<?php endif; ?>
-
-<?php if ($archive || $search) : ?>
+<?php if ($archive) : ?>
   <div class="container archive-flow">
 <?php endif; ?>
 
@@ -33,7 +27,7 @@ $paginatedArticles = $articles->flip()->paginate(10);
   <p class="container">Keine Beiträge gefunden.</p>
 <?php endif; ?>
 
-<?php if ($archive || $search) : ?>
+<?php if ($archive) : ?>
   </div>
 <?php endif; ?>
 

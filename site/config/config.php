@@ -68,15 +68,6 @@ return [
                 ]);
             }
         ],
-        // Suche
-        [
-            'pattern' => 'suche',
-            'action'  => function () {
-                return page('blog')->render([
-                    'search' => true
-                ]);
-            }
-        ],
         // Archive für Jahr und Monat
         [
             'pattern' => '(:num)/(:num)',
