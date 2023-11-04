@@ -1,5 +1,5 @@
 .site-archive h1 + * {
-  margin-top: var(--space-xl);
+  margin-block-start: var(--space-xl);
 }
 
 .site-archive h2 {
@@ -7,11 +7,11 @@
 }
 
 .site-archive ul {
-  margin-top: var(--space-xs);
+  margin-block-start: var(--space-xs);
 }
 
 .site-archive li {
-  margin-top: var(--space-2xs);
+  margin-block-start: var(--space-2xs);
 }
 
 .site-archive summary {
@@ -24,11 +24,11 @@
 }
 
 .site-archive details + details {
-  margin-top: var(--space-l);
+  margin-block-start: var(--space-l);
 }
 
 .site-archive h3 {
-  margin-top: var(--space-m);
+  margin-block-start: var(--space-m);
 }
 
 .site-archive__date {

@@ -28,7 +28,7 @@
 
 .teaser__footer {
   font-size: var(--step--1);
-  margin-top: var(--space-xs);
+  margin-block-start: var(--space-xs);
   display: flex;
   align-items: center;
   gap: var(--space-3xs);
@@ -46,9 +46,9 @@
 }
 
 .archive-flow {
-  margin-top: var(--space-xl);
+  margin-block-start: var(--space-xl);
 }
 
 .archive-flow > * + * {
-  margin-top: var(--space-l);
+  margin-block-start: var(--space-l);
 }

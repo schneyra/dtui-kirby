@@ -5,7 +5,7 @@
 }
 
 .footer-navigation-wrapper {
-  margin-top: var(--space-2xl-3xl);
+  margin-block-start: var(--space-2xl-3xl);
   position: relative;
   padding-bottom: var(--space-s);
   border-radius: 4px 4px 0 0;
@@ -22,7 +22,7 @@
 }
 
 .footer-navigation + .footer-navigation {
-  margin-top: var(--space-s);
+  margin-block-start: var(--space-s);
 }
 
 .footer-navigation__item {

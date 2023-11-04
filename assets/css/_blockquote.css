@@ -5,6 +5,6 @@ blockquote {
 }
 
 blockquote footer {
-  margin-top: var(--space-s);
+  margin-block-start: var(--space-s);
   font-size: var(--step--1);
 }

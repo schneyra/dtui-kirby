@@ -32,6 +32,8 @@ class DtuiHelper
     }
 
     /**
+     * Gibt alle Kategorien zurück
+     *
      * @return array
      */
     private static function getCategories(): array

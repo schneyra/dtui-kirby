@@ -3,7 +3,7 @@
   max-width: var(--content-width);
   margin-left: auto;
   margin-right: auto;
-  padding: 0 var(--space-s);
+  padding-inline: var(--padding-default);
 }
 
 .container-wide {
@@ -11,5 +11,5 @@
   max-width: var(--wide-content-width);
   margin-left: auto;
   margin-right: auto;
-  padding: 0 var(--space-s);
+  padding-inline: var(--padding-default);
 }

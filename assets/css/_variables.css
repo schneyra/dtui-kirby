@@ -58,7 +58,8 @@
   */
   --content-width: clamp(50rem, calc(30rem + 30vw), 55rem);
   --wide-content-width: 1200px;
-  --default-article-margin-top: 1.5em;
+  --default-article-margin-block-start: 1.5em;
+  --padding-default: var(--space-m);
 
   /* Schrift */
   --headline-font-family: "Vollkorn", cursive;

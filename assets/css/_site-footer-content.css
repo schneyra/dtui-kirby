@@ -2,7 +2,7 @@
   display: grid;
   grid-gap: var(--space-2xl-3xl);
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding-top: var(--space-2xl-3xl);
+  padding-block-start: var(--space-2xl-3xl);
 }
 
 .site-footer-content__headline {
