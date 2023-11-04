@@ -3,9 +3,8 @@
   flex-wrap: wrap;
   list-style: none;
   margin: var(--space-4xl) 0 0;
-  gap: var(--space-s);
+  gap: var(--space-xs);
   justify-content: center;
-  padding-inline: var(--padding-default);
 }
 
 .pagination a,

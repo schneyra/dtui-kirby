@@ -1,6 +1,6 @@
 .site-header__content {
   max-width: var(--content-width);
-  padding: var(--space-l) var(--space-s) 0;
+  padding: var(--space-l) var(--padding-default) 0;
   margin: 0 auto;
   display: flex;
   align-items: center;
