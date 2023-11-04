@@ -12,12 +12,16 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
         $year = $page->date()->toDate('Y');
         $url = "https://weeknotes.cafe/w/$year/$week/feed";
 
-        $xml = simplexml_load_string(file_get_contents($url), "SimpleXMLElement", LIBXML_NOCDATA);
+        $response = new Remote($url);
 
-        if ($xml) {
-            $json = json_encode($xml);
-            $array = json_decode($json, true);
-            $notes = array_key_exists('item', $array['channel']) ? $array['channel']['item'] : [];
+        if ($response->code() === 200) {
+            $xml = simplexml_load_string($response->content(), "SimpleXMLElement", LIBXML_NOCDATA);
+
+            if ($xml) {
+                $json = json_encode($xml);
+                $array = json_decode($json, true);
+                $notes = array_key_exists('item', $array['channel']) ? $array['channel']['item'] : [];
+            }
         }
     }
 }
