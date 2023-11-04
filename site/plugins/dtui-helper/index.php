@@ -36,7 +36,7 @@ class DtuiHelper
      *
      * @return array
      */
-    private static function getCategories(): array
+    public static function getCategories(): array
     {
         $props = Kirby\Cms\Blueprint::load('pages/article');
         $props['model'] = page();

@@ -2,20 +2,12 @@
   margin-block-start: var(--space-xl);
 }
 
-.site-archive h2 {
-  display: inline;
-}
-
-.site-archive ul {
-  margin-block-start: var(--space-xs);
-}
-
-.site-archive li {
-  margin-block-start: var(--space-2xs);
-}
-
 .site-archive summary {
   border-block-end: 1px solid var(--color-secondary);
+}
+
+.site-archive summary > * {
+  display: inline;
 }
 
 .site-archive details {
@@ -23,11 +15,19 @@
   padding: var(--space-xs);
 }
 
+.site-archive details ul {
+  margin-block-start: var(--space-xs);
+}
+
+.site-archive details li {
+  margin-block-start: var(--space-2xs);
+}
+
 .site-archive details + details {
   margin-block-start: var(--space-l);
 }
 
-.site-archive h3 {
+.site-archive details h3 {
   margin-block-start: var(--space-m);
 }
 

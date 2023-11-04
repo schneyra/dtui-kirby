@@ -1,0 +1,10 @@
+.category-cloud {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-s) var(--space-m);
+}
+
+.category-cloud li {
+}

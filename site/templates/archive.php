@@ -3,6 +3,14 @@
 <div class="site-archive container flow">
   <h1>Archiv</h1>
 
+  <h2>Kategorien</h2>
+  <ul class="category-cloud">
+    <?php foreach (DtuiHelper::getCategories() as $slug => $name): ?>
+      <li><a href="<?= url('kategorie/' . $slug) ?>"><?= $name ?></a></li>
+    <?php endforeach; ?>
+  </ul>
+
+  <h2>Alle Artikel</h2>
   <p>Aktuell sind <?= $articleCount ?> Artikel veröffentlicht.</p>
 
   <?php foreach (page('blog')->children()->flip() as $year) : ?>
@@ -10,6 +18,8 @@
       <summary>
         <h2><?= $year->title() ?></h2>
       </summary>
+
+      <p>In diesem Jahr wurden <?= $year->grandChildren()->listed()->count() ?> Artikel veröffentlicht.</p>
 
       <?php foreach ($year->children()->flip() as $month) : ?>
         <?php $articles = $month->children()->listed()->flip(); ?>
