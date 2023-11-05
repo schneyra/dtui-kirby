@@ -11,11 +11,12 @@
     <?php endif; ?>
   <?php else : ?>
     <h1>Suche</h1>
-    <form method="GET" action="<?= url('suche') ?>" class="site-footer-searchform">
-      <input type="search" name="s" aria-label="Suchbegriff">
-      <button type="submit">Suchen</button>
-    </form>
   <?php endif; ?>
+
+  <form method="GET" action="<?= url('suche') ?>" class="site-footer-searchform">
+    <input type="search" name="s" aria-label="Suchbegriff" value="<?= !empty($query) ? esc($query) : ''; ?>">
+    <button type="submit">Suchen</button>
+  </form>
 </div>
 
 <div class="container archive-flow">
