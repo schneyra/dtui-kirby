@@ -26,7 +26,7 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
     }
 }
 
-if (count($notes)) : ?>
+if (count($notes) > 1) : ?>
 <aside class="container highlight-box flow">
   <h2>Weeknotes <?= $week . "/" . $year ?></h2>
 
@@ -38,7 +38,7 @@ if (count($notes)) : ?>
     $i = 0;
     
     foreach ($notes as $note) : ?>
-      <?php if (!str_starts_with($note['title'], 'martin')) : ?>
+      <?php if (!empty($note) && !str_starts_with($note['title'], 'martin')) : ?>
         <li class="article-list__item<?= $rand === $i ? ' article-list__item--active' : ''?>">
           <a href="<?= $note['link'] ?>" class="article-list__link"><?= $note['title'] ?></a>
         </li>
