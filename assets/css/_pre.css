@@ -1,0 +1,4 @@
+pre {
+  overflow-x: auto;
+  background: var(--background-light);
+}
