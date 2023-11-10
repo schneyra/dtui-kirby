@@ -1,0 +1,3 @@
+main > *:first-child {
+  padding-block-start: var(--space-4xl-5xl);
+}
