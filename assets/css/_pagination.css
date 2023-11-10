@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: var(--space-4xl) 0 0;
+  margin: var(--space-4xl) 0;
   gap: var(--space-xs);
   justify-content: center;
 }

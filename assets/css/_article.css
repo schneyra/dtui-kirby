@@ -1,3 +1,11 @@
+.article {
+  padding-block: var(--space-2xl-3xl);
+}
+
+main > *:first-child {
+  padding-block-start: var(--space-4xl-5xl);
+}
+
 .article > * {
   margin-left: auto;
   margin-right: auto;
@@ -83,8 +91,4 @@
   font-size: var(--step--1);
   text-align: right;
   clear: both;
-}
-
-.article + .article {
-  margin-block-start: var(--space-4xl-5xl);
 }
