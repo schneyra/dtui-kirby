@@ -71,5 +71,5 @@ a.site-header__title:hover {
 }
 
 .site-navigation__item + .site-navigation__item {
-  margin-left: var(--space-s);
+  margin-inline-start: var(--space-s);
 }

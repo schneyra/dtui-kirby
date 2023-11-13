@@ -21,8 +21,7 @@
   }
 
   .gallery--odd > *:last-child .image {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     max-width: calc(50% - (var(--space-xl) / 2));
   }
 }

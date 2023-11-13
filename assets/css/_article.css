@@ -3,8 +3,7 @@
 }
 
 .article > * {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   max-width: var(--content-width);
   padding-inline: var(--padding-default);
 }
@@ -50,18 +49,18 @@
   .align-left > * {
     width: 50%;
     float: left;
-    margin-right: var(--space-m-l);
+    margin-inline-end: var(--space-m-l);
   }
 
   .align-right > * {
     width: 50%;
     float: right;
-    margin-left: var(--space-m-l);
+    margin-inline-start: var(--space-m-l);
   }
 
   .align-right > *:last-child,
   .align-left > *:last-child {
-    margin-bottom: var(--space-m-l);
+    margin-block-end: var(--space-m-l);
   }
 
   .article > .align-left + *,

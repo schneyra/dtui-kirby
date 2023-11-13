@@ -1,4 +1,4 @@
 ol:not([class]) li,
 ul:not([class]) li {
-  margin-left: var(--space-s-m);
+  margin-inline-start: var(--space-s-m);
 }

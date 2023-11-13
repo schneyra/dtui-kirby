@@ -1,15 +1,13 @@
 .container {
   width: 100%;
   max-width: var(--content-width);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   padding-inline: var(--padding-default);
 }
 
 .container-wide {
   width: 100%;
   max-width: var(--wide-content-width);
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   padding-inline: var(--padding-default);
 }
