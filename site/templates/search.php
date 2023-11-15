@@ -13,7 +13,7 @@
     <h1>Suche</h1>
   <?php endif; ?>
 
-  <form method="GET" action="<?= url('suche') ?>" class="site-footer-searchform">
+  <form method="GET" action="<?= url('suche') ?>" class="site-footer-searchform" role="search">
     <input type="search" name="s" aria-label="Suchbegriff" value="<?= !empty($query) ? esc($query) : ''; ?>">
     <button type="submit">Suchen</button>
   </form>

@@ -2,11 +2,25 @@
 /**
  * @var App $kirby
  **/
+
+$showHero = $article->thumbnail()->toFile() && (isset($isSingle) && $isSingle === true);
 ?>
 
-<article class="article">
+<article class="article <?php if ($showHero) : ?>article--has-hero<?php endif; ?>">
+  <?php if ($showHero) : ?>
+    <div class="article__hero">
+
+      <?php
+      snippet('picture', [
+        'image' => $article->thumbnail()->toFile(),
+        'sizes' => "100vw",
+      ]);
+      ?>
+    </div>
+  <?php endif; ?>
+
   <?php if (isset($isSingle) && $isSingle === true) : ?>
-    <h1 class="article__headline">
+    <h1 class="article__headline <?php if ($showHero) : ?>article__headline--hero<?php endif; ?>">
       <?= $article->title() ?>
     </h1>
   <?php else: ?>
@@ -17,19 +31,13 @@
     </h2>
   <?php endif; ?>
 
-  <?php /*
-  {% if article.thumbnail.toFile() %}
-      <img src="{{ article.thumbnail.toFile().url }}" width="200" alt="">
-  {% endif %}
-  #} */?>
-
   <?= $article->body()->toBlocks() ?>
 
   <?php
-  snippet('weeknotes', [
-    'page' => $article
-  ]);
-?>
+    snippet('weeknotes', [
+      'page' => $article
+    ]);
+  ?>
 
   <footer class="article__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">

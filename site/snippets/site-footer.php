@@ -39,7 +39,7 @@ $rand = rand(0, count($articlesOnThisDay)-1);
     </div>
     <div class="flow">
       <h2 class="site-footer-content__headline">Suche</h2>
-      <form method="GET" action="<?= url('suche') ?>" class="site-footer-searchform">
+      <form method="GET" action="<?= url('suche') ?>" class="site-footer-searchform" role="search">
         <input type="search" name="s" aria-label="Suchbegriff">
         <button type="submit">Suchen</button>
       </form>
@@ -62,7 +62,7 @@ $rand = rand(0, count($articlesOnThisDay)-1);
     </div>
   </div>
 
-  <nav aria-label="Footer-Navigation" class="footer-navigation-wrapper container">
+  <nav aria-label="Footer" class="footer-navigation-wrapper container">
     <ul class="footer-navigation">
       <li class="footer-navigation__item">
         <a href="<?= $site->url() ?>/impressum/" class="footer-navigation__link">Impressum</a>

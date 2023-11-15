@@ -27,8 +27,8 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
 }
 
 if (count($notes) > 1) : ?>
-<aside class="container highlight-box flow">
-  <h2>Weeknotes <?= $week . "/" . $year ?></h2>
+<aside class="container highlight-box flow" aria-labelledby="weeknotes-<?= $week . "-" . $year ?>">
+  <h2 id="weeknotes-<?= $week . "-" . $year ?>">Weeknotes <?= $week . "/" . $year ?></h2>
 
   <p>Zum Glück muss ich nicht alleine jede Woche daran denken einen kleinen Rückblick zu schreiben. Hier sind die Beiträge meiner Freunde für diese Woche:</p>
 
