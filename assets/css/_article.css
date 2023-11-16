@@ -6,6 +6,12 @@
   padding-block-start: 0 !important;
 }
 
+.article > * {
+  margin-inline: auto;
+  max-width: var(--content-width);
+  padding-inline: var(--padding-default);
+}
+
 .article__hero {
   max-height: 65vh;
   display: flex;
@@ -13,6 +19,8 @@
   justify-content: center;
   overflow: hidden;
   margin-block-end: var(--space-xl);
+  max-width: 100%;
+  padding-inline: 0;
 }
 
 .article__hero picture {
@@ -39,12 +47,6 @@
 
 .article > * + * {
   margin-block-start: var(--default-article-margin-block-start);
-}
-
-.article > *:not(.article__hero) {
-  margin-inline: auto;
-  max-width: var(--content-width);
-  padding-inline: var(--padding-default);
 }
 
 .article > .image-wrapper:not(:nth-child(2)),
