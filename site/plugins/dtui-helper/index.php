@@ -21,7 +21,7 @@ class DtuiHelper
         }
 
         if ($archive) {
-            return "Archiv " . self::getCategoryName($archive) . " › " . $site->title() . " › Alltäglich belangloses";
+            return "Archiv der Kategorie " . self::getCategoryName($archive) . " › " . $site->title() . " › Alltäglich belangloses";
         }
 
         if ($page->isHomepage()) {

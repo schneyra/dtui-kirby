@@ -34,7 +34,7 @@
 }
 
 .article__hero img {
-  filter: grayscale(100%) contrast(1);
+  filter: grayscale(50%) contrast(1);
   object-fit: contain;
   width: 100%;
   max-width: 100%;
@@ -42,7 +42,7 @@
   height: auto;
   display: block;
   mix-blend-mode: lighten;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .article > * + * {
