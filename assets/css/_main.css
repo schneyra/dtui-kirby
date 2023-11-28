@@ -1,3 +1,7 @@
 main > *:first-child {
   padding-block-start: var(--space-4xl-5xl);
 }
+
+main > *:last-child {
+  padding-block-end: var(--space-3xl-4xl);
+}
