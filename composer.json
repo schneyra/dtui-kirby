@@ -20,7 +20,8 @@
     "php": ">=8.1.0",
     "getkirby/cms": "^4.0",
     "bvdputte/kirby-fingerprint": "^2.2",
-    "friendsofphp/php-cs-fixer": "^3.14"
+    "friendsofphp/php-cs-fixer": "^3.14",
+    "distantnative/retour-for-kirby": "^5.0"
   },
   "config": {
     "allow-plugins": {

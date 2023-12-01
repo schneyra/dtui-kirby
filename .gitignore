@@ -67,3 +67,7 @@ Icon
 /.ddev/*
 !/.ddev/config.yaml
 .php-cs-fixer.cache
+
+# Logs
+# ---------------
+site/logs/
