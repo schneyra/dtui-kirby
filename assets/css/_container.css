@@ -11,3 +11,8 @@
   margin-inline: auto;
   padding-inline: var(--padding-default);
 }
+
+.container-wide .container {
+  max-width: calc(var(--content-width) - var(--padding-default) - var(--padding-default));
+  padding-inline: 0;
+}

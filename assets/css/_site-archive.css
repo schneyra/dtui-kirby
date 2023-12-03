@@ -1,9 +1,13 @@
-.site-archive h1 + * {
-  margin-block-start: var(--space-xl);
+.site-archive > * + * {
+  margin-block-start: var(--space-2xl);
 }
 
 .site-archive summary {
   border-block-end: 1px solid var(--color-secondary);
+}
+
+.site-archive summary + * {
+  margin-block-start: 1em;
 }
 
 .site-archive summary > * {
