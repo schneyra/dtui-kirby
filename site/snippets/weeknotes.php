@@ -3,13 +3,15 @@ $notes = [];
 
 if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
     if ($page->date()->toDate('Y') >= 2023) {
-        if ($page->date()->toDate('ee') === '07') {
-            $week = $page->date()->toDate('ww');
+        $weekday = DtuiHelper::dateformat($page->date(), 'ee');
+
+        if ($weekday === '07') {
+            $week = DtuiHelper::dateformat($page->date(), 'ww');
         } else {
             $week = date('W', strtotime("last sunday " . $page->date()));
         }
 
-        $year = $page->date()->toDate('Y');
+        $year = DtuiHelper::dateformat($page->date(), 'YYYY');
         $url = "https://weeknotes.cafe/w/$year/$week/feed";
 
         $response = new Remote($url);
