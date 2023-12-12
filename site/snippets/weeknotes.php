@@ -12,18 +12,13 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
         }
 
         $year = DtuiHelper::dateformat($page->date(), 'YYYY');
-        $url = "https://weeknotes.cafe/w/$year/$week/feed";
+        $url = "https://weeknotes.cafe/w/$year/$week/json";
 
         $response = new Remote($url);
 
         if ($response->code() === 200) {
-            $xml = simplexml_load_string($response->content(), "SimpleXMLElement", LIBXML_NOCDATA);
-
-            if ($xml) {
-                $json = json_encode($xml);
-                $array = json_decode($json, true);
-                $notes = array_key_exists('item', $array['channel']) ? $array['channel']['item'] : [];
-            }
+            $array = json_decode($response->content(), true);
+            $notes = array_key_exists('items', $array) ? $array['items'] : [];
         }
     }
 }
