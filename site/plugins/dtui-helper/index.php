@@ -262,4 +262,25 @@ class DtuiHelper
                 return $page->date()->toDate('MM-dd') === $date && $page->date()->toDate('YYYY-MM-dd') !== $today;
             });
     }
+
+    /**
+     * Gibt die Kalenderwoche eines Datums zurück wenn das Datum ein Sonntag ist.
+     * Ist das Datum ein anderer Wochentag, wird die Kalenderwoche der Vorwoche zurückgegeben.
+     *
+     * @param $date
+     * @return string
+     * @throws Exception
+     */
+    public static function getWeekFromDate($date): string
+    {
+        $weekday = DtuiHelper::dateformat($date, 'ee');
+
+        if ($weekday === '07') {
+            $week = DtuiHelper::dateformat($date, 'ww');
+        } else {
+            $week = date('W', strtotime("last sunday " . $date));
+        }
+
+        return $week;
+    }
 }
