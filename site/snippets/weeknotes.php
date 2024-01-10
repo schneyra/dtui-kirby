@@ -9,20 +9,19 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
     if ($page->date()->toDate('Y') >= 2023) {
         $url = "https://weeknotes.cafe/w/$year/$week/json";
 
-        try {
-            $response = new Remote($url);
+        $response = new Remote($url);
 
-            if ($response->code() === 200) {
-                $array = json_decode($response->content(), true);
-                $notes = array_key_exists('items', $array) ? $array['items'] : [];
-            }
-        } catch (Exception $e) {
-        };
+        if ($response->code() === 200) {
+            $array = json_decode($response->content(), true);
+            $notes = array_key_exists('items', $array) ? $array['items'] : [];
+        }
     }
 
-    $thisWeekInThePast = page('blog')->grandChildren()->children()->listed()->filter(
-        fn ($child) => DtuiHelper::getWeekFromDate($child->date()) == $week
-    )->filterBy('categories', 'allwoechentlich-belangloses');
+    $thisWeekInThePast = page('blog')
+      ->grandChildren()->children()
+      ->filter(function ($page) use ($week) {
+          return in_array('allwoechentlich-belangloses', $page->categories()->toArray()) && DtuiHelper::getWeekFromDate($page->date()) == $week;
+      });
 } ?>
 
 <?php if (count($notes) > 1 || count($thisWeekInThePast) > 0) : ?>
@@ -56,7 +55,7 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
 
       <ul class="article-list article-list--light">
         <?php
-        $rand = rand(0, count($thisWeekInThePast)-1);
+        $rand = rand(0, count($thisWeekInThePast));
         $i = 0;
 
         foreach ($thisWeekInThePast as $note) : ?>
