@@ -17,10 +17,9 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
         }
     }
 
-    $thisWeekInThePast = page('blog')
-      ->grandChildren()->children()
+    $thisWeekInThePast = $kirby->collection('weekly')
       ->filter(function ($page) use ($week) {
-          return in_array('allwoechentlich-belangloses', $page->categories()->toArray()) && DtuiHelper::getWeekFromDate($page->date()) == $week;
+          return DtuiHelper::getWeekFromDate($page->date()) == $week;
       });
 } ?>
 
