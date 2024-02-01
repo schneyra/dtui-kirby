@@ -14,21 +14,25 @@ class DtuiHelper
      * @return string
      * @throws Exception
      */
-    public static function generatePageTitle(object $site, object $page, string $archive = null, object $dateArchive = null): string
+    public static function generatePageTitle(object $site, object $page, string $archive = null, object $dateArchive = null, string $searchQuery = null): string
     {
+        if ($searchQuery) {
+            return "Suchergebnisse für " . $searchQuery . " › " . $site->title();
+        }
+
         if ($dateArchive) {
-            return "Archiv für " . self::generateArchiveTitle($page) . " › " . $site->title() . " › Alltäglich belangloses";
+            return "Archiv für " . self::generateArchiveTitle($page) . " › " . $site->title();
         }
 
         if ($archive) {
-            return "Archiv der Kategorie " . self::getCategoryName($archive) . " › " . $site->title() . " › Alltäglich belangloses";
+            return "Archiv der Kategorie " . self::getCategoryName($archive) . " › " . $site->title();
         }
 
         if ($page->isHomepage()) {
-            return $site->title()  . " › Alltäglich belangloses";
+            return $site->title();
         }
 
-        return $page->title() . " › " . $site->title() . " › Alltäglich belangloses";
+        return $page->title() . " › " . $site->title();
     }
 
     /**
