@@ -31,6 +31,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install Composer dependencies
+      uses: php-actions/composer@v6
       run: composer install --prefer-dist --no-progress --no-dev
 
     - name: Cache NodeJS packages
