@@ -17,6 +17,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: php-actions/composer@v6
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -31,7 +32,6 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install Composer dependencies
-      uses: php-actions/composer@v6
       run: composer install --prefer-dist --no-progress --no-dev
 
     - name: Cache NodeJS packages
