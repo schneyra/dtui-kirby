@@ -34,11 +34,13 @@ final class UrlTest extends TestCase
         foreach ($urls as $url) {
             $headers = get_headers($url['oldUrl']);
 
+            var_dump($headers);
+
             // Alte URL wird weitergeleitet
             $this->assertNotFalse(strpos($headers[0],'301'));
 
             // Neue URL ist wie erwartet
-            $this->assertEquals('Location: ' . $url['newUrl'], $headers[11]);
+            $this->assertEquals('Location: ' . $url['newUrl'], $headers[6]);
 
             // Neue antwortet mit dem richtigen Statuscode
             $this->assertNotFalse(strpos($headers[15],'200'));
