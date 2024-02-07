@@ -30,7 +30,7 @@
 
     <img
       src="<?= $image->crop(800)->url() ?>"
-      alt="<?= $image->alt()->esc() ?>"
+      alt="<?= $customAlt ?? $image->alt()->esc() ?>"
       width="<?= $image->width() ?>"
       height="<?= $image->height() ?>"
       class="image"

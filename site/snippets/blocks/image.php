@@ -2,20 +2,21 @@
 
 /** @var \Kirby\Cms\Block $block */
 
-$alt     = $block->alt();
 $caption = $block->caption();
 $crop    = $block->crop()->isTrue();
 $link    = $block->link();
 $ratio   = $block->ratio()->or('auto');
 $align   = $block->align()->or('none');
 $src     = null;
+$image = $block->image()->toFile();
 
-if ($block->location() == 'web') {
+/**
+@todo Bilder aus Fremdquellen ermöglichen
+ if ($block->location() == 'web') {
     $src = $block->src()->esc();
-} elseif ($image = $block->image()->toFile()) {
-    $alt = $alt ?? $image->alt();
+} elseif () {
     $src = $image->url();
-}
+} */
 
 /**
  * @todo Bilder bei alignleft oder alignright kleiner ausgeben
@@ -30,6 +31,12 @@ if ($align == 'left' || $align == 'right') {
 if ($align == 'full') {
     $sizes = "100vw";
 }
+
+$customAlt = null;
+if ($block->alt()->isNotEmpty()) {
+  $customAlt = $block->alt()->esc();
+}
+
 ?>
 
 <?php if ($image): ?>
@@ -42,6 +49,7 @@ if ($align == 'full') {
     snippet('picture', [
       'image' => $image,
       'sizes' => $sizes,
+      'customAlt' => $customAlt,
     ]);
     ?>
 

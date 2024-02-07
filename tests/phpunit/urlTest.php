@@ -34,8 +34,6 @@ final class UrlTest extends TestCase
         foreach ($urls as $url) {
             $headers = get_headers($url['oldUrl']);
 
-            var_dump($headers);
-
             // Alte URL wird weitergeleitet
             $this->assertNotFalse(strpos($headers[0],'301'));
 
