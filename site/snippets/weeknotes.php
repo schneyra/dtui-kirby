@@ -6,7 +6,7 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
     $week = DtuiHelper::getWeekFromDate($page->date());
     $year = DtuiHelper::dateformat($page->date(), 'YYYY');
 
-    if ($page->date()->toDate('Y') >= 2023) {
+    if (DtuiHelper::dateformat($page->date(), 'YYYY') >= 2023) {
         $url = "https://weeknotes.cafe/w/$year/$week/json";
 
         $response = new Remote($url);
@@ -59,7 +59,7 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
 
         foreach ($thisWeekInThePast as $note) : ?>
           <?php $noteYear = DtuiHelper::dateformat($note->date(), 'YYYY'); ?>
-          <?php if (!empty($note) && $noteYear !== $page->date()->toDate('Y')) : ?>
+          <?php if (!empty($note) && $noteYear !== DtuiHelper::dateformat($page->date(), 'YYYY')) : ?>
             <li class="article-list__item<?= $rand === $i ? ' article-list__item--active' : ''?>">
               <?= $noteYear ?>: <a href="<?= $note->articleUrl() ?>" class="article-list__link"><?= $note->title() ?></a>
             </li>

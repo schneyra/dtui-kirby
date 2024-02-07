@@ -20,7 +20,7 @@
 
   <footer class="teaser__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">
-      <?= $article->date()->toDate('dd. MMMM YYYY') ?>
+      <?= DtuiHelper::dateformat($article->date(), 'dd. MMMM YYYY') ?>
     </time>
 
     <?php foreach ($article->categories()->split() as $category) : ?>
