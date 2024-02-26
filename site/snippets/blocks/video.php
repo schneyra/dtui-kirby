@@ -23,7 +23,7 @@ if ($video = Html::video($block->url(), [], ['class' => 'js-video-iframe'])):
             $results = $request->json(false);
             $coverImageUrl = $results->items[0]->snippet->thumbnails->maxres->url ?? $results->items[0]->snippet->thumbnails->high->url;
             $videoTitle = $results->items[0]->snippet->title;
-            $video = str_replace('data-src="', 'title="' . htmlentities($videoTitle) . '" data-src="', $video);
+            $video = str_replace('data-src="', 'title="YouTube-Video: ' . htmlentities($videoTitle) . '" data-src="', $video);
         }
     }
 
