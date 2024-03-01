@@ -44,6 +44,7 @@
   background-size: 12.5%;
   cursor: pointer;
   transition: background-size 100ms ease-out;
+  z-index: 1;
 }
 
 .video button:hover {
