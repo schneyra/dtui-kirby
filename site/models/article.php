@@ -2,6 +2,11 @@
 
 class ArticlePage extends Page
 {
+    /**
+     * Gibt die URL des Beitrages ohne "blog" zurück
+     *
+     * @return string
+     */
     public function articleUrl(): string
     {
         return url(str_replace('blog/', '', $this->uri()));
