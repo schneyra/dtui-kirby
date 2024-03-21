@@ -44,6 +44,13 @@ columns:
         options:
           type: query
           query: site.index.pluck("tags", ",", true)
+      rating:
+        label: Bewertung
+        type: select
+        options:
+          0: nicht unterhaltsam
+          1: unterhaltsam
+          2: sehr unterhaltsam
       thumbnail:
         label: Beitragsbild
         type: files
