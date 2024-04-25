@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50c813682b1c50d959f6d2b8e4760f54",
+    "content-hash": "59af3f5cb214caa30eb74d32902516ad",
     "packages": [
         {
             "name": "bvdputte/kirby-fingerprint",
@@ -1150,6 +1150,43 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
             "time": "2021-07-14T16:46:02+00:00"
+        },
+        {
+            "name": "schneyra/kirby-autosave",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schneyra/kirby-autosave.git",
+                "reference": "4ddf497d26afed03027d6cacaebd14880d217bcd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schneyra/kirby-autosave/zipball/4ddf497d26afed03027d6cacaebd14880d217bcd",
+                "reference": "4ddf497d26afed03027d6cacaebd14880d217bcd",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^4.2"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Schneider",
+                    "email": "martin@martinschneider.me",
+                    "homepage": "https://martinschneider.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Saves your page automatically.",
+            "support": {
+                "issues": "https://github.com/schneyra/kirby-autosave/issues",
+                "source": "https://github.com/schneyra/kirby-autosave/tree/v1.0.0"
+            },
+            "time": "2024-04-25T18:55:58+00:00"
         },
         {
             "name": "sebastian/diff",

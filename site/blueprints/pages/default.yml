@@ -9,6 +9,9 @@ columns:
   sidebar:
     width: 1/3
     fields:
+      autosave:
+        label: Automatisches Speichern
+        interval: 30000
       files:
         label: Dateien
         type: files
