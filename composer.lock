@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59af3f5cb214caa30eb74d32902516ad",
+    "content-hash": "fd20ecc895edc140ef61a37b03851ffa",
     "packages": [
         {
             "name": "bvdputte/kirby-fingerprint",
@@ -380,16 +380,16 @@
         },
         {
             "name": "distantnative/retour-for-kirby",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/distantnative/retour-for-kirby.git",
-                "reference": "ffd0189f0d09f879c849fcb18a753370753bca23"
+                "reference": "ed0482d8bcbb6f7391ebbf781e4c25a5a0af3fbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/ffd0189f0d09f879c849fcb18a753370753bca23",
-                "reference": "ffd0189f0d09f879c849fcb18a753370753bca23",
+                "url": "https://api.github.com/repos/distantnative/retour-for-kirby/zipball/ed0482d8bcbb6f7391ebbf781e4c25a5a0af3fbd",
+                "reference": "ed0482d8bcbb6f7391ebbf781e4c25a5a0af3fbd",
                 "shasum": ""
             },
             "require": {
@@ -412,11 +412,11 @@
                     "email": "nico@getkirby.com"
                 }
             ],
-            "description": "Redirects and 404 tracking for Kirby",
-            "homepage": "https://github.com/distantnative/retour-for-kirby",
+            "description": "Manage redirects and track 404s right from the Kirby CMS Panel",
+            "homepage": "https://distantnative.com/retour-for-kirby/",
             "support": {
                 "issues": "https://github.com/distantnative/retour-for-kirby/issues",
-                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.2.0"
+                "source": "https://github.com/distantnative/retour-for-kirby/tree/5.2.1"
             },
             "funding": [
                 {
@@ -424,7 +424,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-03-29T18:54:30+00:00"
+            "time": "2024-04-25T14:10:10+00:00"
         },
         {
             "name": "filp/whoops",
@@ -1153,20 +1153,21 @@
         },
         {
             "name": "schneyra/kirby-autosave",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schneyra/kirby-autosave.git",
-                "reference": "4ddf497d26afed03027d6cacaebd14880d217bcd"
+                "reference": "e3af7036adf559705d230f482f24835f559c2fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schneyra/kirby-autosave/zipball/4ddf497d26afed03027d6cacaebd14880d217bcd",
-                "reference": "4ddf497d26afed03027d6cacaebd14880d217bcd",
+                "url": "https://api.github.com/repos/schneyra/kirby-autosave/zipball/e3af7036adf559705d230f482f24835f559c2fc2",
+                "reference": "e3af7036adf559705d230f482f24835f559c2fc2",
                 "shasum": ""
             },
             "require": {
-                "getkirby/cms": "^4.2"
+                "getkirby/cms": "^4.2",
+                "getkirby/composer-installer": "^1.1"
             },
             "type": "kirby-plugin",
             "notification-url": "https://packagist.org/downloads/",
@@ -1184,9 +1185,9 @@
             "description": "Saves your page automatically.",
             "support": {
                 "issues": "https://github.com/schneyra/kirby-autosave/issues",
-                "source": "https://github.com/schneyra/kirby-autosave/tree/v1.0.0"
+                "source": "https://github.com/schneyra/kirby-autosave/tree/v1.1.0"
             },
-            "time": "2024-04-25T18:55:58+00:00"
+            "time": "2024-04-26T07:47:10+00:00"
         },
         {
             "name": "sebastian/diff",

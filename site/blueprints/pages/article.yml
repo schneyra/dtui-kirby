@@ -15,6 +15,9 @@ columns:
         display: DD. MMMM YYYY
         default: now
         time: true
+      autosave:
+        label: Automatisches Speichern
+        interval: 30000
       categories:
         label: Kategorien
         type: multiselect
