@@ -36,8 +36,8 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
     <?php foreach ($items as $item): ?>
       <item>
         <title><?= Xml::encode($item->title()) ?></title>
-        <link><?= Xml::encode($item->url()) ?></link>
-        <guid><?= Xml::encode($item->url()) ?></guid>
+        <link><?= Xml::encode($item->articleUrl()) ?></link>
+        <guid><?= Xml::encode($item->articleUrl()) ?></guid>
         <pubDate><?= date(DATE_RSS, $item->date()->toTimestamp()) ?></pubDate>
         <description><![CDATA[<?php foreach ($item->body()->toBlocks() as $block) {
             echo $block;

@@ -11,7 +11,9 @@
       button.addEventListener("click", () => {
         iframe.setAttribute(
           "src",
-          `${iframe.getAttribute("data-src")}?autoplay=1&modestbranding=1&showinfo=0`
+          `${iframe.getAttribute(
+            "data-src"
+          )}?autoplay=1&modestbranding=1&showinfo=0`
         );
         iframe.removeAttribute("data-src");
         button.remove();
