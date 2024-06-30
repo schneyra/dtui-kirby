@@ -23,12 +23,16 @@ export default {
       const hasChanges = this.$store.getters["content/hasChanges"]();
 
       if (hasChanges) {
-        const date = new Date().toLocaleString();
+        const date = new Date();
+        const localeDate = date.toLocaleString();
         const content = this.$store.getters['content/values']();
 
-        localStorage.setItem(`kirby-autosave_${content.uuid}`, JSON.stringify(content));
+        localStorage.setItem(`kirby-autosave_${content.uuid}`, JSON.stringify({
+          date: date,
+          content: content
+        }));
 
-        this.saved = `Saved: ${date}`;
+        this.saved = `Saved: ${localeDate}`;
       }
     }, this.interval)
   },
