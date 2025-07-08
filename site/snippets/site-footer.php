@@ -13,7 +13,7 @@ $rand = rand(0, count($articlesOnThisDay)-1);
   <div class="site-footer-content container-wide">
     <div class="flow">
       <h2 class="site-footer-content__headline">der tag und ich</h2>
-      <?php $image = asset('assets/images/avatar.jpg') ?>
+      <?php $image = asset('assets/images/avatar-2025.jpg') ?>
       <picture class="site-footer-content__image">
         <source
           srcset="<?= $image->srcset([
@@ -90,7 +90,7 @@ $rand = rand(0, count($articlesOnThisDay)-1);
     "@context": "https://schema.org",
     "@type": "Person",
     "email": "mailto:hallo@martinschneider.me",
-    "image": "<?= $site->url() ?>/images/avatar.jpg",
+    "image": "<?= $site->url() ?>/images/avatar-2025.jpg",
     "jobTitle": "Frontend-Developer, Diplom Informatiker (FH)",
     "name": "Martin Schneider",
     "url": "https://martinschneider.me",
