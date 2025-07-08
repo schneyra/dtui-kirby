@@ -44,7 +44,7 @@ function init() {
   const chromiumUserAgentIndex = navigator.userAgent.indexOf("Chrome/");
   if (chromiumUserAgentIndex > -1) {
     _chromiumMajorVersionInUserAgent = parseInt(
-      navigator.userAgent.substring(chromiumUserAgentIndex + "Chrome/".length)
+      navigator.userAgent.substring(chromiumUserAgentIndex + "Chrome/".length),
     );
   }
   // The user agent client hints API is a theoretically more reliable way to
@@ -132,7 +132,7 @@ function init() {
     document.addEventListener(
       "touchstart",
       touchstartListener,
-      eventListenersOptions
+      eventListenersOptions,
     );
   }
 
@@ -140,13 +140,13 @@ function init() {
     document.addEventListener(
       "mouseover",
       mouseoverListener,
-      eventListenersOptions
+      eventListenersOptions,
     );
   } else if (!mousedownShortcut) {
     document.addEventListener(
       "mousedown",
       mousedownListener,
-      eventListenersOptions
+      eventListenersOptions,
     );
   }
 
@@ -154,7 +154,7 @@ function init() {
     document.addEventListener(
       "mousedown",
       mousedownShortcutListener,
-      eventListenersOptions
+      eventListenersOptions,
     );
   }
 
@@ -192,7 +192,7 @@ function init() {
       },
       {
         timeout: 1500,
-      }
+      },
     );
   }
 }
@@ -295,7 +295,7 @@ function mousedownShortcutListener(event) {
 
       event.preventDefault();
     },
-    { capture: true, passive: false, once: true }
+    { capture: true, passive: false, once: true },
   );
 
   const customEvent = new MouseEvent("click", {

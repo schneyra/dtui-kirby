@@ -11,7 +11,7 @@
   grid-template-columns: 1fr;
 }
 
-@media screen and (min-width: 960px) {
+@media (width >= 960px) {
   .gallery {
     grid-template-columns: repeat(var(--columns, 2), 1fr);
   }

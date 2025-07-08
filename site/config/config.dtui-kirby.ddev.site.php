@@ -9,5 +9,6 @@ return [
         'pages' => [
             'active' => false
         ]
-    ]
+    ],
+    'bvdputte.fingerprint.disabled' => true
 ];

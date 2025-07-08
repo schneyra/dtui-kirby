@@ -66,7 +66,7 @@
   max-width: var(--content-width);
 }
 
-@media (min-width: 1000px) {
+@media (width >= 1000px) {
   .article > .poi-wrapper:not(.align-none, .align-center) {
     max-width: var(--wide-content-width);
   }
@@ -82,7 +82,7 @@
   max-width: 100%;
 }
 
-@media (min-width: 1000px) {
+@media (width >= 1000px) {
   .align-left > * {
     width: 50%;
     float: left;
