@@ -146,5 +146,10 @@ return [
             'active' => true,
             'type'   => 'file'
         ]
+    ],
+    'panel' => [
+        'vue' => [
+        'compiler' => false
+        ]
     ]
 ];
