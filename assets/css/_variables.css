@@ -1,12 +1,8 @@
 @font-face {
-  font-family: Vollkorn;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src:
-    local(""),
-    url("../fonts/vollkorn-v21-latin-700.woff2") format("woff2"),
-    url("../fonts/vollkorn-v21-latin-700.woff") format("woff");
+    font-display: swap;
+    font-family: "Lexend Deca";
+    font-weight: 1 999;
+    src: url("../fonts/lexend-deca.woff2") format("woff2-variations");
 }
 
 :root {
@@ -64,8 +60,9 @@
   --padding-default: var(--space-m);
 
   /* Schrift */
-  --headline-font-family: "Vollkorn", cursive;
-  --headline-font-weight: 700;
+  --headline-font-family: "Lexend Deca", cursive;
+  --headline-font-weight: 600;
+  --text-font-family: system-ui, sans-serif;
 
   /*
   Basis

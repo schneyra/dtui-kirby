@@ -13,7 +13,7 @@
 
   <title><?= DtuiHelper::generatePageTitle($site, $page, $archive ?? null, $dateArchive ?? null, $query ?? null); ?></title>
 
-  <link rel="preload" href="<?= $site->url() ?>/assets/fonts/vollkorn-v21-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="<?= $site->url() ?>/assets/fonts/lexend-deca.woff2" as="font" type="font/woff2" crossorigin="">
 
   <?php if ($kirby->option('options.local')) : ?>
     <?= css('assets/css/style.css') ?>

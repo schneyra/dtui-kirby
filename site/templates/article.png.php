@@ -25,7 +25,7 @@ imagefill($canvas, 0, 0, $backgroundColor);
 imagefilledrectangle($canvas, 1450, 1120, 2260, 1130, $colorYellow);
 
 // Path to .ttf font file
-$fontFile = './assets/fonts/Vollkorn-Bold.ttf';
+$fontFile = './assets/fonts/LexendDeca-Regular.ttf';
 
 // Write page title to canvas
 $title  = $page->title()->toString();
