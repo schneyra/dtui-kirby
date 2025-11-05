@@ -1,0 +1,17 @@
+{
+    "name": "schneyra/add-post",
+    "description": "Adds new blogpost on current date",
+    "homepage:": "https://www.dertagundich.de",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Schneider",
+            "email": "martin@martinschneider.me"
+        }
+    ],
+    "support": {
+        "docs": "",
+        "source": ""
+    }
+}

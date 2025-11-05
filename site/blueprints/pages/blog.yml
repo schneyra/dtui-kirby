@@ -1,16 +1,15 @@
 title: Blog
 icon: 📚
 
+buttons:
+    add-post: true
+    preview: true
+    settings: true
+    status: true
 columns:
-  left:
-    width: 1/2
-    sections:
-      pages:
-        label: Jahrgänge
-        sortBy: title desc
-  right:
-    width: 1/2
-    sections:
-      addPost:
-        label: Beitrag schreiben
-        type: addPost
+    left:
+        width: 1/2
+        sections:
+            pages:
+                label: Jahrgänge
+                sortBy: title desc
