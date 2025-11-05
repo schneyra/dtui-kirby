@@ -1,4 +1,7 @@
-<?php snippet('site-header', [
+<?php
+/** @var Kirby\Cms\Page $page */
+
+snippet('site-header', [
   'renderArticleMeta' => true
 ]) ?>
 

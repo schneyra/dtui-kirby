@@ -1,4 +1,7 @@
-<?php snippet('site-header', ['dateArchive' => $page]) ?>
+<?php
+/** @var Kirby\Cms\Page $page */
+
+snippet('site-header', ['dateArchive' => $page]) ?>
 
 <?php
 snippet('archive', [

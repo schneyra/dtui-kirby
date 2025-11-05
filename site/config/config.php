@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Cms\Page;
+
 return [
     'locale' => 'de_DE.utf-8',
     'home' => 'blog',

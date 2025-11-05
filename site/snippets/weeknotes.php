@@ -1,4 +1,11 @@
 <?php
+/**
+ * @var Kirby\Cms\App $kirby
+ * @var Kirby\Cms\Page $page
+ **/
+
+use Kirby\Http\Remote;
+
 $notes = [];
 $thisWeekInThePast = [];
 
@@ -33,7 +40,7 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
 
       <ul class="article-list article-list--light">
         <?php
-        $rand = rand(0, count($notes)-2);
+        $rand = rand(0, count($notes) - 2);
         $i = 0;
 
         foreach ($notes as $note) : ?>

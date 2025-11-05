@@ -1,7 +1,10 @@
 <?php
+
 /**
  * @var Kirby\Cms\Block $block
  */
+
+use Kirby\Cms\Html;
 
 $caption = $block->caption();
 $crop    = $block->crop()->isTrue();
@@ -21,7 +24,7 @@ if (
 ?>
 <figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?> class="gallery-wrapper">
   <ul class="gallery<?= $galleryClasses ?>" style="--columns:<?= $columns ?? 2 ?>">
-    <?php foreach ($block->images()->toFiles() as $image): ?>
+    <?php foreach ($block->images()->toFiles() as $image) : ?>
       <li>
         <picture class="image">
           <?php /*
@@ -56,9 +59,9 @@ if (
       </li>
     <?php endforeach ?>
   </ul>
-  <?php if ($caption->isNotEmpty()): ?>
+  <?php if ($caption->isNotEmpty()) : ?>
     <figcaption>
-      <?= $caption ?>
+        <?= $caption ?>
     </figcaption>
   <?php endif ?>
 </figure>

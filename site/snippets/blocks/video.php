@@ -1,13 +1,15 @@
 <?php
+
 use Kirby\Cms\Html;
+use Kirby\Http\Remote;
 use Kirby\Http\Uri;
 
 /**
- * @var App $kirby
+ * @var Kirby\Cms\App $kirby
  * @var Kirby\Cms\Block $block
  */
 
-if ($video = Html::video($block->url(), [], ['class' => 'js-video-iframe'])):
+if ($video = Html::video($block->url(), [], ['class' => 'js-video-iframe'])) :
     $video = str_replace('src=', 'data-src=', $video);
     $video = str_replace('youtube.com', 'youtube-nocookie.com', $video);
 
@@ -27,11 +29,11 @@ if ($video = Html::video($block->url(), [], ['class' => 'js-video-iframe'])):
         }
     }
 
-    if (strpos($video, 'vimeo') >= -1) {
-        /*echo "<pre>";
+    /*if (strpos($video, 'vimeo') >= -1) {
+        echo "<pre>";
 var_dump($block->parent()->root());
-echo "</pre>";*/
-    }
+echo "</pre>";
+    }*/
 
     /**
      * @todo Bild nur einmal laden
@@ -51,9 +53,9 @@ echo "</pre>";*/
     <div class="video js-video">
       <?= $video ?>
       <?php if ($coverImage) : ?>
-        <?php $sizes = "(min-width: 800px) 800px, 100vw"; ?>
+            <?php $sizes = "(min-width: 800px) 800px, 100vw"; ?>
         <picture class="js-video-cover">
-          <?php /*
+            <?php /*
           <source
             srcset="<?= $coverImage->srcset([
               '400w'  => ['width' => 400, 'format' => 'avif'],
@@ -86,7 +88,7 @@ echo "</pre>";*/
       <p class="video__disclaimer js-video-disclaimer">Mit dem Klick werden Daten von YouTube nachgeladen.</p>
     </div>
 
-    <?php if ($block->caption()->isNotEmpty()): ?>
+    <?php if ($block->caption()->isNotEmpty()) : ?>
       <figcaption><?= $block->caption() ?></figcaption>
     <?php endif ?>
   </figure>

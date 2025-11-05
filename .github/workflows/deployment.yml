@@ -1,6 +1,6 @@
 name: Deployment
 
-on: 
+on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
@@ -51,7 +51,7 @@ jobs:
 
     - name: Deployment
       uses: easingthemes/ssh-deploy@main
-      env:
+      with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "/"

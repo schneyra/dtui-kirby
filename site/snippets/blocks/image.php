@@ -1,6 +1,10 @@
 <?php
 
-/** @var \Kirby\Cms\Block $block */
+/** @var Block $block */
+
+use Kirby\Cms\Block;
+use Kirby\Cms\Html;
+use Kirby\Toolkit\Str;
 
 $caption = $block->caption();
 $crop    = $block->crop()->isTrue();
@@ -34,7 +38,7 @@ if ($align == 'full') {
 
 $customAlt = null;
 if ($block->alt()->isNotEmpty()) {
-  $customAlt = $block->alt()->esc();
+    $customAlt = $block->alt()->esc();
 }
 
 ?>

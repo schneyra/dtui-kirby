@@ -1,7 +1,10 @@
 <?php
+
 /**
- * @var App $kirby
- **/
+ * @var Kirby\Cms\App $kirby
+ * @var Kirby\Cms\Page $page
+ * @var Kirby\Cms\Site $site
+**/
 
 /**
  * Based on https://getkirby.com/docs/cookbook/content/dynamic-og-images
@@ -35,7 +38,7 @@ imagefttext($canvas, 70, 0, 1450, 1100, $siteTitleColor, $fontFile, strtoupper($
 
 // Place logo in the corner
 //$logoFile = './assets/kirby-logo.png';
-//$logo     = imagecreatefrompng($logoFile);
+//$logo = imagecreatefrompng($logoFile);
 
 //imagecopyresampled($canvas, $logo, 975, 400, 0, 0, imagesx($logo), imagesy($logo), imagesx($logo), imagesy($logo));
 

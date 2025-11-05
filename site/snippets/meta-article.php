@@ -1,7 +1,10 @@
 <?php
-  $description = DtuiHelper::generateMetaDescription($page);
-  $readingTime = DtuiHelper::generateReadingTime($page);
-  ?>
+/** @var Kirby\Cms\Page $page */
+/** @var Kirby\Cms\Site $site */
+
+$description = DtuiHelper::generateMetaDescription($page);
+$readingTime = DtuiHelper::generateReadingTime($page);
+?>
 
 <meta name="description" content="<?= $description ?>">
 <link rel="canonical" href="<?= $page->articleUrl() ?>">

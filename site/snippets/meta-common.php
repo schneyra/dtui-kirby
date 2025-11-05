@@ -1,4 +1,8 @@
-<?php $description = "„der tag und ich“ ist das private Blog von Martin Schneider aus Bonn. Hier geht es um alltägliche Belanglosigkeiten, Fotografie, Musik, Reisen, Webentwicklung und was mir sonst so einfällt." ?>
+<?php
+/** @var Kirby\Cms\Page $page */
+/** @var Kirby\Cms\Site $site */
+
+$description = "„der tag und ich“ ist das private Blog von Martin Schneider aus Bonn. Hier geht es um alltägliche Belanglosigkeiten, Fotografie, Musik, Reisen, Webentwicklung und was mir sonst so einfällt." ?>
 
 <meta name="description" content="<?= $description ?>">
 <link rel="canonical" href="<?= $page->url() ?>">

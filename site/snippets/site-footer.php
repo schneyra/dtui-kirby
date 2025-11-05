@@ -1,10 +1,8 @@
 <?php
-/**
- * @var object $site
- **/
+/** @var Kirby\Cms\Site $site */
 
 $articlesOnThisDay = DtuiHelper::onThisDay()->flip();
-$rand = rand(0, count($articlesOnThisDay)-1);
+$rand = rand(0, count($articlesOnThisDay) - 1);
 ?>
 
 </main>

@@ -6,7 +6,7 @@ panel.plugin('schneyra/groupedPosts', {
           posts: []
         }
       },
-      created: function() {
+      created: function () {
         this.load().then(response => {
           this.posts = response.groupedPosts;
           console.log(response);

@@ -1,6 +1,7 @@
 <?php
 /**
- * @var App $kirby
+ * @var Kirby\Cms\App $kirby
+ * @var Kirby\Cms\Page $page
  **/
 ?>
 

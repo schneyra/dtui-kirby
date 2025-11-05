@@ -1,6 +1,7 @@
 <?php
 use Kirby\Cms\App;
 use Kirby\Cms\Block;
+use Kirby\Toolkit\Str;
 
 /**
  * @var Block $block

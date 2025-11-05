@@ -1,7 +1,5 @@
 <?php
 
-use Kirby\Cms\Pages;
-
 class DtuiHelper
 {
     /**
@@ -11,6 +9,7 @@ class DtuiHelper
      * @param object $page
      * @param string|null $archive
      * @param object|null $dateArchive
+     * @param string|null $searchQuery
      * @return string
      * @throws Exception
      */
@@ -36,17 +35,51 @@ class DtuiHelper
     }
 
     /**
-     * Gibt alle Kategorien zurück
+     * Gibt das passend formatierte Datum für das aktuellen Archivs zurück
      *
-     * @return array
+     * @param object $page
+     * @return string
+     * @throws Exception
      */
-    public static function getCategories(): array
+    public static function generateArchiveTitle(object $page): string
     {
-        $props = Kirby\Cms\Blueprint::load('pages/article');
-        $props['model'] = page();
+        $title = '';
 
-        $bp = new Kirby\Cms\PageBlueprint($props);
-        return $bp->fields()['categories']['options'];
+        switch ($page->template()->name()) {
+            case 'year':
+                $title = $page->title();
+                break;
+            case 'month':
+                $title = self::dateformat($page->parent()->title() . "-" . $page->title(), 'MMMM YYYY');
+                break;
+            case 'day':
+                $title = 'den ' . self::dateformat($page->parent()->parent()->title() . "-" . $page->parent()->title() . "-" . $page->title(), 'dd. MMMM YYYY');
+                break;
+        }
+
+        return $title;
+    }
+
+    /**
+     * Formatiert Datumsangaben
+     *
+     * @param $date
+     * @param $pattern
+     * @return bool|string
+     * @throws Exception
+     */
+    public static function dateformat($date, $pattern = null): bool|string
+    {
+        $dateFormatter = new IntlDateFormatter(
+            "de_DE",
+            IntlDateFormatter::FULL,
+            IntlDateFormatter::NONE,
+            'Europe/Berlin',
+            IntlDateFormatter::GREGORIAN,
+            $pattern
+        );
+
+        return $dateFormatter->format(new DateTime($date));
     }
 
     /**
@@ -60,6 +93,20 @@ class DtuiHelper
         $categories = self::getCategories();
 
         return $categories[$slug] ?? $slug;
+    }
+
+    /**
+     * Gibt alle Kategorien zurück
+     *
+     * @return array
+     */
+    public static function getCategories(): array
+    {
+        $props = Kirby\Cms\Blueprint::load('pages/article');
+        $props['model'] = page();
+
+        $bp = new Kirby\Cms\PageBlueprint($props);
+        return $bp->fields()['categories']['options'];
     }
 
     /**
@@ -120,6 +167,24 @@ class DtuiHelper
     }
 
     /**
+     * Errechnet die geschätzte Lesezeit eines Beitrags
+     *
+     * @param object $page
+     * @return array
+     */
+    public static function generateReadingTime(object $page): array
+    {
+        $articleBody = strip_tags($page->body()->toBlocks());
+        $readingTime = self::estimateReadingTime($page->title() . ' ' . $articleBody);
+
+        if ($readingTime['seconds'] > 30) {
+            $readingTime['minutes'] = $readingTime['minutes'] + 1;
+        }
+
+        return $readingTime;
+    }
+
+    /**
      * Function to calculate the estimated reading time of the given text.
      * @see https://ourcodeworld.com/articles/read/1603/how-to-determine-the-estimated-reading-time-of-a-text-with-php
      *
@@ -140,46 +205,6 @@ class DtuiHelper
     }
 
     /**
-     * Errechnet die geschätzte Lesezeit eines Beitrags
-     *
-     * @param object $page
-     * @return array
-     */
-    public static function generateReadingTime(object $page): array
-    {
-        $articleBody = strip_tags($page->body()->toBlocks());
-        $readingTime = self::estimateReadingTime($page->title() . ' ' .  $articleBody);
-
-        if ($readingTime['seconds'] > 30) {
-            $readingTime['minutes'] = $readingTime['minutes'] + 1;
-        }
-
-        return $readingTime;
-    }
-
-    /**
-     * Formatiert Datumsangaben
-     *
-     * @param $date
-     * @param $pattern
-     * @return bool|string
-     * @throws Exception
-     */
-    public static function dateformat($date, $pattern = null): bool|string
-    {
-        $dateFormatter = new IntlDateFormatter(
-            "de_DE",
-            IntlDateFormatter::FULL,
-            IntlDateFormatter::NONE,
-            'Europe/Berlin',
-            IntlDateFormatter::GREGORIAN,
-            $pattern
-        );
-
-        return $dateFormatter->format(new DateTime($date));
-    }
-
-    /**
      * Generiert die Datum/Uhrzeit-Ausgabe eines Artikels
      *
      * @param object $article
@@ -193,32 +218,6 @@ class DtuiHelper
             IntlDateFormatter::SHORT,
             'Europe/Berlin'
         )) . " Uhr";
-    }
-
-    /**
-     * Gibt das passend formatierte Datum für das aktuellen Archivs zurück
-     *
-     * @param object $page
-     * @return string
-     * @throws Exception
-     */
-    public static function generateArchiveTitle(object $page): string
-    {
-        $title = '';
-
-        switch ($page->template()->name()) {
-            case 'year':
-                $title = $page->title();
-                break;
-            case 'month':
-                $title = self::dateformat($page->parent()->title() . "-" . $page->title(), 'MMMM YYYY');
-                break;
-            case 'day':
-                $title = 'den ' . self::dateformat($page->parent()->parent()->title() . "-" . $page->parent()->title() . "-" . $page->title(), 'dd. MMMM YYYY');
-                break;
-        }
-
-        return $title;
     }
 
     /**

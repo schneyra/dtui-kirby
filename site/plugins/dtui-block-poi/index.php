@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Cms\App as Kirby;
+
 Kirby::plugin('schneyra/poi-block', [
     'blueprints' => [
         'blocks/poi' => __DIR__ . '/blueprints/blocks/poi.yml'

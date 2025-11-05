@@ -38,6 +38,7 @@ Icon
 # ---------------
 /site/cache/*
 !/site/cache/index.html
+.phpcs-cache
 
 # Accounts
 # ---------------

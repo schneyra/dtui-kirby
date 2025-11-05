@@ -1,0 +1,9 @@
+services:
+  dtui:
+    build: .
+    container_name: dtui-kirby-server
+    ports:
+      - "2909:80"
+    volumes:
+      - .:/var/www/html/
+    restart: no

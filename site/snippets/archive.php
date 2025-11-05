@@ -1,4 +1,6 @@
 <?php
+/** @var Kirby\Cms\Page $page */
+
 $title = DtuiHelper::generateArchiveTitle($page);
 
 $allArticles = DtuiHelper::getAllArticlesForArchive($page);
@@ -9,7 +11,7 @@ $articles = $allArticles->paginate(10);
   <h1>Archiv für <?= $title; ?></h1>
 
   <?php if (count($allArticles) > 0) : ?>
-    <p><?= count($allArticles) . " " . (count($allArticles)!=1 ? 'Beiträge' : "Beitrag") ?></p>
+    <p><?= count($allArticles) . " " . (count($allArticles) != 1 ? 'Beiträge' : "Beitrag") ?></p>
 
     <div class="archive-flow">
       <?php foreach ($articles as $article): ?>

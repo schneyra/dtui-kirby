@@ -1,6 +1,6 @@
 <?php
 /**
- * @var App $kirby
+ * @var Kirby\Cms\App $kirby
  **/
 
 $showHero = $article->thumbnail()->toFile() && (isset($isSingle) && $isSingle === true);
@@ -37,7 +37,7 @@ $showHero = $article->thumbnail()->toFile() && (isset($isSingle) && $isSingle ==
     snippet('weeknotes', [
       'page' => $article
     ]);
-  ?>
+?>
 
   <footer class="article__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">

@@ -1,5 +1,7 @@
 <?php
 
+use Kirby\Cms\App as Kirby;
+
 Kirby::plugin('schneyra/localvideo-block', [
     'blueprints' => [
         'blocks/localvideo' => __DIR__ . '/blueprints/blocks/localvideo.yml'

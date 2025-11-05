@@ -1,8 +1,9 @@
-<?php /**
- * @var App $kirby
- * @var object $site
- * @var object $page
-**/ ?>
+<?php
+/**
+ * @var Kirby\Cms\App $kirby
+ * @var Kirby\Cms\Page $page
+ * @var Kirby\Cms\Site $site
+ **/ ?>
 
 <!DOCTYPE html>
 <html lang="de">

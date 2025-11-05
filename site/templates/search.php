@@ -1,6 +1,6 @@
 <?php snippet('site-header') ?>
 
-<?php $totalPages = ceil($pagination->total()/$pagination->limit()) ?>
+<?php $totalPages = ceil($pagination->total() / $pagination->limit()) ?>
 
 <div class="container archive-header flow">
   <?php if (isset($query)) : ?>
@@ -26,7 +26,7 @@
       snippet('teaser', [
         'article' => $result,
       ]);
-      ?>
+        ?>
     <?php endforeach; ?>
 
   <?php else : ?>
@@ -37,7 +37,7 @@
 
   <?php
     snippet('pagination', ['articles' => $results]);
-  ?>
+?>
 </div>
 
 <?php snippet('site-footer') ?>

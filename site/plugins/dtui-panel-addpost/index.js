@@ -8,7 +8,7 @@ panel.plugin('schneyra/addPost', {
           label: null
         }
       },
-      created: function() {
+      created: function () {
         this.load().then(response => {
           this.label = response.label;
         });

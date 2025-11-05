@@ -1,4 +1,7 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
+
 use PHPUnit\Framework\TestCase;
 
 final class UrlTest extends TestCase
@@ -14,7 +17,7 @@ final class UrlTest extends TestCase
         ];
 
         foreach ($urls as $url) {
-            $this->assertNotFalse(strpos(get_headers($url)[0],'200'));
+            $this->assertNotFalse(strpos(get_headers($url)[0], '200'));
         }
     }
 
@@ -35,13 +38,13 @@ final class UrlTest extends TestCase
             $headers = get_headers($url['oldUrl']);
 
             // Alte URL wird weitergeleitet
-            $this->assertNotFalse(strpos($headers[0],'301'));
+            $this->assertNotFalse(strpos($headers[0], '301'));
 
             // Neue URL ist wie erwartet
             $this->assertEquals('Location: ' . $url['newUrl'], $headers[6]);
 
             // Neue antwortet mit dem richtigen Statuscode
-            $this->assertNotFalse(strpos($headers[15],'200'));
+            $this->assertNotFalse(strpos($headers[15], '200'));
         }
     }
 
@@ -52,7 +55,7 @@ final class UrlTest extends TestCase
         ];
 
         foreach ($urls as $url) {
-            $this->assertNotFalse(strpos(get_headers($url)[0],'404'));
+            $this->assertNotFalse(strpos(get_headers($url)[0], '404'));
         }
     }
 }
