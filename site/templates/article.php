@@ -10,7 +10,7 @@ snippet('site-header', [
     'article' => $page,
     'isSingle' => true,
   ]);
-    ?>
+?>
 
 <!-- Schlagworte: <?= $page->tags() ?> -->
 

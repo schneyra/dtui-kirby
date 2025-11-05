@@ -46,13 +46,13 @@ $rand = rand(0, count($articlesOnThisDay) - 1);
       <?php if (count($articlesOnThisDay)) : ?>
         <ul class="article-list">
             <?php $i = 0;
-            foreach ($articlesOnThisDay as $article) : ?>
+          foreach ($articlesOnThisDay as $article) : ?>
           <li class="article-list__item<?= $rand === $i ? ' article-list__item--active' : ''?>">
             <a href="<?= $article->articleUrl() ?>" class="article-list__link"><?= $article->title() ?></a>
             <span class="article-list__date">(<?= DtuiHelper::dateformat($article->date(), 'YYYY') ?>)</span>
           </li>
-                <?php $i++;
-            endforeach; ?>
+                  <?php $i++;
+          endforeach; ?>
         </ul>
       <?php else : ?>
         <p>An diesem Datum habe ich scheinbar noch nie einen Beitrag geschrieben. Das ist schon ein bisschen überraschend.</p>

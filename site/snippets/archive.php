@@ -27,7 +27,7 @@ $articles = $allArticles->paginate(10);
         snippet('pagination', [
         'articles' => $articles,
         ]);
-        ?>
+      ?>
   <?php else : ?>
     <p>Keine Beiträge gefunden</p>
   <?php endif; ?>

@@ -4,12 +4,13 @@
 
 ## Entwicklung
 ### Entwicklungsumgebung
-- `ddev start`
+- `docker compose up`
 
 ### Linting und Tests
-- `ddev npm run stylelint` (WIP)
-- `ddev exec phpunit tests/phpunit/urlTest.php` (WIP)
+- `docker compose exec dtui "npm" run stylelint` (WIP)
+- `docker compose exec dtui "phpunit" tests/phpunit/urlTest.php` (WIP)
+- `docker compose exec dtui "php-cs-fixer" check`
 
 ### CSS-Build
 CSS wird nur für Prod gebaut in der Github-Action gebaut.
-Zum lokalen Test: `ddev npm run postcss`.
+Zum lokalen Test: `docker compose exec dtui "npm" run postcss`.

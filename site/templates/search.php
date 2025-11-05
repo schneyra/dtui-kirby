@@ -37,7 +37,7 @@
 
   <?php
     snippet('pagination', ['articles' => $results]);
-    ?>
+?>
 </div>
 
 <?php snippet('site-footer') ?>

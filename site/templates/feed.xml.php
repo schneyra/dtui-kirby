@@ -43,7 +43,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
         <pubDate><?= date(DATE_RSS, $item->date()->toTimestamp()) ?></pubDate>
         <description><![CDATA[<?php foreach ($item->body()->toBlocks() as $block) {
             echo $block;
-                              } ?>]]></description>
+        } ?>]]></description>
       </item>
     <?php endforeach; ?>
   </channel>
