@@ -69,7 +69,7 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
             <?php $noteYear = DtuiHelper::dateformat($note->date(), 'YYYY'); ?>
             <?php if (!empty($note) && $noteYear !== DtuiHelper::dateformat($page->date(), 'YYYY')) : ?>
             <li class="article-list__item<?= $rand === $i ? ' article-list__item--active' : ''?>">
-                <?= $noteYear ?>: <a href="<?= $note->articleUrl() ?>" class="article-list__link"><?= $note->title() ?></a>
+                <?= $noteYear ?>: <a href="<?= $note->url() ?>" class="article-list__link"><?= $note->title() ?></a>
             </li>
                 <?php $i++;
             endif; ?>

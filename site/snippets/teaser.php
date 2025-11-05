@@ -7,7 +7,7 @@
 
 <article class="teaser">
   <h2 class="teaser__headline">
-    <a href="<?= $article->articleUrl() ?>" class="teaser__link">
+    <a href="<?= $article->url() ?>" class="teaser__link">
       <?= $article->title() ?>
     </a>
   </h2>

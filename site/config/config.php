@@ -111,7 +111,7 @@ return [
                 foreach ($articles as $article) {
                     $data[] = [
                         'title' => $article->title()->value(),
-                        'url' => $article->articleUrl(),
+                        'url' => $article->url(),
                         'image' => $article->articleImage()
                     ];
                 }
@@ -150,6 +150,7 @@ return [
         ]
     ],
     'panel' => [
+        'install' => true,
         'vue' => [
         'compiler' => false
         ]

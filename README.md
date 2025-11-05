@@ -5,6 +5,7 @@
 ## Entwicklung
 ### Entwicklungsumgebung
 - `docker compose up`
+- http://localhost:2909
 
 ### Linting und Tests
 - `docker compose exec dtui "npm" run stylelint` (WIP)

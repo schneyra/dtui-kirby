@@ -5,13 +5,14 @@ use Kirby\Cms\Page;
 class ArticlePage extends Page
 {
     /**
-     * Gibt die URL des Beitrages ohne "blog" zurück
+     * Entfernt 'blog' aus der Artikel-URL
      *
+     * @param array|string|null $options
      * @return string
      */
-    public function articleUrl(): string
+    public function url($options = null): string
     {
-        return url(str_replace('blog/', '', $this->uri()));
+        return url(str_replace('blog/', '', Page::url()));
     }
 
     /**

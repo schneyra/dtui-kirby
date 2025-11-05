@@ -24,7 +24,7 @@ snippet('site-header', [
     "mainEntityOfPage": "true",
     "image": {
       "@type": "imageObject",
-      "url": "<?= $page->articleUrl() ?>.png",
+      "url": "<?= $page->url() ?>.png",
       "width": "1200",
       "height": "628"
     },

@@ -29,7 +29,7 @@ endif; ?>">
     </h1>
   <?php else : ?>
     <h2 class="article__headline">
-      <a href="<?= $article->articleUrl() ?>">
+      <a href="<?= $article->url() ?>">
         <?= $article->title() ?>
       </a>
     </h2>
@@ -45,7 +45,7 @@ endif; ?>">
 
   <footer class="article__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">
-      <a href="<?= $article->articleUrl() ?>"><?= DtuiHelper::dateformat($article->date(), 'dd. MMMM YYYY') ?></a>
+      <a href="<?= $article->url() ?>"><?= DtuiHelper::dateformat($article->date(), 'dd. MMMM YYYY') ?></a>
     </time>
 
     <?php foreach ($article->categories()->split() as $category) : ?>

@@ -39,7 +39,7 @@
             <ul>
                 <?php foreach ($articles as $article) : ?>
                 <li>
-                  <h4><a href="<?= $article->articleUrl() ?>"><?= $article->title() ?></a></h4>
+                  <h4><a href="<?= $article->url() ?>"><?= $article->title() ?></a></h4>
                   <time datetime="<?= $article->date()->strtotime() ?>" class="site-archive__date">
                     (<?= DtuiHelper::dateformat($article->date(), 'dd. MMMM YYYY')?>)
                   </time>

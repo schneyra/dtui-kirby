@@ -7,12 +7,12 @@ $readingTime = DtuiHelper::generateReadingTime($page);
 ?>
 
 <meta name="description" content="<?= $description ?>">
-<link rel="canonical" href="<?= $page->articleUrl() ?>">
+<link rel="canonical" href="<?= $page->url() ?>">
 <meta property="og:locale" content="de_DE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="<?= $page->title() ?>">
 <meta property="og:description" content="<?= $description ?>">
-<meta property="og:url" content="<?= $page->articleUrl() ?>">
+<meta property="og:url" content="<?= $page->url() ?>">
 <meta property="og:site_name" content="Martin Schneider">
 <meta property="og:image" content="<?= e($page->template()->name() === 'article', $page->url() . '.png', $site->url() . '/default-og.png') ?>">
 <meta property="article:publisher" content="schneyra">

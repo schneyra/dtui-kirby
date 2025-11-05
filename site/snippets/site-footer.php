@@ -48,7 +48,7 @@ $rand = rand(0, count($articlesOnThisDay) - 1);
             <?php $i = 0;
           foreach ($articlesOnThisDay as $article) : ?>
           <li class="article-list__item<?= $rand === $i ? ' article-list__item--active' : ''?>">
-            <a href="<?= $article->articleUrl() ?>" class="article-list__link"><?= $article->title() ?></a>
+            <a href="<?= $article->url() ?>" class="article-list__link"><?= $article->title() ?></a>
             <span class="article-list__date">(<?= DtuiHelper::dateformat($article->date(), 'YYYY') ?>)</span>
           </li>
                   <?php $i++;
