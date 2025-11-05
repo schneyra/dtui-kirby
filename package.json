@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "stylelint": "npx stylelint \"assets/css/**/*.css\"",
+    "stylelint": "npx stylelint \"assets/css/**/*.css\" --formatter verbose",
+    "stylelint-fix": "npx stylelint \"assets/css/**/*.css\" --fix --formatter verbose",
     "postcss": "postcss assets/css/style.css > assets/css/style.min.css",
     "prettier": "npx prettier --write ./assets"
   },
@@ -13,7 +14,7 @@
     "postcss-nested": "^7.0.2",
     "prettier": "^3.3.3",
     "stylelint": "^16.10.0",
-    "stylelint-config-standard": "^38.0.0",
+    "stylelint-config-standard": "^39.0.0",
     "stylelint-order": "^7.0.0"
   },
   "dependencies": {
