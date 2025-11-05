@@ -13,7 +13,7 @@
     </div>
 
     <ul class="category-cloud">
-      <?php foreach (DtuiHelper::getCategories() as $slug => $name): ?>
+      <?php foreach (DtuiHelper::getCategories() as $slug => $name) : ?>
         <li><a href="<?= url('kategorie/' . $slug) ?>"><?= $name ?></a></li>
       <?php endforeach; ?>
     </ul>
@@ -31,20 +31,20 @@
         <p>In diesem Jahr wurden <?= $year->grandChildren()->listed()->count() ?> Artikel veröffentlicht.</p>
 
         <?php foreach ($year->children()->flip() as $month) : ?>
-          <?php $articles = $month->children()->listed()->flip(); ?>
+            <?php $articles = $month->children()->listed()->flip(); ?>
 
-          <?php if (count($articles)) : ?>
-            <h3><?= dtuiHelper::dateformat($year->title()->toString() . '-'. $month->title()->toString(), 'MMMM YYYY') ?></h3>
+            <?php if (count($articles)) : ?>
+            <h3><?= dtuiHelper::dateformat($year->title()->toString() . '-' . $month->title()->toString(), 'MMMM YYYY') ?></h3>
 
             <ul>
-              <?php foreach ($articles as $article) : ?>
+                <?php foreach ($articles as $article) : ?>
                 <li>
                   <h4><a href="<?= $article->articleUrl() ?>"><?= $article->title() ?></a></h4>
                   <time datetime="<?= $article->date()->strtotime() ?>" class="site-archive__date">
                     (<?= DtuiHelper::dateformat($article->date(), 'dd. MMMM YYYY')?>)
                   </time>
                 </li>
-              <?php endforeach; ?>
+                <?php endforeach; ?>
             </ul>
             <?php endif; ?>
         <?php endforeach; ?>

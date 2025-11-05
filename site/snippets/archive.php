@@ -14,21 +14,21 @@ $articles = $allArticles->paginate(10);
     <p><?= count($allArticles) . " " . (count($allArticles) != 1 ? 'Beiträge' : "Beitrag") ?></p>
 
     <div class="archive-flow">
-      <?php foreach ($articles as $article): ?>
-        <?php
-        snippet('teaser', [
-          'article' => $article,
-        ]);
-          ?>
-      <?php endforeach; ?>
+        <?php foreach ($articles as $article) : ?>
+            <?php
+            snippet('teaser', [
+            'article' => $article,
+            ]);
+            ?>
+        <?php endforeach; ?>
     </div>
 
-    <?php
-    snippet('pagination', [
-      'articles' => $articles,
-    ]);
-      ?>
-  <?php else: ?>
+        <?php
+        snippet('pagination', [
+        'articles' => $articles,
+        ]);
+        ?>
+  <?php else : ?>
     <p>Keine Beiträge gefunden</p>
   <?php endif; ?>
 </div>

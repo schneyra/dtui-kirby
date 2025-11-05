@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var Kirby\Cms\App $kirby
  * @var Kirby\Cms\Page $page
@@ -33,7 +34,6 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
 <?php if (count($notes) > 1 || count($thisWeekInThePast) > 0) : ?>
   <aside class="container highlight-box flow" aria-labelledby="weeknotes-<?= $week . "-" . $year ?>">
     <?php if (count($notes) > 1) : ?>
-
       <h2 id="weeknotes-<?= $week . "-" . $year ?>">Weeknotes <?= $week . "/" . $year ?></h2>
 
       <p>Zum Glück muss ich nicht alleine jede Woche daran denken einen kleinen Rückblick zu schreiben. Hier sind die Beiträge meiner Freunde für diese Woche:</p>
@@ -44,12 +44,13 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
         $i = 0;
 
         foreach ($notes as $note) : ?>
-          <?php if (!empty($note) && !str_starts_with($note['title'], 'martin')) : ?>
+            <?php if (!empty($note) && !str_starts_with($note['title'], 'martin')) : ?>
             <li class="article-list__item<?= $rand === $i ? ' article-list__item--active' : ''?>">
               <a href="<?= $note['link'] ?>" class="article-list__link"><?= $note['title'] ?></a>
             </li>
-          <?php $i++; endif; ?>
-          <?php endforeach; ?>
+                <?php $i++;
+            endif; ?>
+        <?php endforeach; ?>
       </ul>
       <p>Alle Beiträge findest du auf der <a href="https://weeknotes.cafe/">Übersichtsseite weeknotes.cafe</a> aufgelistet.</p>
     <?php endif; ?>
@@ -65,12 +66,13 @@ if (in_array('allwoechentlich-belangloses', $page->categories()->toArray())) {
         $i = 0;
 
         foreach ($thisWeekInThePast as $note) : ?>
-          <?php $noteYear = DtuiHelper::dateformat($note->date(), 'YYYY'); ?>
-          <?php if (!empty($note) && $noteYear !== DtuiHelper::dateformat($page->date(), 'YYYY')) : ?>
+            <?php $noteYear = DtuiHelper::dateformat($note->date(), 'YYYY'); ?>
+            <?php if (!empty($note) && $noteYear !== DtuiHelper::dateformat($page->date(), 'YYYY')) : ?>
             <li class="article-list__item<?= $rand === $i ? ' article-list__item--active' : ''?>">
-              <?= $noteYear ?>: <a href="<?= $note->articleUrl() ?>" class="article-list__link"><?= $note->title() ?></a>
+                <?= $noteYear ?>: <a href="<?= $note->articleUrl() ?>" class="article-list__link"><?= $note->title() ?></a>
             </li>
-            <?php $i++; endif; ?>
+                <?php $i++;
+            endif; ?>
         <?php endforeach; ?>
       </ul>
     <?php endif; ?>

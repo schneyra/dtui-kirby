@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @var Kirby\Cms\App $kirby
  **/
@@ -30,11 +31,11 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
     <lastBuildDate><?= $modified ?></lastBuildDate>
     <atom:link href="<?= Xml::encode($feedurl) ?>" rel="self" type="application/rss+xml" />
 
-    <?php if ($description && is_string($description) && strlen(trim($description)) > 0): ?>
+    <?php if ($description && is_string($description) && strlen(trim($description)) > 0) : ?>
       <description><?= Xml::encode($description) ?></description>
     <?php endif; ?>
 
-    <?php foreach ($items as $item): ?>
+    <?php foreach ($items as $item) : ?>
       <item>
         <title><?= Xml::encode($item->title()) ?></title>
         <link><?= Xml::encode($item->articleUrl()) ?></link>
@@ -42,7 +43,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
         <pubDate><?= date(DATE_RSS, $item->date()->toTimestamp()) ?></pubDate>
         <description><![CDATA[<?php foreach ($item->body()->toBlocks() as $block) {
             echo $block;
-        } ?>]]></description>
+                              } ?>]]></description>
       </item>
     <?php endforeach; ?>
   </channel>

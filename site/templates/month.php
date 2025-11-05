@@ -9,4 +9,4 @@ snippet('archive', [
 ]);
 ?>
 
-<?php snippet('site-footer') ?>
+<?php snippet('site-footer');

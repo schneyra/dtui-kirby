@@ -18,6 +18,4 @@
 
     <!-- Include all rules from PSR-12 Coding Standard -->
     <rule ref="PSR12"/>
-
-    <rule ref="Generic.Arrays.DisallowShortArraySyntax"/>
 </ruleset>

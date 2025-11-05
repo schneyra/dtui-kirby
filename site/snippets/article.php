@@ -6,24 +6,28 @@
 $showHero = $article->thumbnail()->toFile() && (isset($isSingle) && $isSingle === true);
 ?>
 
-<article class="article <?php if ($showHero) : ?>article--has-hero<?php endif; ?>">
+<article class="article <?php if ($showHero) :
+    ?>article--has-hero<?php
+                        endif; ?>">
   <?php if ($showHero) : ?>
     <div class="article__hero">
 
-      <?php
-      snippet('picture', [
+        <?php
+        snippet('picture', [
         'image' => $article->thumbnail()->toFile(),
         'sizes' => "100vw",
-      ]);
-      ?>
+        ]);
+        ?>
     </div>
   <?php endif; ?>
 
   <?php if (isset($isSingle) && $isSingle === true) : ?>
-    <h1 class="article__headline <?php if ($showHero) : ?>article__headline--hero<?php endif; ?>">
-      <?= $article->title() ?>
+    <h1 class="article__headline <?php if ($showHero) :
+        ?>article__headline--hero<?php
+                                 endif; ?>">
+        <?= $article->title() ?>
     </h1>
-  <?php else: ?>
+  <?php else : ?>
     <h2 class="article__headline">
       <a href="<?= $article->articleUrl() ?>">
         <?= $article->title() ?>
@@ -37,7 +41,7 @@ $showHero = $article->thumbnail()->toFile() && (isset($isSingle) && $isSingle ==
     snippet('weeknotes', [
       'page' => $article
     ]);
-?>
+    ?>
 
   <footer class="article__footer">
     <time datetime="<?= $article->date()->strtotime() ?>">

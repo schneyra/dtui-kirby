@@ -15,13 +15,13 @@ $paginatedArticles = $articles->flip()->paginate(10);
 <?php endif; ?>
 
 <?php if (count($articles)) : ?>
-  <?php foreach ($paginatedArticles as $article): ?>
-    <?php
-    snippet($template, [
-      'article' => $article,
-    ]);
-      ?>
-  <?php endforeach; ?>
+    <?php foreach ($paginatedArticles as $article) : ?>
+        <?php
+        snippet($template, [
+        'article' => $article,
+        ]);
+        ?>
+    <?php endforeach; ?>
 
 <?php else : ?>
   <p class="container">Keine Beiträge gefunden.</p>

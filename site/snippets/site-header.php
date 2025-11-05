@@ -17,17 +17,17 @@
   <link rel="preload" href="<?= $site->url() ?>/assets/fonts/lexend-deca.woff2" as="font" type="font/woff2" crossorigin="">
 
   <?php if ($kirby->option('options.local')) : ?>
-    <?= css('assets/css/style.css') ?>
-  <?php else: ?>
-    <?= css('assets/css/style.min.css') ?>
+        <?= css('assets/css/style.css') ?>
+  <?php else : ?>
+      <?= css('assets/css/style.min.css') ?>
   <?php endif; ?>
 
   <link rel="alternate" type="application/rss+xml" title="der tag und ich" href="<?= $site->url() ?>/feed.xml">
 
   <?php if (isset($renderArticleMeta) && $renderArticleMeta === true) : ?>
-    <?php snippet('meta-article'); ?>
-  <?php else: ?>
-    <?php snippet('meta-common'); ?>
+        <?php snippet('meta-article'); ?>
+  <?php else : ?>
+      <?php snippet('meta-common'); ?>
   <?php endif; ?>
   
   <link rel="icon" href="/favicon.ico" sizes="any">

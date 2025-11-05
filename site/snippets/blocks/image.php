@@ -43,9 +43,9 @@ if ($block->alt()->isNotEmpty()) {
 
 ?>
 
-<?php if ($image): ?>
+<?php if ($image) : ?>
   <figure<?= Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') ?> class="image-wrapper <?= "align-" . $align ?>">
-    <?php if ($link->isNotEmpty()): ?>
+    <?php if ($link->isNotEmpty()) : ?>
       <a href="<?= Str::esc($link->toUrl()) ?>">
     <?php endif ?>
 
@@ -57,11 +57,11 @@ if ($block->alt()->isNotEmpty()) {
     ]);
     ?>
 
-    <?php if ($link->isNotEmpty()): ?>
+    <?php if ($link->isNotEmpty()) : ?>
       </a>
     <?php endif ?>
 
-    <?php if ($caption->isNotEmpty()): ?>
+    <?php if ($caption->isNotEmpty()) : ?>
       <figcaption>
         <?= $caption ?>
       </figcaption>
