@@ -69,7 +69,7 @@ $rand = rand(0, count($articlesOnThisDay) - 1);
         <a href="<?= $site->url() ?>/datenschutzerklaerung/" class="footer-navigation__link">Datenschutzerklärung</a>
       </li>
       <li class="footer-navigation__item">
-        <a href="https://creativecommons.org/licenses/by-sa/3.0/de/" class="footer-navigation__link">CC-BY-SA</a>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/de/" class="footer-navigation__link">CC-BY-SA</a>
       </li>
     </ul>
     <ul class="footer-navigation">
