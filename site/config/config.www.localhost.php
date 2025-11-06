@@ -10,5 +10,8 @@ return [
             'active' => false
         ]
     ],
-    'bvdputte.fingerprint.disabled' => true
+    'bvdputte.fingerprint.disabled' => true,
+    'panel' => [
+        'install' => true,
+    ]
 ];

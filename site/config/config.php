@@ -150,7 +150,6 @@ return [
         ]
     ],
     'panel' => [
-        'install' => true,
         'vue' => [
         'compiler' => false
         ]
