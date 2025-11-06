@@ -42,7 +42,6 @@ fields:
                 min: 1
                 max: 4
           - video
-          - localvideo
       code:
         label: Code
         type: group
