@@ -8,13 +8,6 @@
 # http://yourdomain.com/about-us/team
 RewriteEngine on
 
-# www und https erzwingen
-RewriteCond %{HTTP_HOST} !=""
-RewriteCond %{HTTP_HOST} !^dtui-kirby\.
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteCond %{HTTPS}s ^on(s)|
-RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
 # make sure to set the RewriteBase correctly
 # if you are running the site in a subfolder;
 # otherwise links or the entire site will break.
@@ -28,11 +21,6 @@ RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # set the RewriteBase to:
 #
 # RewriteBase /
-
-# Bust browsercache on CSS & JS files
-# More info: https://github.com/bvdputte/kirby-fingerprint
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)\.([0-9a-z]{32})\.(js|css|png|jpe?g|gif|svg|ico)$ $1.$3 [L]
 
 # block files and folders beginning with a dot, such as .git
 # except for the .well-known folder, which is used for Let's Encrypt and security.txt
