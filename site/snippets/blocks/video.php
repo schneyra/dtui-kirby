@@ -35,6 +35,7 @@ if (
         $videoMarkup = str_replace('youtube.com', 'youtube-nocookie.com', $videoMarkup);
 
         $coverImageUrl = null;
+        $coverImage = null;
 
         if (strpos($videoMarkup, 'youtube') >= -1) {
             $uri    = new Uri($block->url());
