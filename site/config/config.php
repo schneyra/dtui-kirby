@@ -153,5 +153,8 @@ return [
         'vue' => [
         'compiler' => false
         ]
-    ]
+    ],
+    'api' => [
+        'basicAuth' => true,
+    ],
 ];
